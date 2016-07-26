@@ -4,124 +4,154 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Links to alexkval repos on GitHub">
+
+  <title>AlexKVal's projects</title>
+  <meta name="description" content="Alexkval's projects">
+
   <link href="/favicon.ico?v=2" type="image/x-icon" rel="shortcut icon">
-
-  <title>AlexKVal's OSS development</title>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
   <style media="screen">
+    /* http://meyerweb.com/eric/tools/css/reset/
+       v2.0 | 20110126
+       License: none (public domain)
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
     body {
-      margin-top: 20px
+      line-height: 1;
+    }
+    ol, ul {
+      list-style: none;
+    }
+    blockquote, q {
+      quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+      content: '';
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    /* Main */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      color: #5e5e5e;
+      background-color: #f2f2f2;
+
+      font-family: 'Lato', sans-serif;
+    }
+    a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    html, body, .container {
+      height: 100%;
+      min-height: 400px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    article {
+      margin-bottom: 50px;
+      width: 60%;
+    }
+
+    .header {
+      margin-bottom: 10px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 1px 1px 2px #fff;
     }
   </style>
 </head>
 
 <body>
+  <section class="container">
+    <article>
+      <h1 class="header">I am a contributor into these projects</h1>
 
-  <div class="container">
-    <div id="row">
-      <div class="col-sm-12 col-md-8">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h1 class="panel-title">I've contributed to these projects</h1>
-          </div>
-          <div class="panel-body">
-            <article>
-              <p><a class="anchor" href="https://github.com/react-bootstrap/react-bootstrap" target="_blank">(react-bootstrap) Bootstrap 3 components built with React</a></p>
+      <ul>
+        <li><a class="anchor" href="https://github.com/react-bootstrap/react-bootstrap" target="_blank">(react-bootstrap) Bootstrap 3 components built with React</a></li>
 
-              <p><a class="anchor" href="https://github.com/react-bootstrap/react-prop-types" target="_blank">(react-prop-types) React PropType utilities</a></p>
+        <li><a class="anchor" href="https://github.com/yannickcr/eslint-plugin-react" target="_blank">(eslint-plugin-react) React specific linting rules for ESLint</a></li>
 
-              <p><a class="anchor" href="https://github.com/react-bootstrap/react-router-bootstrap" target="_blank">(react-router-bootstrap) Integration between React Router and React-Bootstrap</a></p>
+        <li><a class="anchor" href="https://github.com/rspec/rspec-core" target="_blank">RSpec runner and formatters</a></li>
 
-              <p><a class="anchor" href="https://github.com/AlexKVal/release-script" target="_blank">(release-script) Release script</a></p>
+        <li><a class="anchor" href="https://github.com/react-bootstrap/react-prop-types" target="_blank">(react-prop-types) React PropType utilities</a></li>
 
-              <p><a class="anchor" href="https://github.com/eslint-plugins/eslint-plugin-lodash" target="_blank">(eslint-plugin-lodash) ESLint plugin for the lodash library</a></p>
+        <li><a class="anchor" href="https://github.com/react-bootstrap/react-router-bootstrap" target="_blank">(react-router-bootstrap) Integration between React Router and React-Bootstrap</a></li>
 
-              <p><a class="anchor" href="https://github.com/AlexKVal/moment-in-rb" target="_blank">Front with Moment.js demo</a></p>
+        <li><a class="anchor" href="https://github.com/AlexKVal/release-script" target="_blank">(release-script) Release script</a></li>
 
-              <p><a class="anchor" href="https://github.com/AlexKVal/react-web-app-boilerplate" target="_blank">My boilerplate for front part of web application built with React</a></p>
+        <li><a class="anchor" href="https://github.com/eslint-plugins/eslint-plugin-lodash" target="_blank">(eslint-plugin-lodash) ESLint plugin for the lodash library</a></li>
+      </ul>
+    </article>
 
-              <p><a class="anchor" href="https://github.com/AlexKVal/react-lib-boilerplate" target="_blank">My boilerplate for React components</a></p>
+    <article>
+      <h1 class="header">My "visual" stuff</h1>
 
-              <p><a class="anchor" href="https://github.com/AlexKVal/flux-shop-playground" target="_blank">Simple shop with Flux</a></p>
+      <ul>
+        <li>
+          <a href="https://github.com/AlexKVal/responsive-gallery-flex">Responsive gallery (flex)</a>&nbsp;
+          <a class="anchor" href="https://alexkval.github.io/responsive-gallery-flex/" target="_blank">(show)</a>
+        </li>
+        <li>
+          <a href="https://github.com/AlexKVal/reimagined-octo-waffle/">My HTML+CSS version of "YardSale's mobile registration form"</a>&nbsp;
+          <a class="anchor" href="https://alexkval.github.io/reimagined-octo-waffle/" target="_blank">(show)</a>
+        </li>
+      </ul>
+    </article>
 
-              <p><a class="anchor" href="https://github.com/AlexKVal/interactive-jsx" target="_blank">Local interactive JSX compiler in Browser</a></p>
-
-              <p><a class="anchor" href="https://github.com/AlexKVal/react-thinking" target="_blank">"React thinking" tutorial</a></p>
-
-              <p><a class="anchor" href="https://github.com/AlexKVal/react-with-bs3" target="_blank">Refactoring of "React thinking" with React-Bootstrap and RequireJS</a></p>
-
-              <p><a class="anchor" href="https://github.com/AlexKVal/reactbs3-require-jsx" target="_blank">Refactoring of "React thinking" with React-Bootstrap and requirejs-react-jsx</a></p>
-
-              <p><a class="anchor" href="https://github.com/AlexKVal/products-bs3" target="_blank">Refactoring of "React thinking" with AngularJS and Bootstrap(CSS)</a></p>
-
-              <p><a class="anchor" href="https://github.com/AlexKVal/prod_table-ng-bs3" target="_blank">Refactoring of "React thinking" with AngularJS, angular_ui/bootstrap and Gulp</a></p>
-
-              <p><a class="anchor" href="https://github.com/AlexKVal/CodeBreaker" target="_blank">CodeBreaker on Ruby for the game Bulls and Cows</a></p>
-
-              <p><a class="anchor" href="https://github.com/AlexKVal/bb-github-releases" target="_blank">Backbone usage for github releases API rendering</a></p>
-
-              <hr>
-              <p>HTML + CSS visual stuff</p>
-              <hr>
-
-              <p>
-                <a href="https://github.com/AlexKVal/reimagined-octo-waffle/">Simple mobile registration form</a>&nbsp;
-                <a class="anchor" href="https://alexkval.github.io/reimagined-octo-waffle/" target="_blank">(show)</a>
-              </p>
-              <p>
-                <a href="https://github.com/AlexKVal/responsive-tabs/">Responsive tabs with bare mimimum of JS</a>&nbsp;
-                <a class="anchor" href="http://alexkval.github.io/responsive-tabs/" target="_blank">(show)</a>
-              </p>
-              <p><a class="anchor" href="https://github.com/AlexKVal/stack-transitions" target="_blank">Simple stack animations</a></p>
-              <p>
-                <a href="https://github.com/AlexKVal/ribbon-element/">A ribbon element of Ember.js site made with CSS</a>&nbsp;
-                <a class="anchor" href="http://alexkval.github.io/ribbon-element/" target="_blank">(show)</a>
-              </p>
-              <p><a class="anchor" href="https://github.com/AlexKVal/w3schools-example-pod" target="_blank">A "copywork" of "w3schools"'s code-pod</a></p>
-              <p><a class="anchor" href="https://github.com/AlexKVal/engvid-button" target="_blank">A "copywork" of "engvid"'s button</a></p>
-              <p><a class="anchor" href="https://github.com/AlexKVal/callmenick-layout" target="_blank">A "copywork" of "Callmenick" site's layout</a></p>
-
-              <p><a class="anchor" href="https://github.com/AlexKVal/color-selector-component" target="_blank">Color Selector React component</a></p>
-              <p><a class="anchor" href="https://github.com/AlexKVal/color-selector-html" target="_blank">Color selector HTML version</a></p>
-
-              <p><a class="anchor" href="https://github.com/AlexKVal/shayhowe-des" target="_blank">Simple gray layout</a></p>
-
-            </article>
-          </div>
-          <div class="panel-footer">
-              <p><a href="https://github.com/AlexKVal" class="avatar"><img src="https://avatars0.githubusercontent.com/u/847572?v=3&amp;s=60" width="48" height="48" class="img-thumbnail"></a> View <a href="https://github.com/AlexKVal">AlexKVal</a> on <a href="https://www.github.com">GitHub</a></p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="col-sm-12 col-md-4">
-        <div class="panel panel-primary">
-
-          <div class="panel-body">
-            <a
-              class="twitter-timeline"
-              href="https://twitter.com/AlexKVal"
-              data-widget-id="632999869486100480"
-              data-chrome="nofooter noborders"
-              data-aria-polite="assertive"
-              width="600"
-              height="530">
-            Tweets by @AlexKVal
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-  </script>
+    <footer>
+      <a href="https://github.com/AlexKVal" class="avatar">
+        <img src="https://avatars0.githubusercontent.com/u/847572?v=3&amp;s=60" width="48" height="48" class="img-thumbnail">
+      </a>
+      <br>
+      <a href="https://github.com/AlexKVal">My GitHub</a>
+    </footer>
+  </section>
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
