@@ -81,7 +81,7 @@
 
     html, body, .container {
       height: 100%;
-      min-height: 400px;
+      min-height: 600px;
     }
 
     .container {
@@ -89,20 +89,35 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      min-width: 600px;
     }
 
     article {
-      margin-bottom: 50px;
-      width: 60%;
+      margin-top: 50px;
+      width: 550px;
+      /*border: 1px solid red;*/
     }
 
     .header {
-      margin-bottom: 10px;
+      margin-bottom: 30px;
       font-family: 'Oswald', sans-serif;
       font-size: 26px;
       font-weight: bold;
       text-align: center;
       text-shadow: 1px 1px 2px #fff;
+    }
+
+    li {
+      margin-bottom: 15px;
+    }
+
+    .u {
+      text-decoration: underline;
+    }
+
+    .pname {
+      color: #999;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -110,22 +125,23 @@
 <body>
   <section class="container">
     <article>
-      <h1 class="header">I am a contributor into these projects</h1>
+      <h1 class="header">I am a contributor to these projects</h1>
 
       <ul>
-        <li><a class="anchor" href="https://github.com/react-bootstrap/react-bootstrap" target="_blank">(react-bootstrap) Bootstrap 3 components built with React</a></li>
+        <li><a class="anchor" href="https://github.com/react-bootstrap/react-bootstrap" target="_blank">Bootstrap 3 components built with React <span class="u pname">react-bootstrap</span></a></li>
 
-        <li><a class="anchor" href="https://github.com/yannickcr/eslint-plugin-react" target="_blank">(eslint-plugin-react) React specific linting rules for ESLint</a></li>
+        <li><a class="anchor" href="https://github.com/yannickcr/eslint-plugin-react" target="_blank">React specific linting rules for ESLint <span class="u pname">eslint-plugin-react</span></a></li>
 
         <li><a class="anchor" href="https://github.com/rspec/rspec-core" target="_blank">RSpec runner and formatters</a></li>
 
-        <li><a class="anchor" href="https://github.com/react-bootstrap/react-prop-types" target="_blank">(react-prop-types) React PropType utilities</a></li>
+        <li><a class="anchor" href="https://github.com/AlexKVal/release-script" target="_blank">Release script <span class="u pname">release-script</span></a></li>
 
-        <li><a class="anchor" href="https://github.com/react-bootstrap/react-router-bootstrap" target="_blank">(react-router-bootstrap) Integration between React Router and React-Bootstrap</a></li>
+        <li><a class="anchor" href="https://github.com/react-bootstrap/react-prop-types" target="_blank">React PropType utilities <span class="u pname">react-prop-types</span></a></li>
 
-        <li><a class="anchor" href="https://github.com/AlexKVal/release-script" target="_blank">(release-script) Release script</a></li>
+        <li><a class="anchor" href="https://github.com/react-bootstrap/react-router-bootstrap" target="_blank">Integration between React Router and R-Bootstrap <span class="u pname">react-router-bootstrap</span></a></li>
 
-        <li><a class="anchor" href="https://github.com/eslint-plugins/eslint-plugin-lodash" target="_blank">(eslint-plugin-lodash) ESLint plugin for the lodash library</a></li>
+        <li><a class="anchor" href="https://github.com/eslint-plugins/eslint-plugin-lodash" target="_blank">ESLint plugin for the lodash library eslint-plugin-lodash</a></li>
+
       </ul>
     </article>
 
@@ -135,11 +151,11 @@
       <ul>
         <li>
           <a href="https://github.com/AlexKVal/responsive-gallery-flex">Responsive gallery (flex)</a>&nbsp;
-          <a class="anchor" href="https://alexkval.github.io/responsive-gallery-flex/" target="_blank">(show)</a>
+          <a class="u" href="https://alexkval.github.io/responsive-gallery-flex/" target="_blank">Show me</a>
         </li>
         <li>
           <a href="https://github.com/AlexKVal/reimagined-octo-waffle/">My HTML+CSS version of "YardSale's mobile registration form"</a>&nbsp;
-          <a class="anchor" href="https://alexkval.github.io/reimagined-octo-waffle/" target="_blank">(show)</a>
+          <a class="u" href="https://alexkval.github.io/reimagined-octo-waffle/" target="_blank">Show me</a>
         </li>
       </ul>
     </article>
