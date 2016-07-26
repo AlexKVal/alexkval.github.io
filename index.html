@@ -73,6 +73,7 @@
       background-color: #f2f2f2;
 
       font-family: 'Lato', sans-serif;
+      line-height: 1.4;
     }
     a {
       text-decoration: none;
@@ -83,17 +84,16 @@
       font-weight: bold;
     }
 
-    html, body, .container {
-      height: 100%;
-      min-height: 700px;
-    }
-
     .container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       min-width: 600px;
+      margin-top: 50px;
+    }
+
+    .intro {
+      margin-bottom: 10px;
     }
 
     .panel {
@@ -129,13 +129,43 @@
       display: block;
       margin: 0 auto 20px;
       border-radius: 50%;
+      width: 80px;
+      height: 80px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 12px;
+      }
+      .container {
+        min-width: inherit;
+        margin-top: 20px;
+      }
+      .pname {
+        font-size: 10px;
+      }
+      .avatar {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 10px;
+      }
+      .header {
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+      .panel {
+        width: 94%;
+      }
+      li {
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <section>
+    <section class="intro">
       <img src="https://avatars0.githubusercontent.com/u/847572?v=3&amp;s=80" class="avatar">
       <h1 class="header">Hi. I'm Alex.</h1>
     </section>
