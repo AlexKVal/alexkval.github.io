@@ -102,14 +102,15 @@
       width: 100%;
     }
 
-    .header {
-      margin-bottom: 30px;
+    h1, h2 {
       font-family: 'Oswald', sans-serif;
-      font-size: 26px;
       font-weight: bold;
       text-align: center;
       text-shadow: 1px 1px 2px #fff;
+      margin-bottom: 30px;
     }
+    h1 { font-size: 26px; }
+    h2 { font-size: 22px; }
 
     li {
       margin-bottom: 15px;
@@ -156,10 +157,11 @@
         height: 60px;
         margin: 0 auto 10px;
       }
-      .header {
+      h1, h2 {
         margin-bottom: 15px;
-        font-size: 18px;
       }
+      h1 { font-size: 18px; }
+      h2 { font-size: 16px; }
       li {
         margin-bottom: 10px;
       }
@@ -172,6 +174,31 @@
     <section class="intro">
       <img src="https://avatars0.githubusercontent.com/u/847572?v=3&amp;s=80" class="avatar">
       <h1 class="header">Hi. I'm Alex</h1>
+      <h2>I am a full stack software engineer</h2>
+    </section>
+
+    <section class="panel">
+      <h2>Techonogies I like</h2>
+
+      <ul>
+        <li><a class="anchor" href="http://elm-lang.org/" target="_blank">Elm</a></li>
+
+        <li><a class="anchor" href="https://facebook.github.io/react/" target="_blank">React</a></li>
+
+        <li><a class="anchor" href="http://www.phoenixframework.org/" target="_blank">Phoenix Framework</a></li>
+
+        <li><a class="anchor" href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a></li>
+
+        <li><a class="anchor" href="http://emberjs.com/" target="_blank">Ember</a></li>
+
+        <li><a class="anchor" href="https://nodejs.org/" target="_blank">Node.js</a></li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <ul>
+        <li><a class="anchor" href="http://www.shakacode.com/about/" target="_blank">Currently I'm working remotely at ShakaCode</a></li>
+      </ul>
     </section>
 
     <section class="panel">
@@ -199,7 +226,7 @@
     </section>
 
     <section class="panel">
-      <h1 class="header">My prove of concept projects</h1>
+      <h1 class="header">My proof of concept projects</h1>
 
       <ul>
         <li><a class="anchor" href="https://github.com/AlexKVal/webd2-api" target="_blank">JSON-API server with ORM-layer for ODBC in Node.js <span class="u pname">webd2-api</span></a></li>
@@ -211,7 +238,7 @@
     </section>
 
     <section class="panel">
-      <h1 class="header">Design related morsels</h1>
+      <h2>Design related morsels</h2>
 
       <ul>
         <li>
@@ -226,7 +253,7 @@
     </section>
 
     <section class="panel">
-      <h1 class="header">Misc stuff</h1>
+      <h2>Misc stuff</h2>
 
       <ul>
         <li><a class="anchor" href="https://github.com/AlexKVal/my-reading-list" target="_blank">Links to awesome reading/learning resources</a></li>
