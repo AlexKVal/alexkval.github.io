@@ -142,10 +142,15 @@
       color: #aaa;
     }
 
-    .shaka-logo {
+    .logo {
       font-size: 22px;
       text-decoration: underline;
       margin-left: 5px;
+    }
+
+    .horizontal {
+      display: flex;
+      justify-content: space-between;
     }
 
     @media (max-width: 600px) {
@@ -173,6 +178,9 @@
       li {
         margin-bottom: 10px;
       }
+      .logo {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
@@ -181,31 +189,33 @@
   <div class="container">
     <section class="intro">
       <img src="https://avatars0.githubusercontent.com/u/847572?v=3&amp;s=80" class="avatar">
-      <h1 class="header">Hi. I'm Alex</h1>
+      <h1 class="header">Hi. I'm Alexander</h1>
       <h2>I am a full stack software engineer</h2>
     </section>
 
     <section class="panel">
       <h2>Techonogies I like</h2>
 
-      <ul>
-        <li><a class="anchor" href="http://elm-lang.org/" target="_blank">Elm</a></li>
+      <ul class="horizontal">
+        <li><a class="anchor logo" href="http://elm-lang.org/" target="_blank">Elm</a></li>
 
-        <li><a class="anchor" href="https://facebook.github.io/react/" target="_blank">React</a></li>
+        <li><a class="anchor logo" href="https://facebook.github.io/react/" target="_blank">React</a></li>
+      </ul>
+      <ul class="horizontal">
+        <li><a class="anchor logo" href="http://www.phoenixframework.org/" target="_blank">Phoenix Framework</a></li>
 
-        <li><a class="anchor" href="http://www.phoenixframework.org/" target="_blank">Phoenix Framework</a></li>
+        <li><a class="anchor logo" href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a></li>
+      </ul>
+      <ul class="horizontal">
+        <li><a class="anchor logo" href="http://emberjs.com/" target="_blank">Ember</a></li>
 
-        <li><a class="anchor" href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a></li>
-
-        <li><a class="anchor" href="http://emberjs.com/" target="_blank">Ember</a></li>
-
-        <li><a class="anchor" href="https://nodejs.org/" target="_blank">Node.js</a></li>
+        <li><a class="anchor logo" href="https://nodejs.org/" target="_blank">Node.js</a></li>
       </ul>
     </section>
 
     <section class="panel">
       <ul>
-        <li><a class="anchor" href="http://www.shakacode.com/about/" target="_blank">Currently I'm working remotely at <span class="shaka-logo">ShakaCode</span></a></li>
+        <li><a class="anchor" href="http://www.shakacode.com/about/" target="_blank">Currently I'm working remotely at <span class="logo">ShakaCode</span></a></li>
       </ul>
     </section>
 
