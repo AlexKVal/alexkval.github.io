@@ -55,7 +55,6 @@ table {
 
 body {
   color: #555;
-  background-color: #f2f2f2;
 
   font-family: 'Lato', sans-serif;
   line-height: 1.4;
@@ -75,6 +74,17 @@ a:hover {
 
 .intro {
   margin-bottom: 10px;
+}
+
+.cta {
+  color: #0099aa;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+}
+.cta:hover {
+  color: #009977;
+  text-decoration: underline;
+  font-size: 24px;
 }
 
 .panel {
