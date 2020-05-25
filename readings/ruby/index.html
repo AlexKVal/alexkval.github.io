@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.71.0" /><meta name="theme-color" content="#fff" />
+
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title> | Alexander Shemetovskiy</title>
+
+    <link rel="stylesheet" href="/css/meme.min.58bc39dbe134c5e44a78e94ce3e1861400ca666811a7cdadca215d1fae085f0d.css" integrity="sha256-WLw52&#43;E0xeRKeOlM4&#43;GGFADKZmgRp82tyiFdH64IXw0=" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="Alexander Shemetovskiy" /><meta name="description" content="Ruby
+ Pry: State navigation Pry: Source browsing Pry Cheat Sheet How To Delegate Methods in Ruby Always define respond_to_missing? when overriding method_missing Ruby Mixin Tutorial Metaprogramming in Ruby: It&amp;rsquo;s All About the Self The splat * operator in Ruby Everything you should know about Ruby Splats Do we need constants?" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Alexander Shemetovskiy" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Alexander Shemetovskiy" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://alexkval.github.io/readings/ruby/" />
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "datePublished": "2014-12-28T12:00:00+00:00",
+        "dateModified": "2020-05-25T00:34:26+01:00",
+        "url": "https://alexkval.github.io/readings/ruby/",
+        "name": "",
+        "description": "Ruby\n Pry: State navigation Pry: Source browsing Pry Cheat Sheet How To Delegate Methods in Ruby Always define respond_to_missing? when overriding method_missing Ruby Mixin Tutorial Metaprogramming in Ruby: It\u0026rsquo;s All About the Self The splat * operator in Ruby Everything you should know about Ruby Splats Do we need constants?",
+        "image": "https://alexkval.github.io/apple-touch-icon.png",
+        "license": "Copyright © Alexander Shemetovskiy, all rights reserved.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Alexander Shemetovskiy",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://alexkval.github.io/apple-touch-icon.png"
+            },
+            "url": "https://alexkval.github.io/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://alexkval.github.io/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:site" content="@alexkval" />
+<meta name="twitter:creator" content="@alexkval" />
+
+    
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Ruby
+ Pry: State navigation Pry: Source browsing Pry Cheat Sheet How To Delegate Methods in Ruby Always define respond_to_missing? when overriding method_missing Ruby Mixin Tutorial Metaprogramming in Ruby: It&amp;rsquo;s All About the Self The splat * operator in Ruby Everything you should know about Ruby Splats Do we need constants?" />
+<meta property="og:url" content="https://alexkval.github.io/readings/ruby/" />
+<meta property="og:site_name" content="Alexander Shemetovskiy" />
+<meta property="og:locale" content="en" /><meta property="og:image" content="https://alexkval.github.io/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+
+        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+
+        
+
+
+
+
+    
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-67171111-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header" data-scroll-header>
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">Alexander Shemetovskiy</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/posts/"><span class="menu-item-name">Posts</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item active"><a href="/readings/"><span class="menu-item-name">Readings</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/about/"><span class="menu-item-name">About</span></a>
+                </li>
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post" data-small-caps="true" data-align="default" data-type="readings" data-toc-num="true">
+
+            <h1 class="post-title"></h1>
+
+            
+
+            
+
+            
+
+            <div class="post-body">
+              <p><strong>Ruby</strong></p>
+<ul>
+<li><a href="https://github.com/pry/pry/wiki/State-navigation" target="_blank" rel="noopener">Pry: State navigation</a></li>
+<li><a href="https://github.com/pry/pry/wiki/Source-browsing" target="_blank" rel="noopener">Pry: Source browsing</a></li>
+<li><a href="https://gist.github.com/lfender6445/9919357" target="_blank" rel="noopener">Pry Cheat Sheet</a></li>
+<li><a href="http://www.rubyguides.com/2018/10/delegate-methods-in-ruby/" target="_blank" rel="noopener">How To Delegate Methods in Ruby</a></li>
+<li><a href="https://robots.thoughtbot.com/always-define-respond-to-missing-when-overriding" target="_blank" rel="noopener">Always define <code>respond_to_missing?</code> when overriding <code>method_missing</code></a></li>
+<li><a href="http://juixe.com/techknow/index.php/2006/06/15/mixins-in-ruby/" target="_blank" rel="noopener">Ruby Mixin Tutorial</a></li>
+<li><a href="http://yehudakatz.com/2009/11/15/metaprogramming-in-ruby-its-all-about-the-self/" target="_blank" rel="noopener">Metaprogramming in Ruby: It&rsquo;s All About the Self</a></li>
+<li><a href="https://4loc.wordpress.com/2009/01/16/the-splat-operator-in-ruby/" target="_blank" rel="noopener">The splat * operator in Ruby</a></li>
+<li><a href="https://alexcastano.com/everything-about-ruby-splats/" target="_blank" rel="noopener">Everything you should know about Ruby Splats</a></li>
+<li><a href="http://www.virtuouscode.com/2011/08/18/do-we-need-constants/" target="_blank" rel="noopener">Do we need constants?</a></li>
+<li><a href="http://mitrev.net/ruby/2015/11/13/the-operator-in-ruby/" target="_blank" rel="noopener">The Safe Navigation Operator (&amp;.)</a></li>
+<li><a href="http://blog.arkency.com/2014/07/hidden-features-of-ruby-you-may-dont-know-about/" target="_blank" rel="noopener">Hidden features of Ruby</a></li>
+<li><a href="http://www.virtuouscode.com/2010/08/02/using-and-and-or-in-ruby/" target="_blank" rel="noopener">Using “and” and “or” in Ruby</a></li>
+<li><a href="https://blog.codeship.com/replacing-sinatra-with-rack-in-sidekiq/" target="_blank" rel="noopener">Replacing Sinatra with Rack in Sidekiq</a></li>
+<li><a href="https://robots.thoughtbot.com/writing-a-hypermedia-api-client-in-ruby" target="_blank" rel="noopener">Writing a Hypermedia API client in Ruby</a></li>
+<li><a href="http://www.blackbytes.info/2016/12/new-ruby-features/" target="_blank" rel="noopener">9 New Features in Ruby 2.4</a></li>
+<li><a href="https://blog.codeminer42.com/towards-minimal-idiomatic-and-performant-ruby-code-f3fc6aed3c94#.q7xq2gwwa" target="_blank" rel="noopener">Towards Minimal, Idiomatic, and Performant Ruby Code</a></li>
+<li><a href="https://www.rubysteps.com/articles/2017/what-rubys-zero-method-can-teach-you-about-oop/" target="_blank" rel="noopener">What Ruby&rsquo;s zero? method can teach you about OOP</a></li>
+<li><a href="https://www.rubysteps.com/articles/2014/when-it-comes-to-oop-the-big-idea-is-messaging/" target="_blank" rel="noopener">When it comes to OOP, the big idea is messaging</a></li>
+<li><a href="https://www.rubysteps.com/articles/2014/ruby-runtime-composition/" target="_blank" rel="noopener">Ruby Runtime Composition</a></li>
+<li><a href="https://www.sitepoint.com/symbol-gc-ruby-2-2/" target="_blank" rel="noopener">Symbol GC in Ruby 2.2</a></li>
+<li><a href="https://www.saturnflyer.com/blog/ruby-delegate-rb-secrets" target="_blank" rel="noopener">Ruby delegate.rb secrets</a></li>
+<li><a href="http://david.heinemeierhansson.com/2012/dependency-injection-is-not-a-virtue.html" target="_blank" rel="noopener">(DHH) Dependency injection is not a virtue</a></li>
+<li><a href="https://www.calleerlandsson.com/rubys-bitwise-operators/" target="_blank" rel="noopener">Ruby’s Bitwise Operators</a></li>
+<li><a href="https://pawelniewiadomski.com/2017/02/20/pitfalls-of-ruby-memoization-pattern/" target="_blank" rel="noopener">Pitfalls of Ruby&rsquo;s memoization pattern</a></li>
+<li><a href="https://stackoverflow.com/a/21609473/3874570" target="_blank" rel="noopener">Range include? vs cover?</a></li>
+<li><a href="https://medium.com/s-c-a-l-e/github-scaling-on-ruby-with-a-nomadic-tech-team-4db562b96dcd" target="_blank" rel="noopener">GitHub: Scaling on Ruby, with a nomadic tech team (2015)</a></li>
+<li><a href="https://appfolio-engineering.squarespace.com/appfolio-engineering/2017/5/24/how-is-ruby-different-in-japan" target="_blank" rel="noopener">How is Ruby Different in Japan?</a></li>
+<li><a href="http://mjk.space/how-to-avoid-inheritance-in-ruby/" target="_blank" rel="noopener">How to avoid inheritance in Ruby?</a></li>
+<li><a href="https://blog.codeship.com/an-introduction-to-crystal-fast-as-c-slick-as-ruby/" target="_blank" rel="noopener">An Introduction to Crystal: Fast as C, Slick as Ruby</a></li>
+<li><a href="https://vaneyckt.io/posts/ruby_concurrency_in_praise_of_condition_variables/" target="_blank" rel="noopener">Ruby concurrency: in praise of condition variables</a></li>
+<li><a href="http://kevinkuchta.com/_site/2017/07/disguising-ruby-as-javascript/" target="_blank" rel="noopener">Disguising Ruby as Javascript</a></li>
+<li><a href="https://medium.com/airbnb-engineering/accelerating-services-at-airbnb-by-building-a-blazing-fast-thrift-binding-for-ruby-8f63044ba149" target="_blank" rel="noopener">Accelerating Services by Sparsam, a Blazing Fast Thrift Binding for Ruby</a></li>
+<li><a href="https://codequizzes.wordpress.com/2014/04/11/singleton-classes-in-ruby-aka-eigenclasses/" target="_blank" rel="noopener">Singleton Classes in Ruby (aka eigenclasses)</a></li>
+<li><a href="http://nithinbekal.com/slides/metaprogramming-tricks/#/" target="_blank" rel="noopener">Fun With Ruby Metaprogramming</a></li>
+<li><a href="http://ruby-metaprogramming.rubylearning.com/html/seeingMetaclassesClearly.html" target="_blank" rel="noopener">Seeing Metaclasses Clearly</a></li>
+<li><a href="https://www.toptal.com/ruby/ruby-metaprogramming-cooler-than-it-sounds" target="_blank" rel="noopener">Ruby Metaprogramming Is Even Cooler Than It Sounds</a></li>
+<li><a href="https://codenoble.com/blog/understanding-rack-middleware/" target="_blank" rel="noopener">Understanding Rack Middleware</a></li>
+<li><a href="http://lucianopanaro.com/2008/10/15/creating-a-rack-middleware-for-minifying-your-javascript-files.html" target="_blank" rel="noopener">Creating a Rack Middleware for Minifying Your Javascript files</a></li>
+<li><a href="https://stackoverflow.com/a/9470563/3874570" target="_blank" rel="noopener">What&rsquo;s the difference between to_a and to_ary ?</a></li>
+<li><a href="http://rubyquicktips.com/post/533010887/ill-put-the-squeeze-on-ya" target="_blank" rel="noopener">I’ll put the “squeeze” on ya. String#squeeze</a></li>
+<li><a href="http://blog.honeybadger.io/when-to-use-freeze-and-frozen-in-ruby/" target="_blank" rel="noopener">When to use freeze and frozen? in Ruby</a></li>
+<li><a href="https://simpleror.wordpress.com/2009/03/15/q-q-w-w-x-r-s/" target="_blank" rel="noopener">%Q, %q, %W, %w, %x, %r, %s</a></li>
+<li><a href="http://bundler.io/v1.15/guides/creating_gem.html" target="_blank" rel="noopener">Developing a RubyGem using Bundler (v1.15)</a></li>
+<li><a href="http://edgar.tumblr.com/post/52300664342/how-to-extend-an-existing-rake-task" target="_blank" rel="noopener">How to extend an existing rake task</a></li>
+<li><a href="https://medium.com/kkempin/builder-design-pattern-in-ruby-dfa2d557ff1b" target="_blank" rel="noopener">Builder design pattern in Ruby</a></li>
+<li><a href="https://blog.appsignal.com/2017/08/01/ruby-magic-code-interpretation.html" target="_blank" rel="noopener">A look at how Ruby interprets your code</a></li>
+<li><a href="https://www.engineyard.com/blog/five-ruby-methods-you-should-be-using" target="_blank" rel="noopener">Five Ruby Methods You Should Be Using</a></li>
+<li><a href="https://hqc.io/posts/six-confusing-features-in-ruby" target="_blank" rel="noopener">Six confusing features in Ruby</a></li>
+<li><a href="https://engineering.universe.com/introduction-to-concurrency-models-with-ruby-part-i-550d0dbb970" target="_blank" rel="noopener">Introduction to Concurrency Models with Ruby</a></li>
+<li><a href="https://stackoverflow.com/a/723/3874570" target="_blank" rel="noopener">lambda vs proc</a></li>
+<li><a href="https://stackoverflow.com/a/2496240/3874570" target="_blank" rel="noopener">class_eval &laquo;-EOM, <strong>FILE</strong>, <strong>LINE</strong> + 1</a></li>
+<li><a href="http://rubyblog.pro/2017/02/class-macros-in-ruby" target="_blank" rel="noopener">Class Macros</a></li>
+<li><a href="https://ernie.io/2012/05/11/why-your-ruby-class-macros-might-suck-mine-did/" target="_blank" rel="noopener">Why your Ruby class macros (might) suck</a></li>
+<li><a href="http://www.virtuouscode.com/2008/08/26/classnew-and-inherited/" target="_blank" rel="noopener">Class.new and .inherited()</a></li>
+<li><a href="http://chrisholtz.com/blog/more-than-you-care-to-know-about-the-uniq-method/#using-blocks" target="_blank" rel="noopener">#uniq using blocks</a></li>
+<li><a href="http://mlomnicki.com/yield-self-in-ruby-25/" target="_blank" rel="noopener">yield_self in Ruby 2.5</a></li>
+<li><a href="https://kellysutton.com/2017/09/13/embracing-functional-programming-in-ruby.html" target="_blank" rel="noopener">Embracing Functional Programming in Ruby</a></li>
+<li><a href="https://blog.bigbinary.com/2012/06/28/extend-self-in-ruby.html" target="_blank" rel="noopener">extend self in ruby</a></li>
+<li><a href="https://blog.phusion.nl/2017/10/13/why-ruby-app-servers-break-on-macos-high-sierra-and-what-can-be-done-about-it/" target="_blank" rel="noopener">Why Ruby app servers break on macOS High Sierra and what can be done about it</a></li>
+<li><a href="https://blog.bigbinary.com/2011/07/20/ruby-pack-unpack.html" target="_blank" rel="noopener">Ruby pack unpack</a></li>
+<li><a href="https://avdi.codes/service-objects/" target="_blank" rel="noopener">Enough With the Service Objects Already</a></li>
+<li><a href="http://rubykaigi.org/2017/presentations/codefolio.html" target="_blank" rel="noopener">How Close is Ruby 3x3 For Production Web Apps?</a></li>
+<li><a href="https://medium.com/rubyinside/class-methods-in-ruby-a-thorough-review-and-why-i-define-them-using-class-self-af677ede9596" target="_blank" rel="noopener">Class Methods In Ruby: a Thorough Review &amp; Why I Define Them Using class &laquo; self</a></li>
+<li><a href="http://thirtysixthspan.com/posts/hash-tricks-in-ruby" target="_blank" rel="noopener">Hash Tricks in Ruby</a></li>
+<li><a href="http://blog.bigbinary.com/2017/12/12/ruby-2-5-added-yield_self.html" target="_blank" rel="noopener">Ruby 2.5 added yield_self</a></li>
+<li><a href="https://tom-lord.github.io/10-More-New-Features-In-Ruby-2.5/" target="_blank" rel="noopener">10 More New Features in Ruby v2.5</a></li>
+<li><a href="https://robots.thoughtbot.com/ruby-2-keyword-arguments" target="_blank" rel="noopener">Ruby 2 Keyword Arguments</a></li>
+<li><a href="http://thirtysixthspan.com/posts/hash-tricks-in-ruby" target="_blank" rel="noopener">Hash Tricks in Ruby</a></li>
+<li><a href="https://blog.arkency.com/2017/07/nil-empty-blank-ruby-rails-difference/" target="_blank" rel="noopener">nil?, empty?, blank? in Ruby on Rails - what&rsquo;s the difference actually?</a></li>
+<li><a href="https://www.nasseri.io/posts/2.html" target="_blank" rel="noopener">Introducing Fir, the Friendly, Interactive Ruby REPL</a></li>
+<li><a href="https://stackoverflow.com/a/26750460/3874570" target="_blank" rel="noopener">What is the difference between tr and gsub?</a></li>
+<li><a href="https://samsaffron.com/archive/2018/02/16/reducing-string-duplication-in-ruby" target="_blank" rel="noopener">Reducing String duplication in Ruby</a></li>
+<li><a href="https://www.regular-expressions.info/lookaround.html" target="_blank" rel="noopener">Lookahead and Lookbehind Zero-Length Assertions</a></li>
+<li><a href="https://dejimata.com/2017/5/20/the-ruby-module-builder-pattern" target="_blank" rel="noopener">The Ruby Module Builder Pattern</a></li>
+<li><a href="https://bowild.wordpress.com/2018/05/01/rubys-rack-push-decoupling-the-real-time-web-application-from-the-web/" target="_blank" rel="noopener">Ruby’s Rack Push: Decoupling the real-time web application from the web</a></li>
+<li><a href="https://medium.com/square-corner-blog/new-class-naming-rules-in-ruby-bb3b45150c37" target="_blank" rel="noopener">New Class Naming Rules in Ruby 2.6</a></li>
+<li><a href="http://blog.testdouble.com/posts/2018-05-17-do-we-need-dependency-injection-in-ruby.html" target="_blank" rel="noopener">Do we need dependency injection in Ruby?</a></li>
+<li><a href="https://medium.com/square-corner-blog/rubys-new-exception-keyword-arguments-4d5bbb504d37" target="_blank" rel="noopener">Ruby’s New Exception Keyword Arguments</a></li>
+<li><a href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/88819" target="_blank" rel="noopener">The desicive moment of the language name Ruby</a></li>
+<li><a href="https://medium.com/rubyinside/building-a-creative-fun-api-client-in-ruby-a-builder-pattern-variation-f50613abd4c3" target="_blank" rel="noopener">Building A Creative &amp; Fun API Client In Ruby: A Builder Pattern Variation</a></li>
+<li><a href="https://www.morozov.is/2018/05/27/do-notation-ruby.html" target="_blank" rel="noopener">Railway Oriented programming in Ruby: do notation vs dry-transaction</a></li>
+<li><a href="https://medium.com/square-corner-blog/rubys-new-infinite-range-syntax-0-97777cf06270" target="_blank" rel="noopener">Ruby’s New Infinite Range Syntax: (0..)</a></li>
+<li><a href="https://coderwall.com/p/fkg-ng/display-date-ranges-in-text-in-rails" target="_blank" rel="noopener">Display date ranges in text in Rails</a></li>
+<li><a href="https://blog.bigbinary.com/2018/07/10/ruby-2.6-raise-exception-for-else-without-rescue.html" target="_blank" rel="noopener">Ruby 2.6 raises exception when &lsquo;else&rsquo; is used inside &lsquo;begin..end&rsquo; block without &lsquo;rescue&rsquo;</a></li>
+<li><a href="https://blog.bigbinary.com/2018/07/17/ruby-2-6-adds-split-with-block.html" target="_blank" rel="noopener">Ruby 2.6 adds String#split with block</a></li>
+<li><a href="http://rea.tech/evaluating-scala-and-sticking-with-ruby/" target="_blank" rel="noopener">Evaluating Scala and sticking with Ruby</a></li>
+<li><a href="https://medium.com/futuredev/stop-shipping-untested-ruby-code-with-undercover-1edc963be4a6" target="_blank" rel="noopener">Stop shipping untested Ruby code with undercover</a></li>
+<li><a href="https://bundler.io/v1.16/guides/bundler_in_a_single_file_ruby_script.html" target="_blank" rel="noopener">How to use Bundler in a single-file Ruby script</a></li>
+<li><a href="https://samsaffron.com/archive/2018/08/07/finding-where-stdout-stderr-debug-messages-are-coming-from" target="_blank" rel="noopener">Finding where STDOUT/STDERR debug messages are coming from</a></li>
+<li><a href="https://tenderlovemaking.com/2016/02/05/i-am-a-puts-debuggerer.html#i-have-a-deadlock-but-i-dont-know-where" target="_blank" rel="noopener">I am a puts debuggerer (Aaron Patterson)</a></li>
+<li><a href="https://viewsourcecode.org/why/hacking/seeingMetaclassesClearly.html" target="_blank" rel="noopener">Seeing Metaclasses Clearly</a></li>
+<li><a href="https://medium.com/@baweaver/destructuring-in-ruby-9e9bd2be0360" target="_blank" rel="noopener">Destructuring Methods in Ruby</a></li>
+<li><a href="https://medium.com/@farsi_mehdi/alias-in-ruby-bf89be245f69" target="_blank" rel="noopener">alias vs alias_method</a></li>
+<li><a href="https://blog.driftingruby.com/updated-to-mojave/" target="_blank" rel="noopener">Updated to Mojave (Ruby)</a></li>
+<li><a href="https://medium.com/@farsi_mehdi/5-ruby-tips-you-probably-dont-know-76fee34cfd0c" target="_blank" rel="noopener">Tips About Arrays and Hashes You Probably Don’t Know</a></li>
+<li><a href="https://medium.com/@farsi_mehdi/ruby-instance-eval-a49fd4afa268" target="_blank" rel="noopener">Ruby: instance_eval</a></li>
+<li><a href="https://www.rubyguides.com/2018/10/defined-keyword/" target="_blank" rel="noopener">How to Check If a Variable is Defined in Ruby</a></li>
+<li><a href="https://blog.appsignal.com/2018/09/25/explicitly-casting-vs-implicitly-coercing-types-in-ruby.html" target="_blank" rel="noopener">to_s or to_str? Explicitly casting vs. implicitly coercing types</a></li>
+<li><a href="https://medium.com/tailor-tech/whats-new-in-ruby-2-6-a4774f3631c1" target="_blank" rel="noopener">What’s new in Ruby 2.6?</a></li>
+<li><a href="https://supergood.software/statements-and-expressions/" target="_blank" rel="noopener">Statements and Expressions in Ruby</a></li>
+<li><a href="https://medium.com/@hcstebbins/clean-module-injection-in-ruby-91c2ca34e0ec" target="_blank" rel="noopener">Clean Module Injection in Ruby</a></li>
+<li><a href="https://solnic.codes/2012/04/11/get-rid-of-that-code-smell-control-couple/" target="_blank" rel="noopener">Get Rid of That Code Smell – Control Couple</a></li>
+<li><a href="https://blog.codeship.com/good-module-bad-module/" target="_blank" rel="noopener">Good Module, Bad Module (@schneems)</a></li>
+<li><a href="https://www.leighhalliday.com/ruby-struct" target="_blank" rel="noopener">The simple but powerful Ruby Struct</a></li>
+<li><a href="https://robots.thoughtbot.com/sandi-metz-rules-for-developers" target="_blank" rel="noopener">Sandi Metz&rsquo; Rules For Developers</a></li>
+<li><a href="http://www.wjwh.eu/posts/2018-10-29-double-hijack.html" target="_blank" rel="noopener">Maintaining 65k open connections in a single Ruby process</a></li>
+<li><a href="https://blog.appsignal.com/2018/10/30/ruby-magic-building-a-ruby-c-extension-from-scratch.html" target="_blank" rel="noopener">Building a Ruby C Extension From Scratch</a></li>
+<li><a href="https://bbs-software.com/blog/2018/08/04/using-lambdas-to-simplify-varying-behaviors-in-your-code.html" target="_blank" rel="noopener">Using Lambdas to Simplify Varying Behaviors in Your Code</a></li>
+<li><a href="https://robots.thoughtbot.com/types-of-coupling" target="_blank" rel="noopener">Types of Coupling (Thoughtbot)</a></li>
+<li><a href="https://samphippen.com/hash-rockets-are-good-actually/" target="_blank" rel="noopener">Hash Rockets are good actually</a></li>
+<li><a href="https://medium.com/@k0kubun/the-method-jit-compiler-for-ruby-2-6-388ee0989c13" target="_blank" rel="noopener">The method JIT compiler for Ruby 2.6</a></li>
+<li><a href="https://dev.to/hanachin/ruby-27-new-feature-method-reference-operator-38l2" target="_blank" rel="noopener">Ruby 2.7 new feature: Method reference operator</a></li>
+<li><a href="https://bugs.ruby-lang.org/issues/15022#Why-this-is-needed" target="_blank" rel="noopener">Ruby 2.6 Oneshot coverage</a></li>
+<li><a href="https://binarapps.com/blog/ruby-object-id-mystery/" target="_blank" rel="noopener">Why true and nil have different object_ids in Ruby-1.9 and Ruby-2</a></li>
+<li><a href="https://bugs.ruby-lang.org/issues/6763" target="_blank" rel="noopener">Flonum technique to speedup floating computations on 64bit</a></li>
+<li><a href="https://robots.thoughtbot.com/ruby-memoization-and-alternatives" target="_blank" rel="noopener">Ruby Memoization and Alternatives</a></li>
+<li><a href="https://www.reddit.com/r/ruby/comments/14u7zs/dont_subclass_struct_classes_please/" target="_blank" rel="noopener">Don&rsquo;t subclass Struct classes please</a></li>
+<li><a href="https://thepugautomatic.com/2013/08/struct-inheritance-is-overused/" target="_blank" rel="noopener">Struct inheritance is overused</a></li>
+<li><a href="https://www.rubyguides.com/2016/02/ruby-procs-and-lambdas/" target="_blank" rel="noopener">The Ultimate Guide to Blocks, Procs &amp; Lambdas</a></li>
+<li><a href="https://docs.ruby-lang.org/en/trunk/syntax/assignment_rdoc.html" target="_blank" rel="noopener">Assignment in Ruby</a></li>
+<li><a href="https://medium.com/@mctaylorpants/a-weird-and-wonderful-trip-through-rubys-standard-library-762ddcf7a908" target="_blank" rel="noopener">A Weird and Wonderful Trip through Ruby’s Standard Library</a></li>
+<li><a href="https://www.johnhawthorn.com/2018/02/playing-with-ruby-jit-mjit/" target="_blank" rel="noopener">Playing with ruby&rsquo;s new JIT: MJIT (2018)</a></li>
+<li><a href="https://www.rubytapas.com/2019/01/08/boolean/" target="_blank" rel="noopener">Why Ruby doesn’t have a Boolean class (Avdi Grimm)</a></li>
+<li><a href="https://medium.com/@baweaver/ruby-2-7-numbered-parameters-3f5c06a55fe4" target="_blank" rel="noopener">Ruby 2.7 — Numbered Parameters</a></li>
+<li><a href="https://medium.com/@dvandersluis/an-rspec-time-issue-and-its-not-about-timezones-a89bbd167b86" target="_blank" rel="noopener">DateTime is only comparing dates</a></li>
+<li><a href="https://andycroll.com/ruby/use-the-presence-method/" target="_blank" rel="noopener">Use the presence method</a></li>
+<li><a href="https://andycroll.com/ruby/delegate-to-simplify-your-code/" target="_blank" rel="noopener">Delegate to simplify your code</a></li>
+<li><a href="https://medium.com/@nothingisfunny/sorting-arrays-in-ruby-375c547a5d6" target="_blank" rel="noopener">Sorting arrays and hashes in Ruby</a></li>
+<li><a href="http://alanwsmith.com/convert-ruby-array-into-keys-of-new-hash" target="_blank" rel="noopener">Convert a Ruby Array into the Keys of a New Hash</a></li>
+<li><a href="https://medium.com/@baweaver/ruby-2-7-pattern-matching-first-impressions-cdb93c6246e6" target="_blank" rel="noopener">Ruby 2.7 — Pattern Matching — First Impressions</a></li>
+<li><a href="https://alyssa.is/doing-a-lightning-talk-at-bath-ruby-2018/" target="_blank" rel="noopener">My Favourite Parts of the Ruby Standard Library that You Might Not Know About</a></li>
+<li><a href="https://tonyarcieri.com/a-gentle-introduction-to-nio4r" target="_blank" rel="noopener">A gentle introduction to nio4r: low-level portable asynchronous I/O for Ruby</a></li>
+<li><a href="https://www.geeksforgeeks.org/ruby-integer-downto-function-with-example/" target="_blank" rel="noopener">A gentle introduction to nio4r: low-level portable asynchronous I/O for Ruby</a></li>
+<li><a href="https://speakerdeck.com/k_tsj/pattern-matching-new-feature-in-ruby-2-dot-7" target="_blank" rel="noopener">Pattern matching - New feature in Ruby 2.7</a></li>
+<li><a href="https://www.rubydoc.info/github/rails/arel/Arel/Visitors" target="_blank" rel="noopener">Visitor pattern in Ruby - Rails Arel</a></li>
+<li><a href="https://www.rubydoc.info/stdlib/core/Kernel:select" target="_blank" rel="noopener">Method: Kernel#select</a></li>
+<li><a href="https://www.ruby-lang.org/en/news/2019/12/12/separation-of-positional-and-keyword-arguments-in-ruby-3-0/" target="_blank" rel="noopener">Separation of positional and keyword arguments in Ruby 3.0</a></li>
+<li><a href="https://www.thoughtco.com/combining-arrays-in-ruby-2907842" target="_blank" rel="noopener">How to Combine Arrays in Ruby</a></li>
+<li><a href="https://stackoverflow.com/q/51021/3874570" target="_blank" rel="noopener">raise vs throw</a></li>
+<li><a href="https://blog.bigbinary.com/2017/02/23/ruby-2-4-implements-integer-digits-for-extracting-digits-in-place-value-notation.html" target="_blank" rel="noopener">Integer#digits extracts digits</a></li>
+<li><a href="https://stackoverflow.com/questions/22191938/ruby-convert-array-to-fixnum" target="_blank" rel="noopener">Ruby convert Array to Integer</a></li>
+<li><a href="https://thoughtbot.com/blog/untangling-ruby-threads" target="_blank" rel="noopener">Untangling Ruby Threads</a></li>
+<li><a href="https://medium.com/metalanguage/objects-are-for-interactions-functions-are-for-data-936e044cc729" target="_blank" rel="noopener">Objects are for interactions, functions are for data</a></li>
+<li><a href="https://medium.com/rubycademy/ruby-class-eval-vs-module-eval-6c3cc24a070" target="_blank" rel="noopener">Ruby: class_eval vs module_eval</a></li>
+<li><a href="https://blog.appsignal.com/2019/01/08/ruby-magic-bindings-and-lexical-scope.html" target="_blank" rel="noopener">Bindings and Lexical Scope in Ruby</a></li>
+<li><a href="https://ruby-doc.org/core-2.7.1/Binding.html" target="_blank" rel="noopener">Binding and eval() in Ruby 2.7</a></li>
+<li><a href="https://eregon.me/blog/2019/11/10/the-delegation-challenge-of-ruby27.html" target="_blank" rel="noopener">The Delegation Challenge of Ruby 2.7 and the &ldquo;&hellip;&rdquo; operator</a></li>
+<li><a href="https://eregon.me/blog/2016/11/28/optcarrot.html" target="_blank" rel="noopener">TruffleRuby - NES emulator at 150 fps with the GUI</a></li>
+<li><a href="https://stackoverflow.com/a/7627271/3874570" target="_blank" rel="noopener">Ruby in C - how to specify default argument values?</a></li>
+</ul>
+
+            </div>
+
+        </article>
+
+        
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+    
+
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2020&nbsp;Alexander Shemetovskiy</div>
+
+            
+    
+        <ul class="socials"><li class="socials-item">
+                    <a href="/rss.xml" target="_blank" rel="external noopener" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="mailto:alexkval@gmail.com" target="_blank" rel="external noopener" title="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://github.com/alexkval" target="_blank" rel="external noopener" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://twitter.com/alexkval" target="_blank" rel="external noopener" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://t.me/alexkval" target="_blank" rel="external noopener" title="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon social-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                </li></ul>
+    
+
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true,
+        header: '[data-scroll-header]'
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/meme.min.185530990dfec107a70ab138f45085aabdf7c3888ebc363f667497978c71d3eb.js" integrity="sha256-GFUwmQ3&#43;wQenCrE49FCFqr33w4iOvDY/ZnSXl4xx0&#43;s="></script>
+
+    </body>
+</html>

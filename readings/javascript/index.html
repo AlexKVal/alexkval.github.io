@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.71.0" /><meta name="theme-color" content="#fff" />
+
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title> | Alexander Shemetovskiy</title>
+
+    <link rel="stylesheet" href="/css/meme.min.58bc39dbe134c5e44a78e94ce3e1861400ca666811a7cdadca215d1fae085f0d.css" integrity="sha256-WLw52&#43;E0xeRKeOlM4&#43;GGFADKZmgRp82tyiFdH64IXw0=" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="Alexander Shemetovskiy" /><meta name="description" content="JavaScript
+ Javascript Frameworks: A futile attempt at objectivity (March 2017) You Should Learn Vanilla JavaScript Before Fancy JS Frameworks The Basics of DOM Manipulation in Vanilla JavaScript (No jQuery) (Now More Than Ever) You Might Not Need jQuery You Don&amp;rsquo;t Need jQuery - Events Decoupling Your HTML, CSS, and JavaScript 7 really good reasons not to use TypeScript 3 Different Kinds of Prototypal Inheritance: ES6&#43; Edition The Origin of Stimulus." />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Alexander Shemetovskiy" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Alexander Shemetovskiy" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://alexkval.github.io/readings/javascript/" />
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "datePublished": "2014-12-28T12:00:00+00:00",
+        "dateModified": "2020-05-25T00:53:59+01:00",
+        "url": "https://alexkval.github.io/readings/javascript/",
+        "name": "",
+        "description": "JavaScript\n Javascript Frameworks: A futile attempt at objectivity (March 2017) You Should Learn Vanilla JavaScript Before Fancy JS Frameworks The Basics of DOM Manipulation in Vanilla JavaScript (No jQuery) (Now More Than Ever) You Might Not Need jQuery You Don\u0026rsquo;t Need jQuery - Events Decoupling Your HTML, CSS, and JavaScript 7 really good reasons not to use TypeScript 3 Different Kinds of Prototypal Inheritance: ES6+ Edition The Origin of Stimulus.",
+        "image": "https://alexkval.github.io/apple-touch-icon.png",
+        "license": "Copyright © Alexander Shemetovskiy, all rights reserved.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Alexander Shemetovskiy",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://alexkval.github.io/apple-touch-icon.png"
+            },
+            "url": "https://alexkval.github.io/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://alexkval.github.io/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:site" content="@alexkval" />
+<meta name="twitter:creator" content="@alexkval" />
+
+    
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="JavaScript
+ Javascript Frameworks: A futile attempt at objectivity (March 2017) You Should Learn Vanilla JavaScript Before Fancy JS Frameworks The Basics of DOM Manipulation in Vanilla JavaScript (No jQuery) (Now More Than Ever) You Might Not Need jQuery You Don&amp;rsquo;t Need jQuery - Events Decoupling Your HTML, CSS, and JavaScript 7 really good reasons not to use TypeScript 3 Different Kinds of Prototypal Inheritance: ES6&#43; Edition The Origin of Stimulus." />
+<meta property="og:url" content="https://alexkval.github.io/readings/javascript/" />
+<meta property="og:site_name" content="Alexander Shemetovskiy" />
+<meta property="og:locale" content="en" /><meta property="og:image" content="https://alexkval.github.io/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+
+        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+
+        
+
+
+
+
+    
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-67171111-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header" data-scroll-header>
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">Alexander Shemetovskiy</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/posts/"><span class="menu-item-name">Posts</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item active"><a href="/readings/"><span class="menu-item-name">Readings</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/about/"><span class="menu-item-name">About</span></a>
+                </li>
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post" data-small-caps="true" data-align="default" data-type="readings" data-toc-num="true">
+
+            <h1 class="post-title"></h1>
+
+            
+
+            
+
+            
+
+            <div class="post-body">
+              <p><strong>JavaScript</strong></p>
+<ul>
+<li><a href="https://medium.com/@mattburgess/javascript-frameworks-a-futile-attempt-at-objectivity-adf6e75d2fbe#.upulieplp" target="_blank" rel="noopener">Javascript Frameworks: A futile attempt at objectivity (March 2017)</a></li>
+<li><a href="https://snipcart.com/blog/learn-vanilla-javascript-before-using-js-frameworks" target="_blank" rel="noopener">You Should Learn Vanilla JavaScript Before Fancy JS Frameworks</a></li>
+<li><a href="https://www.sitepoint.com/dom-manipulation-vanilla-javascript-no-jquery/" target="_blank" rel="noopener">The Basics of DOM Manipulation in Vanilla JavaScript (No jQuery)</a></li>
+<li><a href="https://css-tricks.com/now-ever-might-not-need-jquery/" target="_blank" rel="noopener">(Now More Than Ever) You Might Not Need jQuery</a></li>
+<li><a href="https://blog.garstasio.com/you-dont-need-jquery/events/" target="_blank" rel="noopener">You Don&rsquo;t Need jQuery - Events</a></li>
+<li><a href="https://philipwalton.com/articles/decoupling-html-css-and-javascript/" target="_blank" rel="noopener">Decoupling Your HTML, CSS, and JavaScript</a></li>
+<li><a href="https://medium.com/javascript-in-plain-english/7-really-good-reasons-not-to-use-typescript-166af597c466" target="_blank" rel="noopener">7 really good reasons not to use TypeScript</a></li>
+<li><a href="https://medium.com/javascript-scene/3-different-kinds-of-prototypal-inheritance-es6-edition-32d777fa16c9#.ma4dg0cxa" target="_blank" rel="noopener">3 Different Kinds of Prototypal Inheritance: ES6+ Edition</a></li>
+<li><a href="https://github.com/stimulusjs/stimulus/blob/master/ORIGIN.md" target="_blank" rel="noopener">The Origin of Stimulus.js (DHH)</a></li>
+<li><a href="http://nts.strzibny.name/stimulus-js-front-end-framework-example/" target="_blank" rel="noopener">Taking Stimulus.js for a ride</a></li>
+<li><a href="https://nolanlawson.com/2016/08/15/the-cost-of-small-modules/" target="_blank" rel="noopener">The cost of small modules</a></li>
+<li><a href="https://medium.com/@tjholowaychuk/go-blows-away-node-in-pretty-much-every-way-3b412b5050d8" target="_blank" rel="noopener">Go blows away Node in pretty much every way IMO (TJ Holowaychuk)</a></li>
+<li><a href="https://www.nczonline.net/blog/tag/computer-science/" target="_blank" rel="noopener">Computer Science in JS</a></li>
+<li><a href="https://nodesource.com/blog/eleven-npm-tricks-that-will-knock-your-wombat-socks-off/" target="_blank" rel="noopener">11 Simple npm Tricks</a></li>
+<li><a href="https://reaktor.com/blog/javascript-performance-fundamentals-make-bluebird-fast/" target="_blank" rel="noopener">Three JavaScript performance fundamentals that make Bluebird fast</a></li>
+<li><a href="https://medium.freecodecamp.com/10-tips-to-maximize-your-javascript-debugging-experience-b69a75859329#.e1ck03n47" target="_blank" rel="noopener">Things you probably didn’t know you could do with Chrome’s Developer Console</a></li>
+<li><a href="https://medium.com/javascript-scene/angular-2-vs-react-the-ultimate-dance-off-60e7dfbc379c#.esfc0vgkb" target="_blank" rel="noopener">Angular 2 vs React: The Ultimate Dance Off</a></li>
+<li><a href="https://medium.com/the-vue-point/vue-2-0-is-here-ef1f26acf4b8#.o4966ml2t" target="_blank" rel="noopener">Vue 2.0 is Here!</a></li>
+<li><a href="https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.ytcnakn81" target="_blank" rel="noopener">How it feels to learn JavaScript in 2016</a></li>
+<li><a href="https://shift.infinite.red/npm-vs-yarn-cheat-sheet-8755b092e5cc#.o86wqsb3b" target="_blank" rel="noopener">NPM vs Yarn Cheat Sheet</a></li>
+<li><a href="https://medium.freecodecamp.com/seo-vs-react-is-it-neccessary-to-render-react-pages-in-the-backend-74ce5015c0c9#.5pgkc0t8t" target="_blank" rel="noopener">SEO vs. React: Web Crawlers are Smarter Than You Think</a></li>
+<li><a href="https://medium.com/@kentcdodds/migrating-to-jest-881f75366e7e#.24e8tt5em" target="_blank" rel="noopener">Migrating to Jest</a></li>
+<li><a href="https://blog.instant2fa.com/choosing-ember-over-react-in-2016-41a2e7fd341#.wi43m290x" target="_blank" rel="noopener">Choosing Ember over React in 2016</a></li>
+<li><a href="https://medium.freecodecamp.com/constant-confusion-why-i-still-use-javascript-function-statements-984ece0b72fd#.mopjeon2x" target="_blank" rel="noopener">Constant confusion: why I still use JavaScript function statements</a></li>
+<li><a href="https://medium.com/javascript-scene/top-javascript-frameworks-topics-to-learn-in-2017-700a397b711#.fm3ezgjzs" target="_blank" rel="noopener">Top JavaScript Frameworks &amp; Topics to Learn in 2017</a></li>
+<li><a href="http://fromrailstoember.com/12-you-dont-need-coffeescript/" target="_blank" rel="noopener">Tip #12 - You Don&rsquo;t Need CoffeeScript</a></li>
+<li><a href="https://medium.freecodecamp.com/ajax-explained-by-upgrading-your-video-game-character-17d26305163c#.4b2oqcm07" target="_blank" rel="noopener">AJAX Explained by Upgrading Your Video Game Character</a></li>
+<li><a href="https://www.sitepoint.com/a-beginners-guide-to-data-binding-in-d3-js/" target="_blank" rel="noopener">A Beginner’s Guide to Data Binding in D3.js</a></li>
+<li><a href="https://emptysqua.re/blog/building-node-applications-mongodb-backbone/" target="_blank" rel="noopener">Review of &ldquo;Building Node Applications with MongoDB and Backbone&rdquo;</a></li>
+<li><a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank" rel="noopener">Clean Code concepts adapted for JavaScript</a></li>
+<li><a href="https://github.com/una/YouMightNotNeedJS" target="_blank" rel="noopener">You Might Not Need JavaScript</a></li>
+<li><a href="http://jlongster.com/A-Prettier-Formatter" target="_blank" rel="noopener">A Prettier JavaScript Formatter</a></li>
+<li><a href="https://betweenthewires.org/between-the-wires-mootools-7ac80d4ca28f#.fbhk6ln03" target="_blank" rel="noopener">Between the Wires | MooTools</a></li>
+<li><a href="https://davidwalsh.name/neutrino" target="_blank" rel="noopener">An introductory post about Neutrino</a></li>
+<li><a href="https://medium.freecodecamp.com/reacts-jsx-vs-vue-s-templates-a-showdown-on-the-front-end-b00a70470409#.69a8t6i06" target="_blank" rel="noopener">React’s JSX vs Vue’s templates: a showdown on the front end</a></li>
+<li><a href="https://medium.freecodecamp.com/d3-and-canvas-in-3-steps-8505c8b27444#.tvmwqitip" target="_blank" rel="noopener">D3 and Canvas in 3 steps</a></li>
+<li><a href="https://medium.com/react-native-training/redux-4-ways-95a130da0cdc#.3mlb38lza" target="_blank" rel="noopener">Implementations of Thunk vs Saga vs Observable vs Redux Promise Middleware in 10 minutes</a></li>
+<li><a href="https://medium.freecodecamp.com/what-exactly-is-client-side-rendering-and-hows-it-different-from-server-side-rendering-bd5c786b340d#.cnozz6i9u" target="_blank" rel="noopener">Client-side vs. server-side rendering: why it’s not all black and white</a></li>
+<li><a href="http://www.2ality.com/2017/02/ecmascript-2018.html" target="_blank" rel="noopener">Feature watch: ECMAScript 2018</a></li>
+<li><a href="http://www.2ality.com/2016/10/understanding-promises.html" target="_blank" rel="noopener">Three ways of understanding Promises</a></li>
+<li><a href="https://www.joyent.com/node-js/production/design/errors" target="_blank" rel="noopener">Error Handling in Node.js</a></li>
+<li><a href="http://www.quirksmode.org/blog/archives/2015/05/web_vs_native_l.html" target="_blank" rel="noopener">Web vs. native: let’s concede defeat</a></li>
+<li><a href="https://medium.com/@kentcdodds/introducing-glamorous-fb3c9f4ed20e" target="_blank" rel="noopener">Introducing glamorous</a></li>
+<li><a href="https://www.sitepoint.com/quick-tip-game-loop-in-javascript/" target="_blank" rel="noopener">Quick Tip: How to Make a Game Loop in JavaScript</a></li>
+<li><a href="https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9" target="_blank" rel="noopener">6 Reasons Why JavaScript’s Async/Await Blows Promises Away (Tutorial)</a></li>
+<li><a href="https://medium.com/@tomdale/glimmer-js-whats-the-deal-with-typescript-f666d1a3aad0" target="_blank" rel="noopener">Glimmer.js: What’s the Deal with TypeScript?</a></li>
+<li><a href="https://slack.engineering/typescript-at-slack-a81307fa288d" target="_blank" rel="noopener">TypeScript at Slack</a></li>
+<li><a href="https://medium.freecodecamp.com/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8#.vztixnqq4" target="_blank" rel="noopener">Requiring modules in Node.js: Everything you need to know</a></li>
+<li><a href="http://perfectionkills.com/the-poor-misunderstood-innerText/" target="_blank" rel="noopener">The poor, misunderstood innerText</a></li>
+<li><a href="https://medium.freecodecamp.com/es6-functions-9f61c72b1e86" target="_blank" rel="noopener">JavaScript ES6 Functions: The Good Parts</a></li>
+<li><a href="http://codingsans.com/blog/node-8" target="_blank" rel="noopener">Node 8: Five New Features You Need to Know</a></li>
+<li><a href="https://medium.com/@nodejs/n-api-next-generation-node-js-apis-for-native-modules-169af5235b06" target="_blank" rel="noopener">N-API: Next generation Node.js APIs for native modules</a></li>
+<li><a href="http://thejameskyle.com/javascripts-new-private-class-fields.html" target="_blank" rel="noopener">JavaScript’s new #private class fields</a></li>
+<li><a href="http://thejameskyle.com/adopting-flow-and-typescript.html" target="_blank" rel="noopener">Adopting Flow &amp; TypeScript</a></li>
+<li><a href="http://javascript.info/" target="_blank" rel="noopener">The Modern JavaScript Tutorial</a></li>
+<li><a href="https://gziolo.pl/2017/06/17/picking-jest-over-mocha/" target="_blank" rel="noopener">Picking Jest over Mocha – testing tools comparison</a></li>
+<li><a href="https://medium.freecodecamp.com/how-to-get-the-most-out-of-the-javascript-console-b57ca9db3e6d" target="_blank" rel="noopener">How to get the most out of the JavaScript console</a></li>
+<li><a href="https://github.com/wearehive/project-guidelines" target="_blank" rel="noopener">A set of best practices for JavaScript projects (Hive)</a></li>
+<li><a href="https://dev-blog.apollodata.com/apollo-server-1-0-a-graphql-server-for-all-node-js-frameworks-2b37d3342f7c" target="_blank" rel="noopener">Apollo Server 1.0 — A GraphQL Server for all Node.js frameworks</a></li>
+<li><a href="https://medium.com/the-node-js-collection/what-you-should-know-to-really-understand-the-node-js-event-loop-and-its-metrics-c4907b19da4c" target="_blank" rel="noopener">What you should know to really understand the Node.js Event Loop</a></li>
+<li><a href="https://medium.com/javascript-scene/why-composition-is-harder-with-classes-c3e627dcd0aa" target="_blank" rel="noopener">Why Composition is Harder with Classes</a></li>
+<li><a href="https://facebook.github.io/react/blog/2017/07/26/error-handling-in-react-16.html" target="_blank" rel="noopener">Error Handling in React 16</a></li>
+<li><a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/" target="_blank" rel="noopener">The Node.js Event Loop, Timers, and process.nextTick()</a></li>
+<li><a href="https://blog.dareboost.com/en/2016/09/avoid-using-document-write-scripts-injection/" target="_blank" rel="noopener">Why you should avoid using document.write, specifically for scripts injection</a></li>
+<li><a href="https://davidwalsh.name/window-iframe" target="_blank" rel="noopener">window.postMessage Child-To-Parent Communication</a></li>
+<li><a href="https://stackoverflow.com/a/19738288/3874570" target="_blank" rel="noopener">$(&ldquo;html, body&rdquo;).animate()</a></li>
+<li><a href="https://css-tricks.com/using-the-html5-history-api/" target="_blank" rel="noopener">HTML5 window.history API</a></li>
+<li><a href="https://blog.kollegorna.se/3-years-of-ember-6-months-of-react-34ce909a5ce1" target="_blank" rel="noopener">3+ years of Ember, 6 months of React</a></li>
+<li><a href="https://medium.com/javascript-scene/mocking-is-a-code-smell-944a70c90a6a" target="_blank" rel="noopener">Mocking is a Code Smell (Eric Elliot)</a></li>
+<li><a href="https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep/39914235#39914235" target="_blank" rel="noopener">How to sleep() in JS 2017</a></li>
+<li><a href="https://medium.com/@brunn/autofocus-in-ios-safari-458215514a5f" target="_blank" rel="noopener">(Sort of) Fixing autofocus in iOS Safari</a></li>
+<li><a href="http://2ality.com/2017/11/about-reasonml.html" target="_blank" rel="noopener">What is ReasonML? (Dr. Axel)</a></li>
+<li><a href="https://github.com/Chalarangelo/30-seconds-of-code" target="_blank" rel="noopener">Curated collection of useful Javascript snippets that you can understand in 30 seconds or less</a></li>
+<li><a href="https://stackoverflow.com/questions/48270127/can-a-1-a-2-a-3-ever-evaluate-to-true" target="_blank" rel="noopener">Can (a ==1 &amp;&amp; a== 2 &amp;&amp; a==3) ever evaluate to true?</a></li>
+<li><a href="https://medium.com/@abderrahman.hamila/cors-is-not-your-nightmare-but-6cbc749400cf" target="_blank" rel="noopener">CORS is not your nightmare!</a></li>
+<li><a href="https://medium.com/@baphemot/understanding-cors-18ad6b478e2b" target="_blank" rel="noopener">Understanding CORS</a></li>
+<li><a href="https://stackoverflow.com/questions/12204571/mobile-safari-javascript-focus-method-on-inputfield-only-works-with-click" target="_blank" rel="noopener">Mobile Safari: Javascript focus() method on input field only works with click?</a></li>
+<li><a href="https://stackoverflow.com/questions/18728166/programmatically-focus-on-next-input-field-in-mobile-safari" target="_blank" rel="noopener">Programmatically focus on next input field in mobile safari</a></li>
+<li><a href="https://blog.risingstack.com/why-developers-love-node-js-2018-survey/" target="_blank" rel="noopener">Why Developers Love Node.js &amp; what&rsquo;s their main issue with it?</a></li>
+<li><a href="http://openmymind.net/2012/5/16/Ten-Features-I-Like-About-CoffeeScript/" target="_blank" rel="noopener">Ten Features I Like About CoffeeScript</a></li>
+<li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/" target="_blank" rel="noopener">Loading Third-Party JavaScript (Addy Osmani)</a></li>
+<li><a href="https://medium.com/@marcisbee/how-i-built-super-fast-js-framework-faster-than-react-ea99f0d03150" target="_blank" rel="noopener">How I built super fast JS framework. Radi.js intro</a></li>
+<li><a href="https://medium.com/@WebReflection/vanilla-dom-vs-hyperhtml-27e3c866acb5" target="_blank" rel="noopener">Vanilla DOM VS hyperHTML</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Scroll-linked_effects" target="_blank" rel="noopener">Scroll-linked effects</a></li>
+<li><a href="https://medium.freecodecamp.org/google-publishes-a-javascript-style-guide-here-are-some-key-lessons-1810b8ad050b" target="_blank" rel="noopener">Google publishes a JavaScript style guide</a></li>
+<li><a href="https://medium.freecodecamp.org/what-exactly-is-node-js-ae36e97449f5" target="_blank" rel="noopener">What exactly is Node.js?</a></li>
+<li><a href="https://mathiasbynens.be/notes/shapes-ics" target="_blank" rel="noopener">JavaScript engine fundamentals: Shapes and Inline Caches</a></li>
+<li><a href="https://medium.com/@omm2/doing-vue-after-three-years-with-react-3d36d53abbd6" target="_blank" rel="noopener">Doing Vue after three years with React</a></li>
+<li><a href="https://medium.com/dailyjs/threads-in-node-10-5-0-a-practical-intro-3b85a0a3c953" target="_blank" rel="noopener">Threads in Node 10.5.0: a practical intro</a></li>
+<li><a href="http://terrcin.io/2015/05/10/browser-tab-tracking/" target="_blank" rel="noopener">Browser tab tracking</a></li>
+<li><a href="https://css-tricks.com/build-a-state-management-system-with-vanilla-javascript/" target="_blank" rel="noopener">Build a state management system with vanilla JavaScript</a></li>
+<li><a href="https://medium.com/javascript-in-plain-english/i-created-the-exact-same-app-in-react-and-vue-here-are-the-differences-e9a1ae8077fd" target="_blank" rel="noopener">I created the exact same app in React and Vue. Here are the differences</a></li>
+<li><a href="https://medium.com/front-end-hacking/javascript-whats-new-in-ecmascript-2018-es2018-17ede97f36d5" target="_blank" rel="noopener">JavaScript: What’s new in ECMAScript 2018 (ES2018)?</a></li>
+<li><a href="https://mathiasbynens.be/notes/async-stack-traces" target="_blank" rel="noopener">Asynchronous stack traces: why await beats .then()</a></li>
+<li><a href="https://www.sitepoint.com/fusebox-faster-webpack-alternative/" target="_blank" rel="noopener">Introduction to FuseBox — a Faster, Simpler Webpack Alternative</a></li>
+<li><a href="https://hueniverse.com/on-node-framework-popularity-355fbde5cbe4" target="_blank" rel="noopener">On Node Framework Popularity (Eran Hammer)</a></li>
+<li><a href="https://github.com/Tencent/omi" target="_blank" rel="noopener">Omi: Next Generation Web Framework in 4kb JavaScript</a></li>
+<li><a href="https://timkadlec.com/remembers/2018-09-06-chromes-noscript-intervention/" target="_blank" rel="noopener">Chrome&rsquo;s NOSCRIPT Intervention</a></li>
+<li><a href="https://snugug.com/musings/you-probably-shouldnt-use-javascript-framework/" target="_blank" rel="noopener">You probably shouldn&rsquo;t use a JavaScript Framework</a></li>
+<li><a href="https://hackernoon.com/one-reason-you-probably-shouldnt-bet-your-whole-career-on-javascript-c03d779e96a" target="_blank" rel="noopener">One reason you shouldn’t bet your whole career on JS</a></li>
+<li><a href="https://github.com/leonardomso/33-js-concepts#readme" target="_blank" rel="noopener">33 Concepts Every JavaScript Developer Should KnowN</a></li>
+<li><a href="https://www.monterail.com/blog/nodejs-development-enterprises" target="_blank" rel="noopener">Reasons Why Node.js Has Become a Standard Technology for Enterprise-Level Organizations</a></li>
+<li><a href="https://codeburst.io/why-you-shouldnt-spend-one-more-second-choosing-a-javascript-framework-3396e0fb1d96" target="_blank" rel="noopener">Why you shouldn’t spend one more second choosing a JavaScript framework</a></li>
+<li><a href="https://flaviocopes.com/canvas/" target="_blank" rel="noopener">Code driven guide to HTML Canvas</a></li>
+<li><a href="https://medium.com/@mattburgess/beyond-console-log-2400fdf4a9d8" target="_blank" rel="noopener">Beyond console.log()</a></li>
+<li><a href="https://blog.bitsrc.io/the-chronicles-of-javascript-objects-2d6b9205cd66" target="_blank" rel="noopener">The Chronicles of JavaScript Objects</a></li>
+<li><a href="https://www.javascriptjanuary.com/blog/fancy-function-parameters" target="_blank" rel="noopener">Fancy Function Parameters</a></li>
+<li><a href="https://medium.com/@vvkchandra/essential-javascript-mastering-immediately-invoked-function-expressions-67791338ddc6" target="_blank" rel="noopener">Essential JavaScript: Mastering Immediately-invoked Function Expressions</a></li>
+<li><a href="https://www.jvandemo.com/a-10-minute-primer-to-javascript-modules-module-formats-module-loaders-and-module-bundlers/" target="_blank" rel="noopener">JavaScript modules, module formats, module loaders and module bundlers</a></li>
+<li><a href="https://hackernoon.com/effective-functional-javascript-first-class-and-higher-order-functions-713fde8df50a" target="_blank" rel="noopener">First-class and Higher Order Functions: Effective Functional JavaScript</a></li>
+<li><a href="https://codeburst.io/javascript-passing-by-value-vs-reference-explained-in-plain-english-8d00fd06a47c" target="_blank" rel="noopener">Javascript Passing by Value vs. Reference Explained in Plain English</a></li>
+<li><a href="https://medium.freecodecamp.org/prototype-in-js-busted-5547ec68872" target="_blank" rel="noopener">Prototype in JavaScript: it’s quirky, but here’s how it works</a></li>
+<li><a href="https://javascript.info/new-function" target="_blank" rel="noopener">The &ldquo;new Function&rdquo; syntax</a></li>
+<li><a href="https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8#1daf" target="_blank" rel="noopener">I never understood JavaScript closures</a></li>
+<li><a href="https://develoger.com/settimeout-vs-setinterval-cff85142555b" target="_blank" rel="noopener">setTimeout VS setInterval</a></li>
+<li><a href="https://javascript.info/settimeout-setinterval" target="_blank" rel="noopener">Scheduling: setTimeout and setInterval</a></li>
+<li><a href="https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420" target="_blank" rel="noopener">“Super” and “Extends” In JavaScript ES6 - Understanding The Tough Parts</a></li>
+<li><a href="https://medium.com/javascript-scene/top-javascript-frameworks-and-topics-to-learn-in-2019-b4142f38df20" target="_blank" rel="noopener">Top JavaScript Frameworks and Topics to Learn in 2019 (Eric Elliot)</a></li>
+<li><a href="https://coderwall.com/p/b1o2gw/getting-a-list-of-your-eventlisteners-so-you-can-trigger-it-programmatically" target="_blank" rel="noopener">Getting a list of your eventListeners so you can trigger it programmatically</a></li>
+<li><a href="https://www.javascriptjanuary.com/blog/defensive-javascript" target="_blank" rel="noopener">Defensive JavaScript</a></li>
+<li><a href="https://shift.infinite.red/avoid-nightmares-nsfw-js-ab7b176978b1" target="_blank" rel="noopener">Avoid Nightmares — NSFW JS</a></li>
+<li><a href="https://developers.google.com/web/updates/2018/12/class-fields" target="_blank" rel="noopener">Public and private class fields</a></li>
+<li><a href="https://levelup.gitconnected.com/design-patterns-in-modern-javascript-development-ec84d8be06ca" target="_blank" rel="noopener">Design patterns in modern JavaScript development</a></li>
+<li><a href="https://svelte.dev/blog/svelte-3-rethinking-reactivity" target="_blank" rel="noopener">Svelte 3: Rethinking reactivity</a></li>
+<li><a href="https://github.com/valtech-nyc/proposal-fsharp-pipelines/blob/master/README.md" target="_blank" rel="noopener">ESNext Proposal: F# Pipeline Operator</a></li>
+<li><a href="https://bellard.org/quickjs/quickjs.html" target="_blank" rel="noopener">QuickJS Javascript Engine</a></li>
+<li><a href="https://2ality.com/2019/07/global-scope.html" target="_blank" rel="noopener">How do JavaScript’s global variables really work?</a></li>
+<li><a href="https://blog.logrocket.com/what-is-deno/" target="_blank" rel="noopener">What’s Deno, and how is it different from Node.js?</a></li>
+<li><a href="https://2ality.com/2019/07/optional-chaining.html" target="_blank" rel="noopener">ES proposal: optional chaining (2019)</a></li>
+<li><a href="https://www.taniarascia.com/javascript-mvc-todo-app/" target="_blank" rel="noopener">Writing a Simple MVC App in Plain JavaScript</a></li>
+<li><a href="https://nodesource.com/blog/microservices-in-nodejs" target="_blank" rel="noopener">Explain like I&rsquo;m 5: Microservices in Node.js</a></li>
+<li><a href="https://www.ably.io/concepts/socketio" target="_blank" rel="noopener">Everything You Need To Know About Socket.IO</a></li>
+<li><a href="https://css-tricks.com/all-the-new-es2019-tips-and-tricks/" target="_blank" rel="noopener">All the New ES2019 Tips and Tricks</a></li>
+<li><a href="https://dev.to/ionic/apple-just-shipped-web-components-to-production-and-you-probably-missed-it-57pf" target="_blank" rel="noopener">Apple Just Shipped Web Components to Production and You Probably Missed It</a></li>
+<li><a href="https://blog.atulr.com/nodegui-intro/" target="_blank" rel="noopener">NodeGUI - Build native desktop apps with Javascript and CSS</a></li>
+<li><a href="https://dev.to/tlhunter/introducing-osgood-4k1m" target="_blank" rel="noopener">Introducing Osgood</a></li>
+<li><a href="https://www.robinwieruch.de/javascript-naming-conventions" target="_blank" rel="noopener">JavaScript Naming Conventions</a></li>
+<li><a href="https://dev.to/theburningmonk/common-node-js-mistakes-in-lambda-4a4j" target="_blank" rel="noopener">Common Node.js mistakes in Lambda</a></li>
+<li><a href="https://www.taniarascia.com/full-stack-cookies-localstorage-react-express/" target="_blank" rel="noopener">Full Stack Authentication: Cookies and Local Storage</a></li>
+<li><a href="https://medium.com/javascript-in-plain-english/i-created-the-exact-same-app-in-react-and-svelte-here-are-the-differences-c0bd2cc9b3f8" target="_blank" rel="noopener">I created the exact same app in React and Svelte. Here are the differences</a></li>
+<li><a href="http://willtaylor.blog/an-introduction-to-lambda-calculus-explained-through-javascript/" target="_blank" rel="noopener">An introduction to Lambda Calculus, explained through JavaScript</a></li>
+<li><a href="https://2ality.com/2019/07/optional-chaining.html" target="_blank" rel="noopener">Optional chaining</a></li>
+<li><a href="https://2ality.com/2018/02/string-prototype-matchall.html" target="_blank" rel="noopener">String.prototype.matchAll</a></li>
+<li><a href="https://quantumjavascript.app/" target="_blank" rel="noopener">Quantum circuit simulator in your browser</a></li>
+<li><a href="https://timkadlec.com/remembers/2020-04-21-the-cost-of-javascript-frameworks/" target="_blank" rel="noopener">The Cost of Javascript Frameworks</a></li>
+</ul>
+
+            </div>
+
+        </article>
+
+        
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+    
+
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2020&nbsp;Alexander Shemetovskiy</div>
+
+            
+    
+        <ul class="socials"><li class="socials-item">
+                    <a href="/rss.xml" target="_blank" rel="external noopener" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="mailto:alexkval@gmail.com" target="_blank" rel="external noopener" title="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://github.com/alexkval" target="_blank" rel="external noopener" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://twitter.com/alexkval" target="_blank" rel="external noopener" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://t.me/alexkval" target="_blank" rel="external noopener" title="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon social-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                </li></ul>
+    
+
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true,
+        header: '[data-scroll-header]'
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/meme.min.185530990dfec107a70ab138f45085aabdf7c3888ebc363f667497978c71d3eb.js" integrity="sha256-GFUwmQ3&#43;wQenCrE49FCFqr33w4iOvDY/ZnSXl4xx0&#43;s="></script>
+
+    </body>
+</html>

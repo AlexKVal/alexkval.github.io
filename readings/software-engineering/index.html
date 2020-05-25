@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.71.0" /><meta name="theme-color" content="#fff" />
+
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title> | Alexander Shemetovskiy</title>
+
+    <link rel="stylesheet" href="/css/meme.min.58bc39dbe134c5e44a78e94ce3e1861400ca666811a7cdadca215d1fae085f0d.css" integrity="sha256-WLw52&#43;E0xeRKeOlM4&#43;GGFADKZmgRp82tyiFdH64IXw0=" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="Alexander Shemetovskiy" /><meta name="description" content="Software engineering
+ What are questions? Holding a program in one&amp;rsquo;s head Don&amp;rsquo;t Solve Imaginary Problems Organizational Skills Beat Algorithmic Wizardry The Code Review Mindset Object-Oriented Programming: A Disaster Story Execution in the Kingdom of Nouns Best websites a programmer should visit What growth engineers can teach us about engineering How I build MVPs within 3 days Hunting for great names in programming How to actually ship software that actually works On Being A Senior Engineer The Shocking Secret About Static Types Make Large Scale Changes Incrementally with Branch By Abstraction Enabling Trunk Based Development with Deployment Pipelines Tell, Don&amp;rsquo;t Ask Designing Data-Driven Interfaces OSS." />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Alexander Shemetovskiy" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Alexander Shemetovskiy" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://alexkval.github.io/readings/software-engineering/" />
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "datePublished": "2014-12-28T12:00:00+00:00",
+        "dateModified": "2020-05-25T00:28:21+01:00",
+        "url": "https://alexkval.github.io/readings/software-engineering/",
+        "name": "",
+        "description": "Software engineering\n What are questions? Holding a program in one\u0026rsquo;s head Don\u0026rsquo;t Solve Imaginary Problems Organizational Skills Beat Algorithmic Wizardry The Code Review Mindset Object-Oriented Programming: A Disaster Story Execution in the Kingdom of Nouns Best websites a programmer should visit What growth engineers can teach us about engineering How I build MVPs within 3 days Hunting for great names in programming How to actually ship software that actually works On Being A Senior Engineer The Shocking Secret About Static Types Make Large Scale Changes Incrementally with Branch By Abstraction Enabling Trunk Based Development with Deployment Pipelines Tell, Don\u0026rsquo;t Ask Designing Data-Driven Interfaces OSS.",
+        "image": "https://alexkval.github.io/apple-touch-icon.png",
+        "license": "Copyright © Alexander Shemetovskiy, all rights reserved.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Alexander Shemetovskiy",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://alexkval.github.io/apple-touch-icon.png"
+            },
+            "url": "https://alexkval.github.io/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://alexkval.github.io/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:site" content="@alexkval" />
+<meta name="twitter:creator" content="@alexkval" />
+
+    
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Software engineering
+ What are questions? Holding a program in one&amp;rsquo;s head Don&amp;rsquo;t Solve Imaginary Problems Organizational Skills Beat Algorithmic Wizardry The Code Review Mindset Object-Oriented Programming: A Disaster Story Execution in the Kingdom of Nouns Best websites a programmer should visit What growth engineers can teach us about engineering How I build MVPs within 3 days Hunting for great names in programming How to actually ship software that actually works On Being A Senior Engineer The Shocking Secret About Static Types Make Large Scale Changes Incrementally with Branch By Abstraction Enabling Trunk Based Development with Deployment Pipelines Tell, Don&amp;rsquo;t Ask Designing Data-Driven Interfaces OSS." />
+<meta property="og:url" content="https://alexkval.github.io/readings/software-engineering/" />
+<meta property="og:site_name" content="Alexander Shemetovskiy" />
+<meta property="og:locale" content="en" /><meta property="og:image" content="https://alexkval.github.io/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+
+        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+
+        
+
+
+
+
+    
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-67171111-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header" data-scroll-header>
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">Alexander Shemetovskiy</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/posts/"><span class="menu-item-name">Posts</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item active"><a href="/readings/"><span class="menu-item-name">Readings</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/about/"><span class="menu-item-name">About</span></a>
+                </li>
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post" data-small-caps="true" data-align="default" data-type="readings" data-toc-num="true">
+
+            <h1 class="post-title"></h1>
+
+            
+
+            
+
+            
+
+            <div class="post-body">
+              <p><strong>Software engineering</strong></p>
+<ul>
+<li><a href="https://m.signalvnoise.com/what-are-questions/" target="_blank" rel="noopener">What are questions?</a></li>
+<li><a href="http://paulgraham.com/head.html" target="_blank" rel="noopener">Holding a program in one&rsquo;s head</a></li>
+<li><a href="https://www.nczonline.net/newsletter/archive/f0e1d724dd/" target="_blank" rel="noopener">Don&rsquo;t Solve Imaginary Problems</a></li>
+<li><a href="https://prog21.dadgum.com/177.html" target="_blank" rel="noopener">Organizational Skills Beat Algorithmic Wizardry</a></li>
+<li><a href="https://medium.engineering/the-code-review-mindset-3280a4af0a89" target="_blank" rel="noopener">The Code Review Mindset</a></li>
+<li><a href="https://medium.com/@brianwill/object-oriented-programming-a-personal-disaster-1b044c2383ab" target="_blank" rel="noopener">Object-Oriented Programming: A Disaster Story</a></li>
+<li><a href="http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html" target="_blank" rel="noopener">Execution in the Kingdom of Nouns</a></li>
+<li><a href="https://github.com/sdmg15/Best-websites-a-programmer-should-visit" target="_blank" rel="noopener">Best websites a programmer should visit</a></li>
+<li><a href="https://medium.freecodecamp.com/what-growth-engineers-can-teach-us-about-engineering-f8bd38516e3e#.nlj0y8ige" target="_blank" rel="noopener">What growth engineers can teach us about engineering</a></li>
+<li><a href="https://medium.com/@vadimdemedes/how-i-build-mvps-within-3-days-5d0b9ea86d9c#.mky9wf7hq" target="_blank" rel="noopener">How I build MVPs within 3 days</a></li>
+<li><a href="https://m.signalvnoise.com/hunting-for-great-names-in-programming-16f624c8fc03#.ybf2im80p" target="_blank" rel="noopener">Hunting for great names in programming</a></li>
+<li><a href="http://mir.aculo.us/2015/08/25/how-to-actually-ship-software-that-actually-works/" target="_blank" rel="noopener">How to actually ship software that actually works</a></li>
+<li><a href="http://www.kitchensoap.com/2012/10/25/on-being-a-senior-engineer/amp/" target="_blank" rel="noopener">On Being A Senior Engineer</a></li>
+<li><a href="https://medium.com/javascript-scene/the-shocking-secret-about-static-types-514d39bf30a3#.qlyigvzb0" target="_blank" rel="noopener">The Shocking Secret About Static Types</a></li>
+<li><a href="https://continuousdelivery.com/2011/05/make-large-scale-changes-incrementally-with-branch-by-abstraction/" target="_blank" rel="noopener">Make Large Scale Changes Incrementally with Branch By Abstraction</a></li>
+<li><a href="https://www.thoughtworks.com/insights/blog/enabling-trunk-based-development-deployment-pipelines" target="_blank" rel="noopener">Enabling Trunk Based Development with Deployment Pipelines</a></li>
+<li><a href="https://robots.thoughtbot.com/tell-dont-ask" target="_blank" rel="noopener">Tell, Don&rsquo;t Ask</a></li>
+<li><a href="https://blog.truthlabs.com/designing-data-driven-interfaces-a75d62997631#.jfs89ov1o" target="_blank" rel="noopener">Designing Data-Driven Interfaces</a></li>
+<li><a href="https://github.com/turbolinks/turbolinks/pull/124#issuecomment-239826060" target="_blank" rel="noopener">OSS. Why this is not still merged?</a></li>
+<li><a href="https://m.signalvnoise.com/how-we-set-up-our-work-cbce3d3d9cae#.nqppp4vb1" target="_blank" rel="noopener">How we structure our work and teams at Basecamp</a></li>
+<li><a href="https://medium.freecodecamp.com/full-stack-between-reality-and-wishful-thinking-43110005f2a2#.y4t843yqc" target="_blank" rel="noopener">Full-stack development is alive and well. And for good reasons.</a></li>
+<li><a href="https://john.onolan.org/calypso/" target="_blank" rel="noopener">Thoughts on Calypso, WordPress and JavaScript</a></li>
+<li><a href="http://www.benorenstein.com/blog/how-to-improve-as-a-programmer" target="_blank" rel="noopener">How to Improve as a Programmer</a></li>
+<li><a href="https://www.groovehq.com/blog/seo-for-startups" target="_blank" rel="noopener">How We Got Over Our Fear of SEO and Improved Conversions</a></li>
+<li><a href="https://medium.freecodecamp.com/a-gentle-introduction-to-data-structures-how-graphs-work-a223d9ef8837#.ukklbsu3p" target="_blank" rel="noopener">A Gentle Introduction to Data Structures: How Graphs Work</a></li>
+<li><a href="https://robots.thoughtbot.com/reusable-oo-composition-vs-inheritance" target="_blank" rel="noopener">Composition vs Inheritance</a></li>
+<li><a href="https://medium.freecodecamp.com/heres-why-client-side-rendering-won-46a349fadb52#.er37111ao" target="_blank" rel="noopener">Here’s Why Client-side Rendering Won</a></li>
+<li><a href="https://medium.freecodecamp.com/surge-vs-github-pages-deploying-a-create-react-app-project-c0ecbf317089#.jvslwp2rn" target="_blank" rel="noopener">Surge VS GitHub Pages: How to deploy a create-react-app project</a></li>
+<li><a href="https://www.rubysteps.com/articles/2016/the-two-dhh-approved-programming-habits-that-will-make-you-a-good-programmer/" target="_blank" rel="noopener">Read a lot of software, and write a lot of software</a></li>
+<li><a href="https://www.rubysteps.com/articles/2014/learn-more-by-writing-code/" target="_blank" rel="noopener">How you can learn more by writing code than by reading it</a></li>
+<li><a href="https://medium.freecodecamp.com/rest-in-peace-to-microservices-or-not-6d097b6c8279#.zcbs211ro" target="_blank" rel="noopener">REST in Peace: Microservices vs monoliths in real-life examples</a></li>
+<li><a href="https://medium.com/@jacobwgillespie/replacing-react-with-rails-6e874fdc6889#.jphtpt8ra" target="_blank" rel="noopener">Replacing React with Rails. Or, Use the Right Tools for the Job</a></li>
+<li><a href="https://medium.freecodecamp.com/start-2017-with-the-100daysofcode-improved-and-updated-18ce604b237b#.7y1fzodd1" target="_blank" rel="noopener">By building projects for 100 days straight you&rsquo;ll make the coding your daily habit</a></li>
+<li><a href="https://medium.com/@christophelimpalair/why-the-founder-of-rails-automatically-rejects-80-of-software-engineer-applicants-4e2a4d255f58#.2mxwgpbfl" target="_blank" rel="noopener">Why the founder of Rails automatically rejects 80% of Software Engineer applicants</a></li>
+<li><a href="http://kamranahmed.info/blog/2016/08/13/http-in-depth/" target="_blank" rel="noopener">Journey to HTTP/2</a></li>
+<li><a href="http://www.kalzumeus.com/2009/09/05/desktop-aps-versus-web-apps/" target="_blank" rel="noopener">Why I’m Done Making Desktop Applications</a></li>
+<li><a href="https://hackernoon.com/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2#.alwg0cr1o" target="_blank" rel="noopener">12 Signs You’re Working in a Feature Factory</a></li>
+<li><a href="https://hackernoon.com/we-reverse-engineered-16k-apps-heres-what-we-found-51bdf3b456bb#.kegp6qhnx" target="_blank" rel="noopener">We reverse engineered 16k apps, here’s what we found</a></li>
+<li><a href="https://medium.freecodecamp.com/easily-set-up-your-own-twitter-bot-4aeed5e61f7f#.2354b2xm2" target="_blank" rel="noopener">Why you should have your own Twitter bot, and how to build one in less than 30 minutes</a></li>
+<li><a href="https://hackernoon.com/create-a-simple-twitter-bot-with-node-js-5b14eb006c08#.gi0iychiu" target="_blank" rel="noopener">Create a Simple Twitter Bot with Node.js</a></li>
+<li><a href="http://www.hongkiat.com/blog/using-twitter-bots/" target="_blank" rel="noopener">8 Ways Twitter Bots Are Actually Helping Us</a></li>
+<li><a href="https://medium.freecodecamp.com/why-does-cryptographic-software-fail-often-d660d3cdfdc5#.ax7jz026r" target="_blank" rel="noopener">The many, many ways that cryptographic software can fail</a></li>
+<li><a href="https://medium.freecodecamp.com/how-we-got-a-2-year-old-repo-trending-on-github-in-just-48-hours-12151039d78b#.nwk1ixo8u" target="_blank" rel="noopener">How we got our 2-year-old repo trending on GitHub in just 48 hours</a></li>
+<li><a href="https://medium.freecodecamp.com/lossless-web-navigation-with-trails-9cd48c0abb56#.kohmd68nf" target="_blank" rel="noopener">Lossless Web Navigation with Trails</a></li>
+<li><a href="http://www.theregister.co.uk/2017/02/15/think_different_shut_up_and_work_harder_says_linus_torvalds/" target="_blank" rel="noopener">An interview with the creator of Linux: &ldquo;Successful projects are 99 percent perspiration, and one percent innovation&rdquo;</a></li>
+<li><a href="https://m.signalvnoise.com/horses-for-courses-b79a402cb982#.nga678wi8" target="_blank" rel="noopener">Horses for courses</a></li>
+<li><a href="https://css-tricks.com/introduction-web-audio-api/" target="_blank" rel="noopener">Introduction to Web Audio API</a></li>
+<li><a href="http://thume.ca/2017/03/04/my-text-editor-journey-vim-spacemacs-atom-and-sublime-text/" target="_blank" rel="noopener">My Text Editor Journey: Vim, Spacemacs, Atom and Sublime Text</a></li>
+<li><a href="https://medium.freecodecamp.com/the-100-correct-coding-style-guide-5b594a1655f0" target="_blank" rel="noopener">The 100% Correct Coding Style Guide</a></li>
+<li><a href="http://www.bigfastblog.com/how-to-get-experience-working-with-large-datasets" target="_blank" rel="noopener">How To Get Experience Working With Large Datasets</a></li>
+<li><a href="http://djangostars.com/blog/heres-how-you-start-using-docker/" target="_blank" rel="noopener">Here’s How You Start Using Docker</a></li>
+<li><a href="https://medium.freecodecamp.com/the-ups-and-downs-of-building-and-marketing-a-chat-bot-when-youre-14-8a072830b43c#.uqi9ww81r" target="_blank" rel="noopener">What it’s like to build and market a chatbot when you’re only 14 years old</a></li>
+<li><a href="https://blog.codinghorror.com/rule-of-three/" target="_blank" rel="noopener">The Rule of Three</a></li>
+<li><a href="http://schneems.com/2017/05/08/stopping-the-death-spiral-of-indecision/" target="_blank" rel="noopener">Stopping the Death Spiral of Indecision</a></li>
+<li><a href="https://johnnunemaker.com/fewer-and-faster/" target="_blank" rel="noopener">Fewer and Faster</a></li>
+<li><a href="https://medium.freecodecamp.com/nginx-rate-limiting-in-a-nutshell-128fe9e0126c" target="_blank" rel="noopener">NGINX rate-limiting in a nutshell</a></li>
+<li><a href="https://medium.freecodecamp.com/how-to-make-your-tic-tac-toe-game-unbeatable-by-using-the-minimax-algorithm-9d690bad4b37" target="_blank" rel="noopener">How to make your Tic Tac Toe game unbeatable by using the minimax algorithm</a></li>
+<li><a href="https://techbeacon.com/essential-guide-serverless-ecosystem" target="_blank" rel="noopener">An essential guide to the serverless ecosystem (2017)</a></li>
+<li><a href="https://engineering.instagram.com/sharding-ids-at-instagram-1cf5a71e5a5c" target="_blank" rel="noopener">Sharding &amp; IDs at Instagram</a></li>
+<li><a href="https://beberlei.de/2014/08/11/spotting_featureenvy_and_refactoring.html" target="_blank" rel="noopener">Spotting Feature Envy and Refactoring</a></li>
+<li><a href="https://youtu.be/DC-pQPq0acs" target="_blank" rel="noopener">Refactoring from Good to Great by Ben (Ruby Conf 2012. Video 44m)</a></li>
+<li><a href="https://medium.freecodecamp.com/mastering-chrome-developer-tools-next-level-front-end-development-techniques-3ac0b6fe8a3" target="_blank" rel="noopener">Mastering Chrome Developer Tools: Next Level Front-End Development Techniques</a></li>
+<li><a href="https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/" target="_blank" rel="noopener">Why Static Site Generators Are The Next Big Thing</a></li>
+<li><a href="https://www.smashingmagazine.com/2015/11/static-website-generators-jekyll-middleman-roots-hugo-review/" target="_blank" rel="noopener">Static Site Generators Reviewed: Jekyll, Middleman, Roots, Hugo</a></li>
+<li><a href="http://carrot.is/coding/static_cms" target="_blank" rel="noopener">Building a Static CMS (Contentful + Roots + Netlify)</a></li>
+<li><a href="https://medium.freecodecamp.com/how-we-got-1-500-github-stars-by-mixing-time-tested-technology-with-a-fresh-ui-b310551cba22" target="_blank" rel="noopener">How we got 1,500 GitHub stars by mixing time-tested technology with a fresh UI</a></li>
+<li><a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/" target="_blank" rel="noopener">The Absolute Minimum Every Software Developer Must Know About Unicode and Character Sets</a></li>
+<li><a href="https://www.devmynd.com/blog/five-factor-testing/" target="_blank" rel="noopener">Five Factor Testing</a></li>
+<li><a href="https://varvy.com/mobile/vary-user-agent.html" target="_blank" rel="noopener">Vary: User-Agent header</a></li>
+<li><a href="https://developers.google.com/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android" target="_blank" rel="noopener">Installable Web Apps with the Web App Manifest</a></li>
+<li><a href="https://schneems.com/2017/07/18/how-i-reduced-my-db-server-load-by-80/" target="_blank" rel="noopener">How I Reduced my DB Server Load by 80% (Shneems)</a></li>
+<li><a href="https://medium.com/@keithwhor/rise-of-functions-as-a-service-how-php-set-the-serverless-stage-20-years-ago-ccb560c5f422" target="_blank" rel="noopener">Rise of Functions as a Service: How PHP Set the “Serverless” Stage 20 Years Ago</a></li>
+<li><a href="https://medium.com/este-js-framework/its-ok-to-use-javascript-generated-guid-in-a-browser-373ca6431cf7" target="_blank" rel="noopener">It’s ok to use JavaScript generated GUID in a browser?</a></li>
+<li><a href="https://medium.freecodecamp.org/i-wanted-real-time-github-push-notifications-so-i-built-a-chrome-extension-7e6be0611e4" target="_blank" rel="noopener">I wanted real time GitHub push notifications. So I built a Chrome extension</a></li>
+<li><a href="http://bbc-news.github.io/wraith/" target="_blank" rel="noopener">A responsive screenshot comparison tool</a></li>
+<li><a href="https://schneems.com/2017/10/23/wtf-is-a-thread/" target="_blank" rel="noopener">WTF is a Thread (by Schneems)</a></li>
+<li><a href="http://www.smashcompany.com/technology/why-would-anyone-choose-docker-over-fat-binaries" target="_blank" rel="noopener">Why would anyone choose Docker over fat binaries?</a></li>
+<li><a href="http://tonsky.me/blog/chrome-intervention/" target="_blank" rel="noopener">My web app died from performance bankruptcy</a></li>
+<li><a href="https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/" target="_blank" rel="noopener">Can You Afford It?: Real-world Web Performance Budgets</a></li>
+<li><a href="https://developers.google.com/web/updates/2017/11/overscroll-behavior" target="_blank" rel="noopener">Take control of your scroll: customizing pull-to-refresh and overflow effects</a></li>
+<li><a href="https://git-scm.com/blog/2010/03/08/rerere.html" target="_blank" rel="noopener">Rerere Your Boat&hellip; (<code>git rerere</code> functionality)</a></li>
+<li><a href="http://madebynathan.com/2011/10/19/git-shortcuts-like-youve-never-seen-before/" target="_blank" rel="noopener">Git Shortcuts Like You&rsquo;ve Never Seen Before</a></li>
+<li><a href="https://hackernoon.com/lesser-known-git-commands-151a1918a60#.esqwxjwkx" target="_blank" rel="noopener">Lesser known Git commands</a></li>
+<li><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="noopener">Git Submodules</a></li>
+<li><a href="https://blog.filippo.io/git-fixup-amending-an-older-commit/" target="_blank" rel="noopener">git fixup: &ndash;amend for older commits</a></li>
+<li><a href="https://medium.com/@dan_manges/the-modular-monolith-rails-architecture-fb1023826fc4" target="_blank" rel="noopener">The Modular Monolith: Rails Architecture</a></li>
+<li><a href="http://www.clara-rules.org/docs/firststeps/" target="_blank" rel="noopener">Write business rules in Clojure (Clara Rules)</a></li>
+<li><a href="https://www.chromium.org/developers/design-documents/form-styles-that-chromium-understands" target="_blank" rel="noopener">Password Form Styles that Chromium Understands</a></li>
+<li><a href="https://www.simform.com/serverless-architecture-guide/" target="_blank" rel="noopener">The Comprehensive Guide to Serverless Architecture (2017)</a></li>
+<li><a href="http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions" target="_blank" rel="noopener">Documenting Architecture Decisions</a></li>
+<li><a href="https://developers.facebook.com/docs/marketing-api/audiences-api/pixel" target="_blank" rel="noopener">Using the Marketing API with the Facebook Pixel</a></li>
+<li><a href="https://shorts.dokkuapp.com/securing-user-emails-in-rails/" target="_blank" rel="noopener">Securing User Emails in Rails (GDPR)</a></li>
+<li><a href="https://medium.freecodecamp.org/why-i-hate-your-single-page-app-f08bb4ff9134" target="_blank" rel="noopener">Why I hate your Single Page App</a></li>
+<li><a href="https://www.sitepoint.com/single-page-app-without-framework/" target="_blank" rel="noopener">Build a JavaScript Single Page App Without a Framework</a></li>
+<li><a href="http://blog.plataformatec.com.br/2016/04/kanban-caring-about-the-whole-development-process/" target="_blank" rel="noopener">Kanban: caring about the whole development process</a></li>
+<li><a href="https://medium.com/@dandemeyere/what-does-a-vp-of-engineering-do-75da2086f74d" target="_blank" rel="noopener">What does a VP of Engineering do?</a></li>
+<li><a href="https://overreacted.io/the-bug-o-notation/" target="_blank" rel="noopener">The “Bug-O” Notation</a></li>
+<li><a href="https://overreacted.io/the-elements-of-ui-engineering/" target="_blank" rel="noopener">The Elements of UI Engineering</a></li>
+<li><a href="https://blog.acolyer.org/2019/04/12/master-of-web-puppets:-abusing-web-browsers-for-persistent-and-stealthy-computation/" target="_blank" rel="noopener">Abusing web browsers for persistent and stealthy computation</a></li>
+<li><a href="https://sites.google.com/site/steveyegge2/google-at-delphi" target="_blank" rel="noopener">Google is building an AI by Steve Yegge 2004</a></li>
+<li><a href="https://blog.acolyer.org/2015/03/03/the-part-time-parliament/" target="_blank" rel="noopener">The Part-Time Parliament (Consistency, Distributed Systems)</a></li>
+<li><a href="https://blog.kowalczyk.info/article/751d064a76bf46fa9b293da1a88cd033/422019-tue-apples-biggest-swift-mistake.html" target="_blank" rel="noopener">Apple&rsquo;s biggest Swift mistake (Aor 2019)</a></li>
+<li><a href="https://github.blog/2018-11-15-state-of-the-octoverse-top-programming-languages/" target="_blank" rel="noopener">The State of the Octoverse: top programming languages of 2018</a></li>
+<li><a href="https://www.targetprocess.com/articles/speed-in-software-development/" target="_blank" rel="noopener">Speed in Software Development</a></li>
+<li><a href="http://antirez.com/news/112" target="_blank" rel="noopener">The mythical 10x programmer</a></li>
+<li><a href="https://blog.acolyer.org/2016/09/14/why-functional-programming-matters/" target="_blank" rel="noopener">Why Functional Programming Matters</a></li>
+<li><a href="https://stackoverflow.com/a/152863/3874570" target="_blank" rel="noopener">What is a socket from a programming perspective?</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Spinlock" target="_blank" rel="noopener">Spinlock - A mutex for OS kernels</a></li>
+<li><a href="https://stackoverflow.com/a/4404551/3874570" target="_blank" rel="noopener">How do I “git blame” a deleted line?</a></li>
+<li><a href="https://prog21.dadgum.com/87.html" target="_blank" rel="noopener">Write Code Like You Just Learned How to Program</a></li>
+<li><a href="https://programmers.blogoverflow.com/2012/08/20-controversial-programming-opinions/" target="_blank" rel="noopener">20 controversial programming opinions</a></li>
+<li><a href="https://blog.acolyer.org/2019/11/15/facebook-taiji/" target="_blank" rel="noopener">Taiji: managing global user traffic for large-scale Internet services at the edge</a></li>
+<li><a href="https://prog21.dadgum.com/93.html" target="_blank" rel="noopener">Don&rsquo;t Distract New Programmers with OOP</a></li>
+<li><a href="https://stackoverflow.com/a/11502482/3874570" target="_blank" rel="noopener">What is the difference between polymorphism and duck typing?</a></li>
+<li><a href="https://bytecodealliance.org/articles/announcing-the-bytecode-alliance" target="_blank" rel="noopener">Building a secure by default, composable future for WebAssembly</a></li>
+<li><a href="https://blog.cleancoder.com/uncle-bob/2013/05/27/TheTransformationPriorityPremise.html" target="_blank" rel="noopener">The Transformation Priority Premise (Uncle Bob)</a></li>
+<li><a href="https://v8.dev/blog/emscripten-llvm-wasm" target="_blank" rel="noopener">Emscripten and the LLVM WebAssembly backend</a></li>
+<li><a href="https://www.freecodecamp.org/news/the-programming-language-pipeline-91d3f449c919/" target="_blank" rel="noopener">I wrote a programming language. Here’s how you can, too</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Visitor_pattern" target="_blank" rel="noopener">Visitor pattern (Wiki)</a></li>
+<li><a href="https://stackoverflow.com/a/9363703/3874570" target="_blank" rel="noopener">Decorator vs Visitor design patterns</a></li>
+<li><a href="https://stackoverflow.com/a/9828716/3874570" target="_blank" rel="noopener">Visitor Pattern in Ruby or just use a Block?</a></li>
+<li><a href="https://www.aosabook.org/en/llvm.html" target="_blank" rel="noopener">LLVM - the design decisions (Chris Lattner)</a></li>
+<li><a href="https://www.welcometothejungle.com/en/articles/btc-discussion-open-source-maintenance" target="_blank" rel="noopener">The Maintenance of Large Open-Source Projects</a></li>
+<li><a href="https://words.steveklabnik.com/i-m-joining-cloudflare" target="_blank" rel="noopener">What is Edge compute (Steve Klabnik)</a></li>
+<li><a href="https://markfaction.wordpress.com/2012/07/15/stack-based-vs-register-based-virtual-machine-architecture-and-the-dalvik-vm/" target="_blank" rel="noopener">Stack based vs Register based Virtual Machine Architecture</a></li>
+</ul>
+
+            </div>
+
+        </article>
+
+        
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+    
+
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2020&nbsp;Alexander Shemetovskiy</div>
+
+            
+    
+        <ul class="socials"><li class="socials-item">
+                    <a href="/rss.xml" target="_blank" rel="external noopener" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="mailto:alexkval@gmail.com" target="_blank" rel="external noopener" title="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://github.com/alexkval" target="_blank" rel="external noopener" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://twitter.com/alexkval" target="_blank" rel="external noopener" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://t.me/alexkval" target="_blank" rel="external noopener" title="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon social-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                </li></ul>
+    
+
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true,
+        header: '[data-scroll-header]'
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/meme.min.185530990dfec107a70ab138f45085aabdf7c3888ebc363f667497978c71d3eb.js" integrity="sha256-GFUwmQ3&#43;wQenCrE49FCFqr33w4iOvDY/ZnSXl4xx0&#43;s="></script>
+
+    </body>
+</html>

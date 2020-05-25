@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://alexkval.github.io/categories/ai/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/tags/ai/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/</loc>
+    <lastmod>2020-05-25T16:31:10+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/categories/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/categories/machine-learning/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/tags/machine-learning/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/posts/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/tags/python/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/tags/setup/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/tags/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/tags/tensor-flow/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/tags/development/</loc>
+    <lastmod>2016-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/posts/dissecting-rails-new/</loc>
+    <lastmod>2016-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/categories/ruby-on-rails/</loc>
+    <lastmod>2016-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/tags/rubyonrails/</loc>
+    <lastmod>2016-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/categories/tools/</loc>
+    <lastmod>2016-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/about/</loc>
+    <lastmod>2020-05-25T16:31:10+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/</loc>
+    <lastmod>2020-05-25T15:00:26+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/clang/</loc>
+    <lastmod>2020-05-25T01:05:26+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/clojure/</loc>
+    <lastmod>2020-05-25T00:52:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/computer-science/</loc>
+    <lastmod>2020-05-25T01:13:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/cplusplus/</loc>
+    <lastmod>2020-05-25T01:08:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/css/</loc>
+    <lastmod>2020-05-25T01:08:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/databases/</loc>
+    <lastmod>2020-05-25T01:00:56+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/design/</loc>
+    <lastmod>2020-05-25T01:09:57+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/digital-electronics/</loc>
+    <lastmod>2020-05-25T01:30:10+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/elixir/</loc>
+    <lastmod>2020-05-25T01:03:41+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/elm/</loc>
+    <lastmod>2020-05-25T01:22:39+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/entrepreneurship/</loc>
+    <lastmod>2020-05-25T00:31:45+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/for-beginners/</loc>
+    <lastmod>2020-05-25T01:31:39+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/golang/</loc>
+    <lastmod>2020-05-25T01:04:17+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/java/</loc>
+    <lastmod>2020-05-25T01:25:36+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/javascript/</loc>
+    <lastmod>2020-05-25T00:53:59+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/machine-learning/</loc>
+    <lastmod>2020-05-25T01:11:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/miscellaneous/</loc>
+    <lastmod>2020-05-25T01:34:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/python/</loc>
+    <lastmod>2020-05-25T01:23:51+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/react/</loc>
+    <lastmod>2020-05-25T00:57:32+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/recruitment/</loc>
+    <lastmod>2020-05-25T01:16:10+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/remote-work/</loc>
+    <lastmod>2020-05-25T01:15:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/ruby-on-rails/</loc>
+    <lastmod>2020-05-25T00:36:12+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/ruby/</loc>
+    <lastmod>2020-05-25T00:34:26+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/rust/</loc>
+    <lastmod>2020-05-25T01:21:25+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/security/</loc>
+    <lastmod>2020-05-25T01:28:48+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/readings/software-engineering/</loc>
+    <lastmod>2020-05-25T00:28:21+01:00</lastmod>
+  </url>
+  
+</urlset>

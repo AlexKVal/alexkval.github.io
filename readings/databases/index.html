@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.71.0" /><meta name="theme-color" content="#fff" />
+
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title> | Alexander Shemetovskiy</title>
+
+    <link rel="stylesheet" href="/css/meme.min.58bc39dbe134c5e44a78e94ce3e1861400ca666811a7cdadca215d1fae085f0d.css" integrity="sha256-WLw52&#43;E0xeRKeOlM4&#43;GGFADKZmgRp82tyiFdH64IXw0=" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="Alexander Shemetovskiy" /><meta name="description" content="Databases
+ Hstore vs. JSON - Which to Use in Postgres Introducing Trinity: a modern, high performance, elegant IR(search) library Who Needs MongoDB? Capped Collections in Postgres How to migrate a Homebrew-installed PostgreSQL database to a new UUID Primary Keys in PostgreSQL TimescaleDB - a scalable time-series database on PostgreSQL You Are Not Google Postgres deadlocks debugging guidelines, tips and tricks UUID or GUID as Primary Keys?" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Alexander Shemetovskiy" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Alexander Shemetovskiy" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://alexkval.github.io/readings/databases/" />
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "datePublished": "2014-12-28T12:00:00+00:00",
+        "dateModified": "2020-05-25T01:00:56+01:00",
+        "url": "https://alexkval.github.io/readings/databases/",
+        "name": "",
+        "description": "Databases\n Hstore vs. JSON - Which to Use in Postgres Introducing Trinity: a modern, high performance, elegant IR(search) library Who Needs MongoDB? Capped Collections in Postgres How to migrate a Homebrew-installed PostgreSQL database to a new UUID Primary Keys in PostgreSQL TimescaleDB - a scalable time-series database on PostgreSQL You Are Not Google Postgres deadlocks debugging guidelines, tips and tricks UUID or GUID as Primary Keys?",
+        "image": "https://alexkval.github.io/apple-touch-icon.png",
+        "license": "Copyright © Alexander Shemetovskiy, all rights reserved.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Alexander Shemetovskiy",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://alexkval.github.io/apple-touch-icon.png"
+            },
+            "url": "https://alexkval.github.io/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://alexkval.github.io/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:site" content="@alexkval" />
+<meta name="twitter:creator" content="@alexkval" />
+
+    
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Databases
+ Hstore vs. JSON - Which to Use in Postgres Introducing Trinity: a modern, high performance, elegant IR(search) library Who Needs MongoDB? Capped Collections in Postgres How to migrate a Homebrew-installed PostgreSQL database to a new UUID Primary Keys in PostgreSQL TimescaleDB - a scalable time-series database on PostgreSQL You Are Not Google Postgres deadlocks debugging guidelines, tips and tricks UUID or GUID as Primary Keys?" />
+<meta property="og:url" content="https://alexkval.github.io/readings/databases/" />
+<meta property="og:site_name" content="Alexander Shemetovskiy" />
+<meta property="og:locale" content="en" /><meta property="og:image" content="https://alexkval.github.io/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+
+        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+
+        
+
+
+
+
+    
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-67171111-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header" data-scroll-header>
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">Alexander Shemetovskiy</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/posts/"><span class="menu-item-name">Posts</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item active"><a href="/readings/"><span class="menu-item-name">Readings</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/about/"><span class="menu-item-name">About</span></a>
+                </li>
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post" data-small-caps="true" data-align="default" data-type="readings" data-toc-num="true">
+
+            <h1 class="post-title"></h1>
+
+            
+
+            
+
+            
+
+            <div class="post-body">
+              <p><strong>Databases</strong></p>
+<ul>
+<li><a href="http://www.craigkerstiens.com/2013/07/03/hstore-vs-json/" target="_blank" rel="noopener">Hstore vs. JSON - Which to Use in Postgres</a></li>
+<li><a href="https://medium.com/@markpapadakis/introducing-trinity-a-modern-high-performance-elegant-ir-search-library-a1a3b4e287a7" target="_blank" rel="noopener">Introducing Trinity: a modern, high performance, elegant IR(search) library</a></li>
+<li><a href="http://www.rigelgroupllc.com/blog/2014/10/14/capped-collections-in-postgres/" target="_blank" rel="noopener">Who Needs MongoDB? Capped Collections in Postgres</a></li>
+<li><a href="https://gist.github.com/olivierlacan/e1bf5c34bc9f82e06bc0" target="_blank" rel="noopener">How to migrate a Homebrew-installed PostgreSQL database to a new</a></li>
+<li><a href="http://www.starkandwayne.com/blog/uuid-primary-keys-in-postgresql/" target="_blank" rel="noopener">UUID Primary Keys in PostgreSQL</a></li>
+<li><a href="https://blog.timescale.com/when-boring-is-awesome-building-a-scalable-time-series-database-on-postgresql-2900ea453ee2" target="_blank" rel="noopener">TimescaleDB - a scalable time-series database on PostgreSQL</a></li>
+<li><a href="https://blog.bradfieldcs.com/you-are-not-google-84912cf44afb" target="_blank" rel="noopener">You Are Not Google</a></li>
+<li><a href="http://www.moioli.net/progetti/postgres-deadlocks-debugging-guidelines/" target="_blank" rel="noopener">Postgres deadlocks debugging guidelines, tips and tricks</a></li>
+<li><a href="https://tomharrisonjr.com/uuid-or-guid-as-primary-keys-be-careful-7b2aa3dcb439" target="_blank" rel="noopener">UUID or GUID as Primary Keys? Be Careful!</a></li>
+<li><a href="http://www.postgresqltutorial.com/postgresql-check-constraint/" target="_blank" rel="noopener">PostgreSQL CHECK Constraint</a></li>
+<li><a href="http://www.postgresqltutorial.com/postgresql-window-function/" target="_blank" rel="noopener">PostgreSQL Window Function</a></li>
+<li><a href="https://schneems.com/2017/06/22/a-tale-of-slow-pagination/" target="_blank" rel="noopener">A Tale of Slow Pagination (Schneems)</a></li>
+<li><a href="https://blog.heapanalytics.com/postgresqls-powerful-new-join-type-lateral/" target="_blank" rel="noopener">PostgreSQL’s Powerful New Join Type: LATERAL</a></li>
+<li><a href="http://www.postgresqltutorial.com/postgresql-upsert/" target="_blank" rel="noopener">PostgreSQL Upsert Using INSERT ON CONFLICT statement</a></li>
+<li><a href="https://blog.timescale.com/time-series-data-postgresql-10-vs-timescaledb-816ee808bac5" target="_blank" rel="noopener">Problems with PostgreSQL 10 for time-series data</a></li>
+<li><a href="https://stackoverflow.com/questions/25811017/how-to-delete-an-enum-type-value-in-postgres" target="_blank" rel="noopener">How to delete an enum type value in postgres? (this is not a fun)</a></li>
+<li><a href="http://www.postgresqltutorial.com/postgresql-natural-join/" target="_blank" rel="noopener">PostgreSQL NATURAL JOIN Explained By Examples</a></li>
+<li><a href="http://www.postgresqltutorial.com/postgresql-cross-join/" target="_blank" rel="noopener">PostgreSQL Cross Join By Example</a></li>
+<li><a href="https://www.postgresql.org/docs/10/static/queries-table-expressions.html" target="_blank" rel="noopener">PostgreSQL 10 Queries Table Expressions</a></li>
+<li><a href="http://www.craigkerstiens.com/2013/04/17/array-agg/" target="_blank" rel="noopener">Using Array_agg</a></li>
+<li><a href="https://medium.com/kkempin/postgresqls-lateral-join-bfd6bd0199df" target="_blank" rel="noopener">PostgreSQL’s LATERAL JOIN</a></li>
+<li><a href="https://stackoverflow.com/a/28557803/3874570" target="_blank" rel="noopener">What is the difference between LATERAL and a subquery in PostgreSQL?</a></li>
+<li><a href="https://medium.com/little-programming-joys/the-filter-clause-in-postgres-9-4-3dd327d3c852" target="_blank" rel="noopener">The FILTER clause in Postgres</a></li>
+<li><a href="https://robots.thoughtbot.com/postgres-window-functions" target="_blank" rel="noopener">Postgres Window Functions</a></li>
+<li><a href="http://postgresguide.com/tips/window.html" target="_blank" rel="noopener">Window Functions in Action</a></li>
+<li><a href="https://www.postgresql.org/docs/current/static/tutorial-window.html" target="_blank" rel="noopener">PostgreSQL: Window Functions</a></li>
+<li><a href="https://www.compose.com/articles/metrics-maven-window-frames-in-postgresql/" target="_blank" rel="noopener">Metrics Maven: Window Frames in PostgreSQL</a></li>
+<li><a href="https://tapoueh.org/blog/2013/08/understanding-window-functions/" target="_blank" rel="noopener">Understanding Window Functions</a></li>
+<li><a href="https://www.cybertec-postgresql.com/en/common-mistakes-union-vs-union-all/" target="_blank" rel="noopener">Common mistakes: UNION vs. UNION ALL</a></li>
+<li><a href="https://www.postgresql.org/docs/current/static/rules-views.html" target="_blank" rel="noopener">PostgreSQL: Views and the Rule System</a></li>
+<li><a href="http://www.postgresqltutorial.com/postgresql-select-distinct/" target="_blank" rel="noopener">Postgres &lsquo;distinct on&rsquo;</a></li>
+<li><a href="http://paquier.xyz/postgresql-2/postgres-9-3-feature-highlight-watch-in-psql/" target="_blank" rel="noopener">Postgres 9.3 feature highlight - \watch in psql</a></li>
+<li><a href="http://paquier.xyz/postgresql-2/postgres-9-4-feature-highlight-with-ordinality/" target="_blank" rel="noopener">Postgres 9.4 feature highlight - WITH ORDINALITY</a></li>
+<li><a href="https://docs.datomic.com/cloud/whatis/data-model.html" target="_blank" rel="noopener">Datomic Data Model</a></li>
+<li><a href="http://www.craigkerstiens.com/2018/01/31/postgres-hidden-gems/" target="_blank" rel="noopener">Postgres Hidden Gems</a></li>
+<li><a href="https://hackernoon.com/winning-arguments-with-data-leading-with-commas-in-sql-672b3b81eac9" target="_blank" rel="noopener">Leading with commas — ugly or efficient? An investigation over 320 GB of SQL code</a></li>
+<li><a href="https://www.xaprb.com/blog/2005/09/23/how-to-write-a-sql-exclusion-join/" target="_blank" rel="noopener">How to Write a SQL Exclusion Join</a></li>
+<li><a href="https://www.citusdata.com/blog/2018/03/14/fun-with-sql-generate-sql/" target="_blank" rel="noopener">Fun with SQL: generate_series in Postgres</a></li>
+<li><a href="https://stackoverflow.com/a/1415448/3874570" target="_blank" rel="noopener">How to find rows in one table that have no corresponding row in another table</a></li>
+<li><a href="https://www.geekytidbits.com/postgres-distinct-on/" target="_blank" rel="noopener">SELECT DISTINCT ON in PostgreSQL</a></li>
+<li><a href="https://www.percona.com/blog/2018/10/12/track-postgresql-row-changes-using-public-private-key-signing/" target="_blank" rel="noopener">Track PostgreSQL Row Changes Using Public/Private Key Signing</a></li>
+<li><a href="https://www.compose.com/articles/mastering-postgresql-tools-full-text-search-and-phrase-search/" target="_blank" rel="noopener">Full-Text Search and Phrase Search</a></li>
+<li><a href="https://blog.jooq.org/2018/07/05/postgresql-11s-support-for-sql-standard-groups-and-exclude-window-function-clauses/" target="_blank" rel="noopener">PostgreSQL 11’s Support for SQL Standard GROUPS and EXCLUDE Window Function Clauses</a></li>
+<li><a href="https://medium.com/@Benjie/postgraphile-v4-released-9dcb117d3e69" target="_blank" rel="noopener">PostGraphile - highly-performant GraphQL API for your PostgreSQL</a></li>
+<li><a href="https://spin.atomicobject.com/2016/03/12/select-top-n-per-group-postgresql/" target="_blank" rel="noopener">Selecting Top N Per Group in PostgreSQL</a></li>
+<li><a href="http://www.vertabelo.com/blog/technical-articles/creating-pivot-tables-in-postgresql-using-the-crosstab-function" target="_blank" rel="noopener">Pivot tables using the crosstab()</a></li>
+<li><a href="https://stackoverflow.com/a/11751905/3874570" target="_blank" rel="noopener">Crosstab Query</a></li>
+<li><a href="https://pgsnake.blogspot.com/2018/09/why-do-we-install-as-root.html" target="_blank" rel="noopener">Why do we install PostgreSQL as root?</a></li>
+<li><a href="https://pgdash.io/blog/postgres-11-whats-new.html" target="_blank" rel="noopener">PostgreSQL 11: What&rsquo;s New</a></li>
+<li><a href="https://lwn.net/Articles/764515/" target="_blank" rel="noopener">PostgreSQL 11: something for everyone</a></li>
+<li><a href="http://www.craigkerstiens.com/2018/09/20/postgresql-11-a-first-look/" target="_blank" rel="noopener">Postgres 11 - a First Look</a></li>
+<li><a href="https://popsql.io/learn-sql/postgresql/how-to-calculate-cumulative-sum-running-total-in-postgresql/" target="_blank" rel="noopener">How to Calculate Cumulative Sum/Running Total in PostgreSQL</a></li>
+<li><a href="http://shiroyasha.io/selecting-for-share-and-update-in-postgresql.html" target="_blank" rel="noopener">Selecting for Share and Update in PostgreSQL</a></li>
+<li><a href="https://www.citusdata.com/blog/2018/10/31/materialized-views-vs-rollup-tables/" target="_blank" rel="noopener">Materialized views vs. Rollup tables in Postgres</a></li>
+<li><a href="https://tapoueh.org/blog/2018/11/preventing-sql-injections/" target="_blank" rel="noopener">Preventing SQL Injections (PostgreSQL protocol)</a></li>
+<li><a href="https://www.cybertec-postgresql.com/en/postgressql-implicit-vs-explicit-joins/" target="_blank" rel="noopener">PostgresSQL: Implicit vs. explicit joins</a></li>
+<li><a href="https://www.braintreepayments.com/blog/safe-operations-for-high-volume-postgresql/" target="_blank" rel="noopener">Safe Operations For High Volume PostgreSQL</a></li>
+<li><a href="https://www.2ndquadrant.com/en/blog/postgresql-10-identity-columns/" target="_blank" rel="noopener">PostgreSQL 10 identity columns explained</a></li>
+<li><a href="https://github.com/obartunov/sqljsondoc/blob/master/jsonpath.md" target="_blank" rel="noopener">Gentle Guide to JSONPATH in PostgreSQL</a></li>
+<li><a href="https://blog.couchbase.com/postgres-jsonb-and-nosql/" target="_blank" rel="noopener">Comparing Postgres JSONB with NoSQL (2019)</a></li>
+<li><a href="https://www.percona.com/blog/2019/07/31/postgresql-simple-c-extension-development-for-a-novice-user/" target="_blank" rel="noopener">PostgreSQL: Performance Advantages of C extensions</a></li>
+<li><a href="https://modern-sql.com/feature/is-distinct-from" target="_blank" rel="noopener">PostgreSQL: NULL-Aware Comparison: is [not] distinct from</a></li>
+<li><a href="https://www.percona.com/blog/2019/08/15/faster-lightweight-trigger-function-in-c-for-postgresql/" target="_blank" rel="noopener">A Faster, Lightweight Trigger Function in C for PostgreSQL</a></li>
+<li><a href="https://stackoverflow.com/a/1517692/3874570" target="_blank" rel="noopener">Save PL/pgSQL output from PostgreSQL to a CSV file</a></li>
+<li><a href="https://www.cybertec-postgresql.com/en/postgresql-you-might-need-to-increase-max_locks_per_transaction/" target="_blank" rel="noopener">PostgreSQL: You might need to increase max_locks_per_transaction</a></li>
+<li><a href="https://tightlycoupled.io/my-goto-postgres-configuration-for-web-services/" target="_blank" rel="noopener">My GOTO Postgres Configuration for Web Services</a></li>
+<li><a href="https://postgresql.verite.pro/blog/2020/02/14/isolation-repeatable-read-postgresql-mysql.html" target="_blank" rel="noopener">Isolation Repeatable Read in PostgreSQL versus MySQL</a></li>
+<li><a href="https://stackoverflow.com/a/4849030/3874570" target="_blank" rel="noopener">PostgreSQL: &lsquo;text&rsquo; vs &lsquo;varchar&rsquo; (character varying)</a></li>
+<li><a href="https://www.cybertec-postgresql.com/en/embedded-sql-in-c-for-postgresql-with-ecpg-blog/" target="_blank" rel="noopener">Embedded SQL in C for PostgreSQL with ecpg</a></li>
+</ul>
+
+            </div>
+
+        </article>
+
+        
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+    
+
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2020&nbsp;Alexander Shemetovskiy</div>
+
+            
+    
+        <ul class="socials"><li class="socials-item">
+                    <a href="/rss.xml" target="_blank" rel="external noopener" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="mailto:alexkval@gmail.com" target="_blank" rel="external noopener" title="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://github.com/alexkval" target="_blank" rel="external noopener" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://twitter.com/alexkval" target="_blank" rel="external noopener" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://t.me/alexkval" target="_blank" rel="external noopener" title="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon social-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                </li></ul>
+    
+
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true,
+        header: '[data-scroll-header]'
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/meme.min.185530990dfec107a70ab138f45085aabdf7c3888ebc363f667497978c71d3eb.js" integrity="sha256-GFUwmQ3&#43;wQenCrE49FCFqr33w4iOvDY/ZnSXl4xx0&#43;s="></script>
+
+    </body>
+</html>

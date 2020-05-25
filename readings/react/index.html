@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.71.0" /><meta name="theme-color" content="#fff" />
+
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title> | Alexander Shemetovskiy</title>
+
+    <link rel="stylesheet" href="/css/meme.min.58bc39dbe134c5e44a78e94ce3e1861400ca666811a7cdadca215d1fae085f0d.css" integrity="sha256-WLw52&#43;E0xeRKeOlM4&#43;GGFADKZmgRp82tyiFdH64IXw0=" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="Alexander Shemetovskiy" /><meta name="description" content="React
+ The Complete Introduction to React (ever green) React Virtual DOM Postmortem Thinking in React Master these five concepts, then master React JavaScript to Know for React Comparing Redux and Relay Why Redux is not so easy A Curated List of 68&#43; React/Redux Tutorials, Walkthroughs &amp;amp; Courses Make Your React Components Pretty Understanding React and reimplementing it from scratch Why Anon Functions Murder Performance in React React, Redux and Immutable." />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Alexander Shemetovskiy" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Alexander Shemetovskiy" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://alexkval.github.io/readings/react/" />
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "datePublished": "2014-12-28T12:00:00+00:00",
+        "dateModified": "2020-05-25T00:57:32+01:00",
+        "url": "https://alexkval.github.io/readings/react/",
+        "name": "",
+        "description": "React\n The Complete Introduction to React (ever green) React Virtual DOM Postmortem Thinking in React Master these five concepts, then master React JavaScript to Know for React Comparing Redux and Relay Why Redux is not so easy A Curated List of 68+ React/Redux Tutorials, Walkthroughs \u0026amp; Courses Make Your React Components Pretty Understanding React and reimplementing it from scratch Why Anon Functions Murder Performance in React React, Redux and Immutable.",
+        "image": "https://alexkval.github.io/apple-touch-icon.png",
+        "license": "Copyright © Alexander Shemetovskiy, all rights reserved.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Alexander Shemetovskiy",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://alexkval.github.io/apple-touch-icon.png"
+            },
+            "url": "https://alexkval.github.io/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://alexkval.github.io/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:site" content="@alexkval" />
+<meta name="twitter:creator" content="@alexkval" />
+
+    
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="React
+ The Complete Introduction to React (ever green) React Virtual DOM Postmortem Thinking in React Master these five concepts, then master React JavaScript to Know for React Comparing Redux and Relay Why Redux is not so easy A Curated List of 68&#43; React/Redux Tutorials, Walkthroughs &amp;amp; Courses Make Your React Components Pretty Understanding React and reimplementing it from scratch Why Anon Functions Murder Performance in React React, Redux and Immutable." />
+<meta property="og:url" content="https://alexkval.github.io/readings/react/" />
+<meta property="og:site_name" content="Alexander Shemetovskiy" />
+<meta property="og:locale" content="en" /><meta property="og:image" content="https://alexkval.github.io/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+
+        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+
+        
+
+
+
+
+    
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-67171111-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header" data-scroll-header>
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">Alexander Shemetovskiy</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/posts/"><span class="menu-item-name">Posts</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item active"><a href="/readings/"><span class="menu-item-name">Readings</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/about/"><span class="menu-item-name">About</span></a>
+                </li>
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post" data-small-caps="true" data-align="default" data-type="readings" data-toc-num="true">
+
+            <h1 class="post-title"></h1>
+
+            
+
+            
+
+            
+
+            <div class="post-body">
+              <p><strong>React</strong></p>
+<ul>
+<li><a href="https://jscomplete.com/learn/complete-intro-react" target="_blank" rel="noopener">The Complete Introduction to React (ever green)</a></li>
+<li><a href="https://medium.com/@js_tut/react-animated-tutorial-7a46fa3c2b96" target="_blank" rel="noopener">React Virtual DOM Postmortem</a></li>
+<li><a href="https://facebook.github.io/react/docs/thinking-in-react.html" target="_blank" rel="noopener">Thinking in React</a></li>
+<li><a href="https://medium.freecodecamp.com/the-5-things-you-need-to-know-to-understand-react-a1dbd5d114a3#.11ce1lmho" target="_blank" rel="noopener">Master these five concepts, then master React</a></li>
+<li><a href="https://kentcdodds.com/blog/javascript-to-know-for-react" target="_blank" rel="noopener">JavaScript to Know for React</a></li>
+<li><a href="https://www.reindex.io/blog/redux-and-relay/" target="_blank" rel="noopener">Comparing Redux and Relay</a></li>
+<li><a href="https://medium.com/@machnicki/why-redux-is-not-so-easy-some-alternatives-24816d5ad22d#.8p4g5rpoh" target="_blank" rel="noopener">Why Redux is not so easy</a></li>
+<li><a href="https://github.com/markerikson/react-redux-links/blob/master/redux-tutorials.md" target="_blank" rel="noopener">A Curated List of 68+ React/Redux Tutorials, Walkthroughs &amp; Courses</a></li>
+<li><a href="https://medium.com/walmartlabs/make-your-react-components-pretty-a1ae4ec0f56e#.xahv5ilrj" target="_blank" rel="noopener">Make Your React Components Pretty</a></li>
+<li><a href="https://gcanti.github.io/2014/10/29/understanding-react-and-reimplementing-it-from-scratch-part-1.html" target="_blank" rel="noopener">Understanding React and reimplementing it from scratch</a></li>
+<li><a href="http://johnnyji.me/react/2016/06/27/why-arrow-functions-murder-react-performance.html" target="_blank" rel="noopener">Why Anon Functions Murder Performance in React</a></li>
+<li><a href="https://www.toptal.com/react/react-redux-and-immutablejs" target="_blank" rel="noopener">React, Redux and Immutable.js</a></li>
+<li><a href="https://blog.preen.ly/5-simple-tips-for-your-first-react-redux-project-10cbb2727b9a#.djzhyu7hz" target="_blank" rel="noopener">5 Simple Tips for Your First React + Redux Project</a></li>
+<li><a href="http://jamesknelson.com/even-need-routing-library/" target="_blank" rel="noopener">Do I Even Need A Routing Library?</a></li>
+<li><a href="https://medium.freecodecamp.com/using-fetch-as-google-for-seo-experiments-with-react-driven-websites-914e0fc3ab1#.nbv28tnl6" target="_blank" rel="noopener">React Router confuses Googlebot</a></li>
+<li><a href="https://medium.com/@taion/react-routing-and-data-fetching-ec519428135c#.3ryihzlp4" target="_blank" rel="noopener">Intro to the &lsquo;Found&rsquo; router</a></li>
+<li><a href="https://thinkster.io/tutorials/build-a-real-world-react-redux-application" target="_blank" rel="noopener">Build a Real World App with React &amp; Redux</a></li>
+<li><a href="https://github.com/acdlite/react-fiber-architecture" target="_blank" rel="noopener">React Fiber Architecture</a></li>
+<li><a href="https://medium.com/@jolyon_russ/11-lessons-learned-as-a-react-contractor-f515cd0491cf#.sx5bxsd67" target="_blank" rel="noopener">11 lessons learned as a React contractor</a></li>
+<li><a href="https://hackernoon.com/how-i-converted-my-react-app-to-vanillajs-and-whether-or-not-it-was-a-terrible-idea-4b14b1b2faff#.yfcfzpog4" target="_blank" rel="noopener">How I converted my React app to VanillaJS</a></li>
+<li><a href="https://medium.com/rendez-voo/migrating-incrementally-from-a-react-app-to-react-native-part-1-of-2-4566626e4ac5#.egtwaehew" target="_blank" rel="noopener">Migrating Incrementally from a React App to React Native</a></li>
+<li><a href="https://medium.com/rendez-voo/writing-your-first-react-native-module-50ede0840dae#.djjj2pmjx" target="_blank" rel="noopener">Writing your first React Native module</a></li>
+<li><a href="http://codepen.io/punkydrewster713/post/the-danger-crew-beta" target="_blank" rel="noopener">The Danger Crew RPG: Lessons Learned</a></li>
+<li><a href="http://techblog.netflix.com/2017/01/crafting-high-performance-tv-user.html" target="_blank" rel="noopener">Netflix. Crafting a high-performance TV user interface using React</a></li>
+<li><a href="https://www.toptal.com/javascript/immutability-in-javascript-using-redux" target="_blank" rel="noopener">Immutability in JavaScript using Redux</a></li>
+<li><a href="https://medium.com/code-life/our-best-practices-for-writing-react-components-dec3eb5c3fc8#.d3obwypza" target="_blank" rel="noopener">Our Best Practices for Writing React Components</a></li>
+<li><a href="https://medium.com/@ddcreationstudi/8-steps-to-get-started-with-redux-and-react-a-roadmap-378807a1672e#.lqemo56yh" target="_blank" rel="noopener">8 steps to get started with Redux and React</a></li>
+<li><a href="https://tylermcginnis.com/build-your-own-react-router-v4/" target="_blank" rel="noopener">Build your own React Router v4</a></li>
+<li><a href="https://hackernoon.com/routing-in-react-the-uncomplicated-way-b2c5ffaee997#.h4pkil43k" target="_blank" rel="noopener">Routing in React, the uncomplicated way</a></li>
+<li><a href="https://tech.okcupid.com/how-okcupid-organizes-its-multi-page-react-app/" target="_blank" rel="noopener">How OkCupid organizes its multi-page React app</a></li>
+<li><a href="https://hackernoon.com/simple-react-development-in-2017-113bd563691f" target="_blank" rel="noopener">Simple React Development in 2017</a></li>
+<li><a href="https://orlandohamsho.com/2017/03/26/the-question-fiber-answers-for-rendering-in-react/" target="_blank" rel="noopener">The question Fiber answers for rendering in React</a></li>
+<li><a href="https://medium.com/@kanavarora/improving-first-time-load-of-a-production-react-app-part-1-of-2-e7494a7c7ab0#.7075zigzk" target="_blank" rel="noopener">Improving first time load of a Production React App</a></li>
+<li><a href="https://medium.com/@asolove/preact-internals-1-the-easy-parts-3a081fa36205#.2knx3veiu" target="_blank" rel="noopener">Preact internals #1: the easy parts</a></li>
+<li><a href="http://formidable.com/blog/2017/introducing-rapscallion/" target="_blank" rel="noopener">Rapscallion: A New Approach for Server-Side Rendering React Apps</a></li>
+<li><a href="https://facebook.github.io/react/docs/integrating-with-other-libraries.html" target="_blank" rel="noopener">Integrating with Other Libraries (jQuery and Backbone)</a></li>
+<li><a href="https://www.sitepoint.com/organize-large-react-application/" target="_blank" rel="noopener">How to Organize a Large React Application and Make It Scale</a></li>
+<li><a href="https://medium.com/missive-app/45-faster-react-functional-components-now-3509a668e69f" target="_blank" rel="noopener">45% Faster React Functional Components, Now</a></li>
+<li><a href="https://medium.freecodecamp.com/3-tips-to-keep-in-mind-while-developing-complex-ui-in-web-b56312310390" target="_blank" rel="noopener">How to build complex user interfaces without going completely insane</a></li>
+<li><a href="https://medium.com/@thegreengreek/the-one-thing-you-need-to-know-about-react-router-4-34e27cbe7b53" target="_blank" rel="noopener">The One Thing you need to know about React Router 4</a></li>
+<li><a href="http://school.shoutem.com/lectures/build-simple-imgur-client-react-native/" target="_blank" rel="noopener">Build an Imgur App with React Native and MobX</a></li>
+<li><a href="https://medium.freecodecamp.org/all-the-fundamental-react-js-concepts-jammed-into-this-single-medium-article-c83f9b53eac2" target="_blank" rel="noopener">All the fundamental React.js concepts, jammed into this single Medium article</a></li>
+<li><a href="https://hackernoon.com/whats-new-with-server-side-rendering-in-react-16-9b0d78585d67" target="_blank" rel="noopener">What’s New With Server-Side Rendering in React 16</a></li>
+<li><a href="https://blog.discordapp.com/lessons-from-migrating-a-large-codebase-to-react-16-e60e49102aa6" target="_blank" rel="noopener">Lessons from migrating a large codebase to React 16</a></li>
+<li><a href="https://medium.com/tandemly/im-breaking-up-with-higher-order-components-44b0df2db052" target="_blank" rel="noopener">I’m Breaking up with Higher Order Components</a></li>
+<li><a href="https://medium.freecodecamp.org/7-reasons-to-outlaw-reacts-functional-components-ff5b5ae09b7c" target="_blank" rel="noopener">7 Reasons to Outlaw React’s Functional Components</a></li>
+<li><a href="https://medium.com/netscape/react-performance-anti-pattern-creating-functions-in-render-ddeb5ebd2933" target="_blank" rel="noopener">React Performance Anti-Pattern: Creating Functions in render()</a></li>
+<li><a href="https://www.bignerdranch.com/blog/destroy-all-classes-turn-react-components-inside-out-with-functional-programming/" target="_blank" rel="noopener">DESTROY ALL CLASSES: Turn React Components Inside Out with Functional Programming</a></li>
+<li><a href="https://stackshare.io/posts/the-react-story" target="_blank" rel="noopener">The React Story</a></li>
+<li><a href="https://moduscreate.com/reactjs-form-validation-approaches/" target="_blank" rel="noopener">ReactJS Form Validation Approaches</a></li>
+<li><a href="https://goshakkk.name/instant-form-fields-validation-react/" target="_blank" rel="noopener">Instant form field validation with React&rsquo;s controlled inputs</a></li>
+<li><a href="https://blog.codeship.com/integrating-react-in-a-6-year-old-rails-app/" target="_blank" rel="noopener">Integrating React in a 6+ Year Old Rails App</a></li>
+<li><a href="https://levelup.gitconnected.com/how-exactly-does-react-handles-events-71e8b5e359f2" target="_blank" rel="noopener">The React and React Native Event System Explained: A Harmonious Coexistence</a></li>
+<li><a href="https://medium.com/@baphemot/whats-new-in-react-16-3-d2c9b7b6193b" target="_blank" rel="noopener">What’s new in React 16.3(.0-alpha)</a></li>
+<li><a href="https://medium.freecodecamp.org/the-best-way-to-bind-event-handlers-in-react-282db2cf1530" target="_blank" rel="noopener">The best way to bind event handlers in React</a></li>
+<li><a href="https://alligator.io/react/using-new-portal-feature-in-react/" target="_blank" rel="noopener">Using the New Portal Feature in React 16+</a></li>
+<li><a href="https://medium.com/airbnb-engineering/react-native-at-airbnb-the-technology-dafd0b43838" target="_blank" rel="noopener">React Native at Airbnb: The Technology</a></li>
+<li><a href="https://medium.com/airbnb-engineering/building-a-cross-platform-mobile-team-3e1837b40a88" target="_blank" rel="noopener">Building a Cross-Platform Mobile Team (AirBnB)</a></li>
+<li><a href="https://medium.com/airbnb-engineering/sunsetting-react-native-1868ba28e30a" target="_blank" rel="noopener">Sunsetting React Native (AirBnB)</a></li>
+<li><a href="https://blog.logrocket.com/react-datepicker-217b4aa840da" target="_blank" rel="noopener">How to build a custom date picker with React</a></li>
+<li><a href="http://blog.plataformatec.com.br/2018/05/setting-up-rails-with-webpacker-react-and-jest/" target="_blank" rel="noopener">Setting up Rails with Webpack(er), React and Jest</a></li>
+<li><a href="https://www.monterail.com/blog/3d-editor-vue.js-reactive-entity-system" target="_blank" rel="noopener">Building a 3D iDesigner with Vue.js: Designing a Reactive Entity System</a></li>
+<li><a href="https://www.robinwieruch.de/javascript-fundamentals-react-requirements/" target="_blank" rel="noopener">JavaScript fundamentals before learning React</a></li>
+<li><a href="https://hackernoon.com/react-native-vs-flutter-which-is-preferred-for-you-bba108f808" target="_blank" rel="noopener">React Native vs Flutter — Which is preferred for you?</a></li>
+<li><a href="https://blog.theodo.com/2019/07/how-i-ruined-my-application-performances-by-using-react-context-instead-of-redux/" target="_blank" rel="noopener">How I ruined my application performances by using React context instead of Redux</a></li>
+<li><a href="https://ionicframework.com/blog/announcing-ionic-react/" target="_blank" rel="noopener">Announcing Ionic React</a></li>
+<li><a href="https://tech.travelaudience.com/how-to-test-asynchronous-data-fetching-on-a-react-component-ff2ee7433d71" target="_blank" rel="noopener">How to test asynchronous data fetching on a React component</a></li>
+<li><a href="https://buttercms.com/blog/best-practices-for-building-a-large-scale-react-application" target="_blank" rel="noopener">Best practices for building a large scale react application</a></li>
+<li><a href="https://medium.com/sanctuary-computer-inc/building-lightos-with-react-native-4b6e4ad1cd7f" target="_blank" rel="noopener">Building LightOS with React Native</a></li>
+<li><a href="https://css-tricks.com/how-we-created-a-static-site-that-generates-tartan-patterns-in-svg/" target="_blank" rel="noopener">Tartan Patterns in SVG</a></li>
+</ul>
+
+            </div>
+
+        </article>
+
+        
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+    
+
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2020&nbsp;Alexander Shemetovskiy</div>
+
+            
+    
+        <ul class="socials"><li class="socials-item">
+                    <a href="/rss.xml" target="_blank" rel="external noopener" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="mailto:alexkval@gmail.com" target="_blank" rel="external noopener" title="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://github.com/alexkval" target="_blank" rel="external noopener" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://twitter.com/alexkval" target="_blank" rel="external noopener" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://t.me/alexkval" target="_blank" rel="external noopener" title="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon social-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                </li></ul>
+    
+
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true,
+        header: '[data-scroll-header]'
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/meme.min.185530990dfec107a70ab138f45085aabdf7c3888ebc363f667497978c71d3eb.js" integrity="sha256-GFUwmQ3&#43;wQenCrE49FCFqr33w4iOvDY/ZnSXl4xx0&#43;s="></script>
+
+    </body>
+</html>

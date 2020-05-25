@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.71.0" /><meta name="theme-color" content="#fff" />
+
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title> | Alexander Shemetovskiy</title>
+
+    <link rel="stylesheet" href="/css/meme.min.58bc39dbe134c5e44a78e94ce3e1861400ca666811a7cdadca215d1fae085f0d.css" integrity="sha256-WLw52&#43;E0xeRKeOlM4&#43;GGFADKZmgRp82tyiFdH64IXw0=" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="Alexander Shemetovskiy" /><meta name="description" content="Clojure
+ Installing Clojure on OSX Opinionated, Complete, Best Way to Setup Atom for Clojure Clojure from the ground up Clojure’s approach to Identity and State ClojureScript Cheatsheet Clojure Distilled Clojure &amp;ldquo;-function&amp;rdquo; special? ClojureScript: JavaScript Interop Clojure by Example ClojureScript Quick Start Using JavaScript libraries in ClojureScript Clojure Libs and Namespaces: require, use, import, and ns Interactive Programming in ClojureScript (2014) lein-figwheel: hot-reloading in a browser of a ClojureScript Creating Reagent Components Reagent deep dive part 1: Hiccup and ratoms Reagent deep dive part 2: The lifecycle of a component Reagent deep dive part 3: Sequences Reagent deep dive part 4: Application principles re-frame: A Reagent Framework For Writing SPAs, in Clojurescript An Introduction to ClojureScript (2015) ClojureScript Translations from JavaScript ClojureScript &#43; React Native JVM Options Cheat Sheet My experience with Clojurescript and React Native (Lymchat) ClojureScript in Rails (Boot way) ClojureScript in Rails (figwheel, reagent) Simple and Happy; is Clojure dying, and what has Ruby got to do with it?" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Alexander Shemetovskiy" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Alexander Shemetovskiy" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://alexkval.github.io/readings/clojure/" />
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "datePublished": "2014-12-28T12:00:00+00:00",
+        "dateModified": "2020-05-25T00:52:24+01:00",
+        "url": "https://alexkval.github.io/readings/clojure/",
+        "name": "",
+        "description": "Clojure\n Installing Clojure on OSX Opinionated, Complete, Best Way to Setup Atom for Clojure Clojure from the ground up Clojure’s approach to Identity and State ClojureScript Cheatsheet Clojure Distilled Clojure \u0026ldquo;-function\u0026rdquo; special? ClojureScript: JavaScript Interop Clojure by Example ClojureScript Quick Start Using JavaScript libraries in ClojureScript Clojure Libs and Namespaces: require, use, import, and ns Interactive Programming in ClojureScript (2014) lein-figwheel: hot-reloading in a browser of a ClojureScript Creating Reagent Components Reagent deep dive part 1: Hiccup and ratoms Reagent deep dive part 2: The lifecycle of a component Reagent deep dive part 3: Sequences Reagent deep dive part 4: Application principles re-frame: A Reagent Framework For Writing SPAs, in Clojurescript An Introduction to ClojureScript (2015) ClojureScript Translations from JavaScript ClojureScript + React Native JVM Options Cheat Sheet My experience with Clojurescript and React Native (Lymchat) ClojureScript in Rails (Boot way) ClojureScript in Rails (figwheel, reagent) Simple and Happy; is Clojure dying, and what has Ruby got to do with it?",
+        "image": "https://alexkval.github.io/apple-touch-icon.png",
+        "license": "Copyright © Alexander Shemetovskiy, all rights reserved.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Alexander Shemetovskiy",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://alexkval.github.io/apple-touch-icon.png"
+            },
+            "url": "https://alexkval.github.io/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://alexkval.github.io/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:site" content="@alexkval" />
+<meta name="twitter:creator" content="@alexkval" />
+
+    
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Clojure
+ Installing Clojure on OSX Opinionated, Complete, Best Way to Setup Atom for Clojure Clojure from the ground up Clojure’s approach to Identity and State ClojureScript Cheatsheet Clojure Distilled Clojure &amp;ldquo;-function&amp;rdquo; special? ClojureScript: JavaScript Interop Clojure by Example ClojureScript Quick Start Using JavaScript libraries in ClojureScript Clojure Libs and Namespaces: require, use, import, and ns Interactive Programming in ClojureScript (2014) lein-figwheel: hot-reloading in a browser of a ClojureScript Creating Reagent Components Reagent deep dive part 1: Hiccup and ratoms Reagent deep dive part 2: The lifecycle of a component Reagent deep dive part 3: Sequences Reagent deep dive part 4: Application principles re-frame: A Reagent Framework For Writing SPAs, in Clojurescript An Introduction to ClojureScript (2015) ClojureScript Translations from JavaScript ClojureScript &#43; React Native JVM Options Cheat Sheet My experience with Clojurescript and React Native (Lymchat) ClojureScript in Rails (Boot way) ClojureScript in Rails (figwheel, reagent) Simple and Happy; is Clojure dying, and what has Ruby got to do with it?" />
+<meta property="og:url" content="https://alexkval.github.io/readings/clojure/" />
+<meta property="og:site_name" content="Alexander Shemetovskiy" />
+<meta property="og:locale" content="en" /><meta property="og:image" content="https://alexkval.github.io/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+
+        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+
+        
+
+
+
+
+    
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-67171111-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header" data-scroll-header>
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">Alexander Shemetovskiy</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/posts/"><span class="menu-item-name">Posts</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item active"><a href="/readings/"><span class="menu-item-name">Readings</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/about/"><span class="menu-item-name">About</span></a>
+                </li>
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post" data-small-caps="true" data-align="default" data-type="readings" data-toc-num="true">
+
+            <h1 class="post-title"></h1>
+
+            
+
+            
+
+            
+
+            <div class="post-body">
+              <p><strong>Clojure</strong></p>
+<ul>
+<li><a href="https://medium.com/@sgnl/installing-clojure-on-osx-eb3bf77908c9" target="_blank" rel="noopener">Installing Clojure on OSX</a></li>
+<li><a href="https://gist.github.com/jasongilman/d1f70507bed021b48625" target="_blank" rel="noopener">Opinionated, Complete, Best Way to Setup Atom for Clojure</a></li>
+<li><a href="https://aphyr.com/tags/Clojure-from-the-ground-up" target="_blank" rel="noopener">Clojure from the ground up</a></li>
+<li><a href="https://clojure.org/about/state" target="_blank" rel="noopener">Clojure’s approach to Identity and State</a></li>
+<li><a href="http://cljs.info/cheatsheet/" target="_blank" rel="noopener">ClojureScript Cheatsheet</a></li>
+<li><a href="http://yogthos.github.io/ClojureDistilled.html" target="_blank" rel="noopener">Clojure Distilled</a></li>
+<li><a href="http://grokbase.com/t/gg/clojure/122shjjk8a/function-special" target="_blank" rel="noopener">Clojure &ldquo;-function&rdquo; special?</a></li>
+<li><a href="http://www.spacjer.com/blog/2014/09/12/clojurescript-javascript-interop/" target="_blank" rel="noopener">ClojureScript: JavaScript Interop</a></li>
+<li><a href="https://kimh.github.io/clojure-by-example/" target="_blank" rel="noopener">Clojure by Example</a></li>
+<li><a href="https://clojurescript.org/guides/quick-start" target="_blank" rel="noopener">ClojureScript Quick Start</a></li>
+<li><a href="http://lukevanderhart.com/2011/09/30/using-javascript-and-clojurescript.html" target="_blank" rel="noopener">Using JavaScript libraries in ClojureScript</a></li>
+<li><a href="https://8thlight.com/blog/colin-jones/2010/12/05/clojure-libs-and-namespaces-require-use-import-and-ns.html" target="_blank" rel="noopener">Clojure Libs and Namespaces: require, use, import, and ns</a></li>
+<li><a href="http://rigsomelight.com/2014/05/01/interactive-programming-flappy-bird-clojurescript.html" target="_blank" rel="noopener">Interactive Programming in ClojureScript (2014)</a></li>
+<li><a href="https://github.com/bhauman/lein-figwheel" target="_blank" rel="noopener">lein-figwheel: hot-reloading in a browser of a ClojureScript</a></li>
+<li><a href="https://github.com/Day8/re-frame/wiki/Creating-Reagent-Components" target="_blank" rel="noopener">Creating Reagent Components</a></li>
+<li><a href="http://timothypratley.blogspot.com/2017/01/reagent-deep-dive-part-1.html" target="_blank" rel="noopener">Reagent deep dive part 1: Hiccup and ratoms</a></li>
+<li><a href="http://timothypratley.blogspot.com/2017/01/reagent-deep-dive-part-2-lifecycle-of.html" target="_blank" rel="noopener">Reagent deep dive part 2: The lifecycle of a component</a></li>
+<li><a href="http://timothypratley.blogspot.com/2017/01/reagent-deep-dive-part-3-sequences.html" target="_blank" rel="noopener">Reagent deep dive part 3: Sequences</a></li>
+<li><a href="http://timothypratley.blogspot.com/2017/01/reagent-deep-dive-part-4-application.html" target="_blank" rel="noopener">Reagent deep dive part 4: Application principles</a></li>
+<li><a href="https://github.com/Day8/re-frame" target="_blank" rel="noopener">re-frame: A Reagent Framework For Writing SPAs, in Clojurescript</a></li>
+<li><a href="https://www.sitepoint.com/introduction-to-clojurescript/" target="_blank" rel="noopener">An Introduction to ClojureScript (2015)</a></li>
+<li><a href="https://kanaka.github.io/clojurescript/web/synonym.html" target="_blank" rel="noopener">ClojureScript Translations from JavaScript</a></li>
+<li><a href="http://cljsrn.org/" target="_blank" rel="noopener">ClojureScript + React Native</a></li>
+<li><a href="https://zeroturnaround.com/rebellabs/jvm-options-cheat-sheet/" target="_blank" rel="noopener">JVM Options Cheat Sheet</a></li>
+<li><a href="https://medium.com/@tiensonqin/my-experience-with-clojurescript-and-react-native-81bb1d3bb2c4" target="_blank" rel="noopener">My experience with Clojurescript and React Native (Lymchat)</a></li>
+<li><a href="https://corbt.com/posts/2015/03/16/clojurescript-in-rails.html" target="_blank" rel="noopener">ClojureScript in Rails (Boot way)</a></li>
+<li><a href="https://github.com/frisoft/frisoft.github.io/wiki/Rails-application-with-clojurescript-front-end-using-figwheel-(live-coding)-and-Reagent-(React)" target="_blank" rel="noopener">ClojureScript in Rails (figwheel, reagent)</a></li>
+<li><a href="https://lambdaisland.com/blog/25-05-2017-simple-and-happy-is-clojure-dying-and-what-has-ruby-got-to-do-with-it" target="_blank" rel="noopener">Simple and Happy; is Clojure dying, and what has Ruby got to do with it?</a></li>
+<li><a href="https://blog.appcanary.com/2017/hard-isnt-simple-ruby-clojure.html" target="_blank" rel="noopener">Simple Ain&rsquo;t Easy, but Hard Ain&rsquo;t Simple: Leaving Clojure for Ruby</a></li>
+<li><a href="http://www.flyingmachinestudios.com/programming/hey-rubyists-try-clojure/" target="_blank" rel="noopener">Why Clojure&rsquo;s a Great Next Language for Rubyists</a></li>
+<li><a href="http://blog.mattgauger.com/blog/2014/09/15/clojure-code-quality-tools/" target="_blank" rel="noopener">Clojure Code Quality Tools</a></li>
+<li><a href="http://blog.klipse.tech/clojure/2016/11/24/stringify-clojure.html" target="_blank" rel="noopener">str vs. pr-str - humans vs. machines</a></li>
+<li><a href="http://www.lispcast.com/testing-clojurescript" target="_blank" rel="noopener">How can you test ClojureScript applications and libraries?</a></li>
+<li><a href="https://reagent-project.github.io/news/news060-alpha.html" target="_blank" rel="noopener">Reagent: track, with-let, rswap!, and &lsquo;:&gt;&rsquo;</a></li>
+<li><a href="https://clojurescript.org/news/2017-07-12-clojurescript-is-not-an-island-integrating-node-modules" target="_blank" rel="noopener">ClojureScript: Integrating Node Modules</a></li>
+<li><a href="http://squirrel.pl/blog/2013/03/28/two-ways-to-access-properties-in-clojurescript/" target="_blank" rel="noopener">Two Ways to Access Properties in ClojureScript</a></li>
+<li><a href="https://pupeno.com/2017/04/15/clojurescript-debouncer/" target="_blank" rel="noopener">ClojureScript debouncer</a></li>
+<li><a href="https://cljs.github.io/api/cljs.core/goog-define" target="_blank" rel="noopener">Need dev-mode only code ? Use goog-define</a></li>
+<li><a href="https://anmonteiro.com/2015/09/solving-closure-librarys-html5history-double-event-dispatch/" target="_blank" rel="noopener">Solving Closure Library&rsquo;s Html5history double event dispatch</a></li>
+<li><a href="https://anmonteiro.com/2016/10/clojurescript-require-outside-ns/" target="_blank" rel="noopener">ClojureScript <code>require</code> outside <code>ns</code></a></li>
+<li><a href="http://blog.cognitect.com/blog/2017/5/22/restate-your-ui-using-state-machines-to-simplify-user-interface-development" target="_blank" rel="noopener">Using State Machines to Simplify UI Development</a></li>
+<li><a href="http://blog.cognitect.com/blog/2017/8/14/restate-your-ui-creating-a-user-interface-with-re-frame-and-state-machines" target="_blank" rel="noopener">Creating a UI with Re-frame and State Machines</a></li>
+<li><a href="http://blog.cognitect.com/blog/2017/4/17/clojure-for-neovim-for-clojure" target="_blank" rel="noopener">Clojure for Neovim for Clojure</a></li>
+<li><a href="https://8thlight.com/blog/colin-jones/2012/05/22/quoting-without-confusion.html" target="_blank" rel="noopener">Quoting Without Confusion</a></li>
+<li><a href="http://www.closurecheatsheet.com/events" target="_blank" rel="noopener">Closure Cheat Sheet - Events</a></li>
+<li><a href="https://yogthos.net/posts/2016-05-20-ExpandableWidgetsInReagent.html" target="_blank" rel="noopener">Writing an expandable widget with Reagent</a></li>
+<li><a href="http://www.metasoarous.com/how-i-fell-in-love-with-clojure/" target="_blank" rel="noopener">How I fell in love with Clojure</a></li>
+<li><a href="http://www.lispcast.com/clojure-and-types" target="_blank" rel="noopener">Clojure vs. The Static Typing World</a></li>
+<li><a href="https://clojurescript.org/news/2017-07-14-checked-array-access" target="_blank" rel="noopener">Checked Array Access</a></li>
+<li><a href="https://purelyfunctional.tv/guide/re-frame-building-blocks/" target="_blank" rel="noopener">The Re-frame Building Blocks Guide</a></li>
+<li><a href="https://madstap.github.io/posts/dbg/" target="_blank" rel="noopener">Debugging made simple</a></li>
+<li><a href="http://www.spacjer.com/blog/2015/11/24/lesser-known-clojure-keep-and-keep-indexed-functions/" target="_blank" rel="noopener">Lesser known Clojure: keep, keep-indexed and map-indexed functions</a></li>
+<li><a href="https://clojure.org/guides/threading_macros" target="_blank" rel="noopener">Threading Macros Guide</a></li>
+<li><a href="http://www.lispcast.com/cognitect-clojure" target="_blank" rel="noopener">Should Cognitect do More for Clojure?</a></li>
+<li><a href="http://www.functionalbytes.nl/clojure/nodejs/figwheel/repl/clojurescript/cli/2017/12/20/tools-deps-figwheel" target="_blank" rel="noopener">Figwheel with new Clojure 1.9 CLI tools</a></li>
+<li><a href="http://tonsky.me/blog/decomposing-web-app-development/" target="_blank" rel="noopener">Decomposing web app development (DataScript intro)</a></li>
+<li><a href="https://yogthos.net/posts/2018-01-12-ClojureScriptErrorPropagation.html" target="_blank" rel="noopener">Capturing ClojureScript Errors on the Server</a></li>
+<li><a href="https://stackoverflow.com/questions/10192602/return-first-item-in-a-map-list-sequence-that-satisfies-a-function-returning-tru" target="_blank" rel="noopener">find-first function</a></li>
+<li><a href="http://tonsky.me/blog/readable-clojure/" target="_blank" rel="noopener">Readable Clojure (Nikita Prokopov)</a></li>
+<li><a href="https://8thlight.com/blog/eric-smith/2016/10/05/a-testable-clojurescript-setup.html" target="_blank" rel="noopener">TDD in ClojureScript</a></li>
+<li><a href="https://blog.michielborkent.nl/blog/2017/05/25/inline-def-debugging/" target="_blank" rel="noopener">Inline Def: An Effective Debugging Technique for Clojure</a></li>
+<li><a href="http://www.lispcast.com/mastering-client-side-routing-with-secretary-and-goog-history" target="_blank" rel="noopener">Mastering ClojureScript Routing with Secretary and goog.History</a></li>
+<li><a href="http://clojure-doc.org/articles/language/functions.html" target="_blank" rel="noopener">Functions in Clojure</a></li>
+<li><a href="https://dzone.com/articles/why-we-use-om-and-why-were-excited-for-om-next" target="_blank" rel="noopener">Why We Use Om, and Why We’re Excited for Om Next</a></li>
+<li><a href="https://medium.com/@kirill.ishanov/poor-mans-graphql-client-for-clojurescript-apps-8dc4b04e8738" target="_blank" rel="noopener">Poor man’s GraphQL client for ClojureScript apps</a></li>
+<li><a href="https://juxt.pro/blog/posts/through-the-looking-graph.html" target="_blank" rel="noopener">Experiences adopting GraphQL on a Clojure/script project (re-graph author)</a></li>
+<li><a href="https://purelyfunctional.tv/article/why-re-frame-instead-of-om-next/" target="_blank" rel="noopener">Why Re-frame instead of Om Next</a></li>
+<li><a href="https://notamonadtutorial.com/one-does-not-simply-build-a-user-interface-our-clojurescript-re-frame-app-67b1354a2d55" target="_blank" rel="noopener">One does not simply build a user interface: our ClojureScript/re-frame app</a></li>
+<li><a href="http://ingesolvoll.github.io/posts/2018-04-01-kee-frame-putting-the-url-in-charge/" target="_blank" rel="noopener">Kee-frame: Putting the URL in charge</a></li>
+<li><a href="https://blog.cognitect.com/blog/2017/5/22/restate-your-ui-using-state-machines-to-simplify-user-interface-development" target="_blank" rel="noopener">Restate Your UI: Using State Machines to Simplify User Interface Development</a></li>
+<li><a href="https://lambdaisland.com/blog/2017-02-11-re-frame-form-1-subscriptions" target="_blank" rel="noopener">re-frame Subscriptions Got Even Better (2017)</a></li>
+<li><a href="https://github.com/Day8/re-frame/blob/master/docs/SubscriptionFlow.md" target="_blank" rel="noopener">re-frame: subscription flow mechanics</a></li>
+<li><a href="https://pupeno.com/2015/08/26/no-hashes-bidirectional-routing-in-re-frame-with-bidi-and-pushy/" target="_blank" rel="noopener">No-hashes bidirectional routing in re-frame with bidi and pushy</a></li>
+<li><a href="https://github.com/Day8/re-frame/blob/master/docs/SubscriptionInfographic.md" target="_blank" rel="noopener">Re-frame Subscription Infographic</a></li>
+<li><a href="http://blog.brunobonacci.com/2014/11/16/clojure-complete-guide-to-destructuring/" target="_blank" rel="noopener">The complete guide to Clojure destructuring</a></li>
+<li><a href="https://clojurescript.org/guides/code-splitting" target="_blank" rel="noopener">CLJS Code Splitting</a></li>
+<li><a href="https://cb.codes/organizing-clojure-projects-and-libraries/" target="_blank" rel="noopener">How To Organize A Clojure Project And Its Dependencies</a></li>
+<li><a href="https://gist.github.com/richhickey/1563cddea1002958f96e7ba9519972d9" target="_blank" rel="noopener">Open Source is Not About You (Rich Hickey)</a></li>
+<li><a href="https://clojure.org/reference/multimethods" target="_blank" rel="noopener">Multimethods and Hierarchies</a></li>
+<li><a href="https://clojure.org/reference/java_interop" target="_blank" rel="noopener">Java Interop</a></li>
+<li><a href="https://dragan.rocks/articles/20/Clojure-Numpy-Cupy-CPU-GPU" target="_blank" rel="noopener">Clojure is faster than NumPy/CuPy</a></li>
+<li><a href="https://stackoverflow.com/questions/4208680/in-clojure-how-can-i-undef-a-var-from-a-namespace" target="_blank" rel="noopener">How to undef a var?</a></li>
+<li><a href="https://clojuredocs.org/clojure.walk/macroexpand-all" target="_blank" rel="noopener">How to expand a macro?</a></li>
+<li><a href="https://stackoverflow.com/a/25328596/3874570" target="_blank" rel="noopener">doall vs dorun</a></li>
+<li><a href="https://clojure.org/reference/transients" target="_blank" rel="noopener">Transient Data Structures</a></li>
+<li><a href="https://www.davideaversa.it/2016/07/language-showdown-elixir-clojure/" target="_blank" rel="noopener">My view on Elixir and Clojure (2016)</a></li>
+<li><a href="https://elixirforum.com/t/opinions-on-elixir-vs-clojure/208/2" target="_blank" rel="noopener">Elixir vs. Clojure (2016)</a></li>
+<li><a href="http://martintrojer.github.io/beyond-clojure/2016/04/19/beyond-clojure-prelude" target="_blank" rel="noopener">Beyond Clojure: Prelude (2016)</a></li>
+<li><a href="https://www.reddit.com/r/Clojure/comments/5q2gmi/convince_me_to_use_clojure_over_elixir/dcvvqtt" target="_blank" rel="noopener">Clojure vs Elixir - for Clojure 1</a></li>
+<li><a href="https://www.reddit.com/r/Clojure/comments/5q2gmi/convince_me_to_use_clojure_over_elixir/dcvsay0" target="_blank" rel="noopener">Clojure vs Elixir - for Clojure 2</a></li>
+<li><a href="https://blog.rentpathcode.com/elixir-vs-clojure-a-high-level-comparison-e5b79537d213" target="_blank" rel="noopener">Elixir vs. Clojure: a high level (2019)</a></li>
+<li><a href="https://clojure.org/about/spec" target="_blank" rel="noopener">clojure.spec - Rationale and Overview</a></li>
+<li><a href="https://stackoverflow.com/a/7558925/3874570" target="_blank" rel="noopener">What does “^:static” do in Clojure?</a></li>
+<li><a href="https://stackoverflow.com/a/9136699/3874570" target="_blank" rel="noopener">Differences between Ref, Var, Agent, Atom</a></li>
+<li><a href="https://stackoverflow.com/a/4999888/3874570" target="_blank" rel="noopener">ref-set vs commute vs alter</a></li>
+<li><a href="http://arcanesentiment.blogspot.com/2011/01/clojures-unconventional-symbols.html" target="_blank" rel="noopener">Clojure&rsquo;s unconventional symbols</a></li>
+<li><a href="http://clojure-doc.org/articles/language/concurrency_and_parallelism.html" target="_blank" rel="noopener">Concurrency and Parallelism in Clojure</a></li>
+<li><a href="https://grison.me/2020/04/20/raytraclj-a-raytracer-in-clojure/" target="_blank" rel="noopener">Raytraclj, a raytracer in Clojure</a></li>
+<li><a href="http://bytopia.org/2014/07/07/inline-functions-in-clojure/" target="_blank" rel="noopener">Inline functions in Clojure</a></li>
+<li><a href="https://clojure.org/news/2013/06/28/clojure-clore-async-channels" target="_blank" rel="noopener">Clojure core.async Channels</a></li>
+<li><a href="http://clojure-goes-fast.com/blog/clojures-slow-start/" target="_blank" rel="noopener">Clojure&rsquo;s slow start — what&rsquo;s inside?</a></li>
+<li><a href="https://medium.com/swlh/what-i-learned-after-writing-clojure-for-424-days-straight-8884ec471f8e" target="_blank" rel="noopener">What I learned after writing Clojure for 424 days, straight</a></li>
+<li><a href="http://blog.guillermowinkler.com/blog/2015/04/12/property-based-testing-using-quickcheck/" target="_blank" rel="noopener">Property-based Testing Using QuickCheck</a></li>
+<li><a href="http://thinkrelevance.com/blog/2013/06/04/clojure-workflow-reloaded" target="_blank" rel="noopener">My Clojure Workflow, Reloaded</a></li>
+<li><a href="https://lambdaisland.com/blog/2018-02-09-reloading-woes" target="_blank" rel="noopener">Different hot-reloading approaches</a></li>
+<li><a href="https://stackoverflow.com/a/20337925/3874570" target="_blank" rel="noopener">How to reload a clojure file in REPL</a></li>
+<li><a href="https://stackoverflow.com/a/34932745/3874570" target="_blank" rel="noopener">How to start a socket REPL?</a></li>
+<li><a href="https://blog.ndk.io/clojure-bootstrapping.html" target="_blank" rel="noopener">Why is Clojure bootstrapping so slow?</a></li>
+<li><a href="http://www.devstopfix.com/posts/2020/clojerl-ant-simulation/" target="_blank" rel="noopener">Clojure JVM vs BEAM Ant Simulation</a></li>
+</ul>
+
+            </div>
+
+        </article>
+
+        
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+    
+
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2020&nbsp;Alexander Shemetovskiy</div>
+
+            
+    
+        <ul class="socials"><li class="socials-item">
+                    <a href="/rss.xml" target="_blank" rel="external noopener" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="mailto:alexkval@gmail.com" target="_blank" rel="external noopener" title="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://github.com/alexkval" target="_blank" rel="external noopener" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://twitter.com/alexkval" target="_blank" rel="external noopener" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://t.me/alexkval" target="_blank" rel="external noopener" title="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon social-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                </li></ul>
+    
+
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true,
+        header: '[data-scroll-header]'
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/meme.min.185530990dfec107a70ab138f45085aabdf7c3888ebc363f667497978c71d3eb.js" integrity="sha256-GFUwmQ3&#43;wQenCrE49FCFqr33w4iOvDY/ZnSXl4xx0&#43;s="></script>
+
+    </body>
+</html>

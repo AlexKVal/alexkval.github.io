@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.71.0" /><meta name="theme-color" content="#fff" />
+
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title> | Alexander Shemetovskiy</title>
+
+    <link rel="stylesheet" href="/css/meme.min.58bc39dbe134c5e44a78e94ce3e1861400ca666811a7cdadca215d1fae085f0d.css" integrity="sha256-WLw52&#43;E0xeRKeOlM4&#43;GGFADKZmgRp82tyiFdH64IXw0=" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="Alexander Shemetovskiy" /><meta name="description" content="Ruby On Rails
+ How DHH Organizes His Rails Controllers Gourmet Service Objects ActiveRecord Mistakes That Slow Down Rails Apps: Count, Where and Present Rails Console Shortcuts, Tips, and Tricks 27 Ruby Gems I use in almost every SaaS project Authorization with Pundit Change data in migrations like a boss Getting Started with JBuilder How to Make a Rails 5 App API-Only How Does ActiveJob Work?" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Alexander Shemetovskiy" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Alexander Shemetovskiy" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://alexkval.github.io/readings/ruby-on-rails/" />
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "datePublished": "2014-12-28T12:00:00+00:00",
+        "dateModified": "2020-05-25T00:36:12+01:00",
+        "url": "https://alexkval.github.io/readings/ruby-on-rails/",
+        "name": "",
+        "description": "Ruby On Rails\n How DHH Organizes His Rails Controllers Gourmet Service Objects ActiveRecord Mistakes That Slow Down Rails Apps: Count, Where and Present Rails Console Shortcuts, Tips, and Tricks 27 Ruby Gems I use in almost every SaaS project Authorization with Pundit Change data in migrations like a boss Getting Started with JBuilder How to Make a Rails 5 App API-Only How Does ActiveJob Work?",
+        "image": "https://alexkval.github.io/apple-touch-icon.png",
+        "license": "Copyright © Alexander Shemetovskiy, all rights reserved.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Alexander Shemetovskiy",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://alexkval.github.io/apple-touch-icon.png"
+            },
+            "url": "https://alexkval.github.io/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://alexkval.github.io/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:site" content="@alexkval" />
+<meta name="twitter:creator" content="@alexkval" />
+
+    
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Ruby On Rails
+ How DHH Organizes His Rails Controllers Gourmet Service Objects ActiveRecord Mistakes That Slow Down Rails Apps: Count, Where and Present Rails Console Shortcuts, Tips, and Tricks 27 Ruby Gems I use in almost every SaaS project Authorization with Pundit Change data in migrations like a boss Getting Started with JBuilder How to Make a Rails 5 App API-Only How Does ActiveJob Work?" />
+<meta property="og:url" content="https://alexkval.github.io/readings/ruby-on-rails/" />
+<meta property="og:site_name" content="Alexander Shemetovskiy" />
+<meta property="og:locale" content="en" /><meta property="og:image" content="https://alexkval.github.io/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+
+        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+
+        
+
+
+
+
+    
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-67171111-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header" data-scroll-header>
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">Alexander Shemetovskiy</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/posts/"><span class="menu-item-name">Posts</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item active"><a href="/readings/"><span class="menu-item-name">Readings</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/about/"><span class="menu-item-name">About</span></a>
+                </li>
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post" data-small-caps="true" data-align="default" data-type="readings" data-toc-num="true">
+
+            <h1 class="post-title"></h1>
+
+            
+
+            
+
+            
+
+            <div class="post-body">
+              <p><strong>Ruby On Rails</strong></p>
+<ul>
+<li><a href="http://jeromedalbert.com/how-dhh-organizes-his-rails-controllers/" target="_blank" rel="noopener">How DHH Organizes His Rails Controllers</a></li>
+<li><a href="http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html" target="_blank" rel="noopener">Gourmet Service Objects</a></li>
+<li><a href="https://www.speedshop.co/2019/01/10/three-activerecord-mistakes.html" target="_blank" rel="noopener">ActiveRecord Mistakes That Slow Down Rails Apps: Count, Where and Present</a></li>
+<li><a href="https://pragmaticstudio.com/tutorials/rails-console-shortcuts-tips-tricks" target="_blank" rel="noopener">Rails Console Shortcuts, Tips, and Tricks</a></li>
+<li><a href="https://hackernoon.com/27-gems-i-use-in-almost-every-project-832986551df8" target="_blank" rel="noopener">27 Ruby Gems I use in almost every SaaS project</a></li>
+<li><a href="https://www.sitepoint.com/straightforward-rails-authorization-with-pundit/" target="_blank" rel="noopener">Authorization with Pundit</a></li>
+<li><a href="http://railsguides.net/change-data-in-migrations-like-a-boss/" target="_blank" rel="noopener">Change data in migrations like a boss</a></li>
+<li><a href="https://richonrails.com/articles/getting-started-with-jbuilder" target="_blank" rel="noopener">Getting Started with JBuilder</a></li>
+<li><a href="https://hashrocket.com/blog/posts/how-to-make-rails-5-api-only" target="_blank" rel="noopener">How to Make a Rails 5 App API-Only</a></li>
+<li><a href="https://karolgalanciak.com/blog/2016/09/25/decoding-rails-magic-how-does-activejob-work/" target="_blank" rel="noopener">How Does ActiveJob Work?</a></li>
+<li><a href="https://github.com/rails/rails/pull/31134" target="_blank" rel="noopener">Built-in Redis cache store</a></li>
+<li><a href="http://schneems.com/post/15948562424/speed-up-capybara-tests-with-devise/" target="_blank" rel="noopener">Speed up Capybara Tests with Devise</a></li>
+<li><a href="https://robots.thoughtbot.com/rspec-integration-tests-with-capybara" target="_blank" rel="noopener">End-to-End Testing with RSpec Integration Tests and Capybara</a></li>
+<li><a href="https://www.relishapp.com/rspec/rspec-rails/v/3-5/docs/helper-specs/helper-spec" target="_blank" rel="noopener">Rspec: Helper spec</a></li>
+<li><a href="https://product.reverb.com/react-on-rails-9936283aea07#.pculzaw1i" target="_blank" rel="noopener">Reverb’s story of moving to Webpack on the frontend</a></li>
+<li><a href="http://www.openmindedinnovations.com/blogs/3-ways-to-integrate-ruby-on-rails-react-flux" target="_blank" rel="noopener">3 ways to integrate Ruby on Rails + React + Flux</a></li>
+<li><a href="https://medium.com/shakacode/react-on-rails-2000-stars-32ff5cfacfbf#.drmtfmpg9" target="_blank" rel="noopener">React on Rails, 2000+ Stars</a></li>
+<li><a href="http://www.createdbypete.com/articles/ruby-on-rails-development-setup-for-mac-osx/" target="_blank" rel="noopener">Ruby on Rails development setup for Mac OSX</a></li>
+<li><a href="https://www.toptal.com/ruby-on-rails/top-10-mistakes-that-rails-programmers-make" target="_blank" rel="noopener">The 10 Most Common Mistakes That Rails Developers Make</a></li>
+<li><a href="http://tmichel.github.io/2015/09/14/oo-controversies-tell-dont-ask-vs-the-web/" target="_blank" rel="noopener">Object-oriented controversies: Tell Don&rsquo;t Ask vs the Web</a></li>
+<li><a href="https://robots.thoughtbot.com/my-issues-with-let" target="_blank" rel="noopener">My issues with Let (RSpec)</a></li>
+<li><a href="https://robots.thoughtbot.com/lets-not" target="_blank" rel="noopener">Let&rsquo;s Not (RSpec)</a></li>
+<li><a href="http://blog.carbonfive.com/2016/11/16/rails-database-best-practices/" target="_blank" rel="noopener">Rails Database Best Practices</a></li>
+<li><a href="http://pixelatedworks.com/articles/replacing-the-rails-asset-pipeline-with-webpack-and-yarn/" target="_blank" rel="noopener">Replacing the Rails Asset Pipeline with Webpack and Yarn</a></li>
+<li><a href="http://tomdallimore.com/blog/includes-vs-joins-in-rails-when-and-where/" target="_blank" rel="noopener">Includes vs Joins in Rails: When and where?</a></li>
+<li><a href="http://www.justinweiss.com/articles/where-do-you-put-your-code/" target="_blank" rel="noopener">Where Does Your Code Go?</a></li>
+<li><a href="http://batsov.com/articles/2013/12/04/using-rubys-each-with-object/" target="_blank" rel="noopener">&ldquo;Reduce&rdquo; the rails way - Enumerable#each_with_object</a></li>
+<li><a href="https://www.alfajango.com/blog/rails-3-remote-links-and-forms/" target="_blank" rel="noopener">Rails 3 Remote Links and Forms: A Definitive Guide</a></li>
+<li><a href="https://www.leighhalliday.com/responding-with-json-in-rails" target="_blank" rel="noopener">Responding with JSON in Rails</a></li>
+<li><a href="http://kirillplatonov.com/2014/11/04/active_model_serializer_vs_jbuilder/" target="_blank" rel="noopener">ActiveModel::Serializers vs Jbuilder (Kirill Platonov)</a></li>
+<li><a href="https://0x2a.sh/from-rest-to-graphql-b4e95e94c26b#.5pj8s3mxi" target="_blank" rel="noopener">From REST to GraphQL</a></li>
+<li><a href="https://www.driftingruby.com/episodes/ruby-on-rails-5-1-0-changes-and-new-features" target="_blank" rel="noopener">Ruby on Rails 5.1.0 Changes and New Features (Video)</a></li>
+<li><a href="http://eng.localytics.com/odbc-and-writing-your-own-activerecord-adapter/" target="_blank" rel="noopener">ODBC and writing your own ActiveRecord adapter</a></li>
+<li><a href="https://engineering.shopify.com/17489056-rebuilding-the-shopify-admin-improving-developer-productivity-by-deleting-28-000-lines-of-javascript" target="_blank" rel="noopener">Rebuilding the Shopify Admin: Improving Developer Productivity by Deleting 28,000 lines of JavaScript</a></li>
+<li><a href="http://www.speedshop.co/2015/07/29/scaling-ruby-apps-to-1000-rpm.html" target="_blank" rel="noopener">Scaling Ruby Apps to 1000 Requests per Minute - A Beginner&rsquo;s Guide</a></li>
+<li><a href="https://www.schneems.com/2016/12/20/how-the-f-does-sprockets-load-an-asset/" target="_blank" rel="noopener">How the F does Sprockets Load an Asset?</a></li>
+<li><a href="http://www.speedshop.co/2016/11/17/rubyconf-2016-performance-update.html" target="_blank" rel="noopener">Rubyconf 2016: The Performance Update</a></li>
+<li><a href="https://www.toptal.com/ruby-on-rails/after-two-decades-of-programming-i-use-rails" target="_blank" rel="noopener">What are the Benefits of Ruby on Rails? After Two Decades of Programming, I Use Rails</a></li>
+<li><a href="http://pixelatedworks.com/articles/configuring_new_rails_projects_with_railsrc_and_templates/" target="_blank" rel="noopener">Configuring New Rails Projects With .railsrc and Templates</a></li>
+<li><a href="https://richonrails.com/articles/customizing-the-rails-app-generator" target="_blank" rel="noopener">Customizing the Rails App Generator</a></li>
+<li><a href="http://pixelatedworks.com/articles/embracing-change-rails51-adopts-yarn-webpack-and-the-js-ecosystem/" target="_blank" rel="noopener">Embracing Change: Rails 5.1 Adopts Yarn, Webpack, and the JS Ecosystem</a></li>
+<li><a href="https://medium.com/ruby-on-rails/learning-ruby-on-rails-in-2016-from-the-best-resources-ecffb36a1fb1" target="_blank" rel="noopener">Learning Ruby on Rails in 2016 from the best resources</a></li>
+<li><a href="http://www.speedshop.co/2015/05/27/100-ms-to-glass-with-rails-and-turbolinks.html" target="_blank" rel="noopener">100ms to Glass with Rails and Turbolinks</a></li>
+<li><a href="https://rails-bestpractices.com/posts/2010/09/23/generate-polymorphic-url/" target="_blank" rel="noopener">Generate polymorphic url</a></li>
+<li><a href="https://m.signalvnoise.com/programming-with-a-love-of-the-implicit-66629bb81ee7" target="_blank" rel="noopener">Programming with a love of the implicit</a></li>
+<li><a href="https://coderwall.com/p/-2klvg/custom-flash-helper-in-rails4" target="_blank" rel="noopener">Custom flash helper in rails4</a></li>
+<li><a href="https://www.viget.com/articles/delete-in-rails-without-jquery-and-ujs" target="_blank" rel="noopener">Delete in Rails Without jQuery and UJS</a></li>
+<li><a href="https://richonrails.com/articles/action-mailer-previews-in-ruby-on-rails-4-1" target="_blank" rel="noopener">Action Mailer Previews in Ruby on Rails 4.1</a></li>
+<li><a href="https://launchschool.com/blog/handling-emails-in-rails" target="_blank" rel="noopener">Sending Emails in Rails Applications</a></li>
+<li><a href="https://richonrails.com/articles/authentication-in-rails-3-1" target="_blank" rel="noopener">Authentication in Rails 3.1+</a></li>
+<li><a href="https://rails-bestpractices.com/posts/2013/06/15/default_scope-is-evil/" target="_blank" rel="noopener">default_scope is evil</a></li>
+<li><a href="http://blog.bigbinary.com/2016/02/29/rails-5-improves-redirect_to_back-with-redirect-back.html" target="_blank" rel="noopener">Rails 5 improves redirect_to :back with new redirect_back method</a></li>
+<li><a href="http://jeffkreeftmeijer.com/2014/using-test-fixtures-with-carrierwave/" target="_blank" rel="noopener">Using Rails test fixtures with CarrierWave</a></li>
+<li><a href="http://ruby-journal.com/how-to-override-default-primary-key-id-in-rails/" target="_blank" rel="noopener">How to Override Default Primary Key Id in Rails</a></li>
+<li><a href="http://joshfrankel.me/blog/2016/how-to/create-a-many-to-many-activerecord-association-in-ruby-on-rails/" target="_blank" rel="noopener">A many-to-many association with &lsquo;has_many :through&rsquo; and &lsquo;has_and_belongs_to_many&rsquo;</a></li>
+<li><a href="http://joshfrankel.me/blog/2016/tutorials/custom-named-belongs_to-associations-in-rails-with-foreign-key-constraints/" target="_blank" rel="noopener">Custom Named Belongs_to Associations in Rails with foreign key constraints</a></li>
+<li><a href="http://blog.bigbinary.com/2016/02/15/rails-5-makes-belong-to-association-required-by-default.html" target="_blank" rel="noopener">Rails 5 makes belongs_to association required by default</a></li>
+<li><a href="http://www.rigelgroupllc.com/blog/2014/08/24/test-objects-for-blankness-with-this-one-little-trick/" target="_blank" rel="noopener">Test Objects for Blankness With This One Little Trick!</a></li>
+<li><a href="https://6ftdan.com/allyourdev/2015/05/13/rails-dont-pluck-unnecessarily/" target="_blank" rel="noopener">Rails: Don’t “pluck” Unnecessarily</a></li>
+<li><a href="https://www.collectiveidea.com/blog/archives/2013/12/18/the-marriage-of-figaro-and-rails" target="_blank" rel="noopener">The Marriage of Figaro… and Rails</a></li>
+<li><a href="http://yerb.net/blog/2014/03/13/three-easy-steps-to-using-counter-caches-in-rails/" target="_blank" rel="noopener">Three Easy Steps to Using Counter Caches in Rails</a></li>
+<li><a href="http://ryan.mcgeary.org/2016/02/05/proper-counter-cache-migrations-in-rails/" target="_blank" rel="noopener">Proper Counter Cache Migrations in Rails</a></li>
+<li><a href="http://blog.carbonfive.com/2016/11/16/rails-database-best-practices/" target="_blank" rel="noopener">Rails Database Best Practices</a></li>
+<li><a href="https://www.speedshop.co/2017/05/25/railsconf-2017-the-performance-update.html" target="_blank" rel="noopener">Railsconf 2017: The Performance Update</a></li>
+<li><a href="https://makandracards.com/makandra/15575-how-to-write-complex-migrations-in-rails" target="_blank" rel="noopener">How to write complex migrations in Rails</a></li>
+<li><a href="https://makandracards.com/makandra/42942-rails-talking-to-the-database-without-instantiating-activerecord-objects" target="_blank" rel="noopener">Rails: Talking to the database without instantiating ActiveRecord objects</a></li>
+<li><a href="https://robots.thoughtbot.com/referential-integrity-with-foreign-keys" target="_blank" rel="noopener">Have Some (Referential) Integrity with Foreign Keys</a></li>
+<li><a href="https://github.com/carrierwaveuploader/carrierwave/wiki/How-to:-Create-random-and-unique-filenames-for-all-versioned-files#unique-filenames" target="_blank" rel="noopener">UUID filenames for CarrierWave</a></li>
+<li><a href="http://dev.edenspiekermann.com/2016/06/02/using-mjml-in-rails/" target="_blank" rel="noopener">Using MJML in Rails</a></li>
+<li><a href="https://blog.botreetechnologies.com/building-responsive-email-templates-using-mjml-in-rails-afb166a5aa1" target="_blank" rel="noopener">How to send responsive Emails using MJML in Rails?</a></li>
+<li><a href="https://blog.engineyard.com/2015/testing-async-emails-rails-42" target="_blank" rel="noopener">Testing async emails, the Rails 4.2+ way</a></li>
+<li><a href="https://robots.thoughtbot.com/mystery-guest" target="_blank" rel="noopener">Mystery Guest</a></li>
+<li><a href="https://robots.thoughtbot.com/use-factory-girls-build-stubbed-for-a-faster-test" target="_blank" rel="noopener">Use Factory Girl&rsquo;s build_stubbed for a Faster Test Suite</a></li>
+<li><a href="https://robots.thoughtbot.com/how-we-test-rails-applications" target="_blank" rel="noopener">How We Test Rails Applications</a></li>
+<li><a href="https://content.pivotal.io/blog/structure-your-sass-files-with-import" target="_blank" rel="noopener">Structure Your SASS Files With @import</a></li>
+<li><a href="https://stackoverflow.com/questions/27814500/ruby-on-rails-provide-vs-content-for/32766186#32766186" target="_blank" rel="noopener">provide vs content_for</a></li>
+<li><a href="http://opensoul.org/2012/11/05/abusing-rails-i18n-to-set-page-titles/" target="_blank" rel="noopener">Abusing Rails I18N to Set Page Titles</a></li>
+<li><a href="https://calebthompson.io/store-page-titles-in-i18n" target="_blank" rel="noopener">Store Page Titles in I18n</a></li>
+<li><a href="https://css-tricks.com/snippets/html/responsive-meta-tag/" target="_blank" rel="noopener">Responsive Meta Tag</a></li>
+<li><a href="https://bitsofco.de/ios-safari-and-shrink-to-fit/" target="_blank" rel="noopener">The Problem with iOS Safari and shrink-to-fit</a></li>
+<li><a href="https://blog.rubyroidlabs.com/2017/05/patterson/" target="_blank" rel="noopener">INTERVIEW: Aaron Patterson, Rack, Github and BBQ</a></li>
+<li><a href="https://dalibornasevic.com/posts/79-debugging-rails-views-in-production" target="_blank" rel="noopener">Debugging Rails views in production</a></li>
+<li><a href="https://robots.thoughtbot.com/directory-for-shared-partials-in-rails" target="_blank" rel="noopener">Directory for shared partials in Rails</a></li>
+<li><a href="https://phraseapp.com/blog/posts/last-rails-i18n-guide-youll-ever-need/" target="_blank" rel="noopener">The Last Rails I18n Guide You’ll Ever Need</a></li>
+<li><a href="http://www.justinweiss.com/articles/rails-i18n-3-quick-tips-and-1-crazy-abuse/" target="_blank" rel="noopener">Rails I18n: 3 Quick Tips and 1 Crazy Abuse</a></li>
+<li><a href="https://everydayrails.com/2011/04/28/rails-try-method.html" target="_blank" rel="noopener">try() again in Rails</a></li>
+<li><a href="https://mixandgo.com/blog/how-to-use-link_to-in-rails" target="_blank" rel="noopener">How to use link_to in Rails</a></li>
+<li><a href="https://alternatelabs.co/blog/clearance-vs-devise" target="_blank" rel="noopener">Clearance vs. Devise</a></li>
+<li><a href="https://drivy.engineering/running-capybara-headless-chrome/" target="_blank" rel="noopener">Running feature specs with Capybara and Chrome headless</a></li>
+<li><a href="https://www.speedshop.co/2017/07/11/is-ruby-too-slow-for-web-scale.html" target="_blank" rel="noopener">Is Ruby Too Slow For Web-Scale? (Nate Berkopec)</a></li>
+<li><a href="https://www.chrisblunt.com/rails-on-docker-getting-started-docker-ruby-rails/" target="_blank" rel="noopener">Rails on Docker: Getting Started with Docker and Ruby on Rails</a></li>
+<li><a href="http://rainux.github.io/2011/07/23/configure-capybara-webkit-to-run-acceptance-specs-with-javascript-ajax/" target="_blank" rel="noopener">Configure capybara-webkit to Run Acceptance Specs With Javascript/AJAX</a></li>
+<li><a href="https://railsware.com/blog/2015/11/12/debugging-capybara-screenshot-of-error-page-on-circleci/" target="_blank" rel="noopener">Debugging Capybara: screenshot of error page on CircleCI</a></li>
+<li><a href="https://hackernoon.com/rails-web-scale-is-expensive-b86facc11381" target="_blank" rel="noopener">Rails Web-Scale is Expensive</a></li>
+<li><a href="https://hackernoon.com/phoenix-is-better-but-rails-is-more-popular-8975d5e68879" target="_blank" rel="noopener">Phoenix is better but Rails is more popular (2017)</a></li>
+<li><a href="https://www.ombulabs.com/blog/rspec/ruby/spy-vs-double-vs-instance-double.html" target="_blank" rel="noopener">Spy vs Double vs Instance Double</a></li>
+<li><a href="https://blog.codeship.com/realtime-with-react-and-rails/" target="_blank" rel="noopener">Realtime with React and Rails (react_on_rails)</a></li>
+<li><a href="https://schneems.com/2017/08/01/is-webrick-webscale/" target="_blank" rel="noopener">Is WEBrick Webscale?</a></li>
+<li><a href="https://robots.thoughtbot.com/automatically-wait-for-ajax-with-capybara" target="_blank" rel="noopener">Automatically Wait for AJAX with Capybara</a></li>
+<li><a href="https://blog.tomoyukikashiro.me/post/things-to-be-aware-of-when-change-capybara_default_wait_time/" target="_blank" rel="noopener">Things To Be Aware Of When Change Capybara Default_wait_time</a></li>
+<li><a href="https://schneems.com/2017/08/09/coder-frozen-in-2009-awakens-to-find-frontend-development-not-awful/" target="_blank" rel="noopener">Coder Frozen in 2009 Awakens to Find Frontend Development not Awful</a></li>
+<li><a href="https://launchschool.com/blog/rails-asset-pipeline-best-practices" target="_blank" rel="noopener">Everything You Should Know About the Rails Asset Pipeline</a></li>
+<li><a href="http://www.justinweiss.com/articles/rails-5-module-number-prepend-and-the-end-of-alias-method-chain/" target="_blank" rel="noopener">Module#prepend, Rails 5, and the End of <code>Alias_method_chain</code></a></li>
+<li><a href="http://yehudakatz.com/2010/02/01/safebuffers-and-rails-3-0/" target="_blank" rel="noopener">SafeBuffers and Rails 3.0</a></li>
+<li><a href="https://robots.thoughtbot.com/io-in-ruby" target="_blank" rel="noopener">IO in Ruby</a></li>
+<li><a href="https://simonecarletti.com/blog/2010/05/understanding-ruby-and-rails-proxy-patter-delegation-and-basicobject/" target="_blank" rel="noopener">Ruby Proxy Pattern and Dynamic Delegation (Rails 2.3 and 3)</a></li>
+<li><a href="https://learnetto.com/blog/how-to-make-ajax-calls-in-rails-5-1-with-or-without-jquery" target="_blank" rel="noopener">How to make AJAX calls in Rails 5.1 with or without jQuery</a></li>
+<li><a href="https://medium.com/@apneadiving/active-records-queries-tricks-2546181a98dd" target="_blank" rel="noopener">Active Record’s queries tricks</a></li>
+<li><a href="https://robots.thoughtbot.com/using-the-draper-gem-round-one" target="_blank" rel="noopener">Using the Draper Gem, Round One</a></li>
+<li><a href="https://apidock.com/rails/ActionView/Helpers/TextHelper/concat#123-Helper-method-taking-a-block" target="_blank" rel="noopener">ActionView/Helpers/TextHelper#concat method</a></li>
+<li><a href="http://blog.arkency.com/2013/12/rails4-preloading/" target="_blank" rel="noopener">#includes #preload #eager_load (Rails 3 &amp; 4 &amp; 5)</a></li>
+<li><a href="https://www.cookieshq.co.uk/posts/rails-tips-to-partial-path" target="_blank" rel="noopener">using #to_partial_path</a></li>
+<li><a href="https://signalvnoise.com/posts/3372-put-chubby-models-on-a-diet-with-concerns" target="_blank" rel="noopener">Put chubby models on a diet with concerns</a></li>
+<li><a href="http://blog.bigbinary.com/2016/05/13/rails-5-accepts-1-or-true-for-acceptance-validation.html" target="_blank" rel="noopener">Rails 5 accepts 1 or true for acceptance validation</a></li>
+<li><a href="https://evilmartians.com/chronicles/evil-front-part-1" target="_blank" rel="noopener">Modern Front-end in Rails</a></li>
+<li><a href="https://robots.thoughtbot.com/the-perils-of-uniqueness-validations" target="_blank" rel="noopener">The Perils of Uniqueness Validations</a></li>
+<li><a href="http://www.concept47.com/austin_web_developer_blog/ruby/puma-dev-on-osx-follow-up-tips-and-tricks/" target="_blank" rel="noopener">puma-dev on OSX follow up (tips and tricks)</a></li>
+<li><a href="https://stackoverflow.com/a/9087086/3874570" target="_blank" rel="noopener">proxy_association.owner</a></li>
+<li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_blank" rel="noopener">ActiveRecord::Associations::ClassMethods (Rails 5.1)</a></li>
+<li><a href="https://robots.thoughtbot.com/rendering-collections-in-rails" target="_blank" rel="noopener">Rendering Collections in Rails</a></li>
+<li><a href="https://www.justinweiss.com/articles/creating-easy-readable-attributes-with-activerecord-enums/" target="_blank" rel="noopener">Creating Easy, Readable Attributes With ActiveRecord Enums</a></li>
+<li><a href="https://sipsandbits.com/2018/04/30/using-database-native-enums-with-rails/" target="_blank" rel="noopener">Enums with Rails &amp; ActiveRecord: an improved way</a></li>
+<li><a href="https://www.schneems.com/2018/01/04/get-your-svgs-out-of-your-html/" target="_blank" rel="noopener">Get your SVGs out of your HTML (Schneems)</a></li>
+<li><a href="http://weblog.rubyonrails.org/2018/1/30/Rails-5-2-RC1-Active-Storage-Redis-Cache-Store-HTTP2-Early-Hints-Credentials/" target="_blank" rel="noopener">5.2 Active Storage, Redis Cache Store, HTTP/2 Early Hints, CSP, Credentials</a></li>
+<li><a href="https://robots.thoughtbot.com/acceptance-tests-with-subdomains" target="_blank" rel="noopener">Acceptance Tests with Subdomains</a></li>
+<li><a href="https://samsaffron.com/archive/2018/02/02/instrumenting-rails-with-prometheus" target="_blank" rel="noopener">Instrumenting Rails with Prometheus</a></li>
+<li><a href="https://evilmartians.com/chronicles/rails-5-2-active-storage-and-beyond" target="_blank" rel="noopener">Rails 5.2: Active Storage and beyond</a></li>
+<li><a href="https://m.patrikonrails.com/rails-5-1s-form-with-vs-old-form-helpers-3a5f72a8c78a" target="_blank" rel="noopener">Rails 5.1&rsquo;s form_with vs. form_tag vs. form_for</a></li>
+<li><a href="http://solnic.eu/2016/05/22/my-time-with-rails-is-up.html" target="_blank" rel="noopener">My time with Rails is up</a></li>
+<li><a href="https://github.com/rails/rails/blob/d3893ec38ec61282c2598b01a298124356d6b35a/activestorage/README.md" target="_blank" rel="noopener">Rails / Active Storage Readme</a></li>
+<li><a href="http://aokolish.me/blog/2015/05/26/how-to-simplify-active-record-scopes-that-reference-other-tables/" target="_blank" rel="noopener">How to simplify Active Record scopes that reference other models</a></li>
+<li><a href="https://github.com/rails/rails/pull/18939" target="_blank" rel="noopener">Provide friendlier access to request variants (also ArrayInquirer)</a></li>
+<li><a href="http://jetrockets.pro/blog/rails-5-attributes-api-value-objects-and-jsonb" target="_blank" rel="noopener">Rails 5 attributes API, value objects and JSONB</a></li>
+<li><a href="http://jetrockets.pro/blog/ruby-string-literals-vs-value-objects-overengineering" target="_blank" rel="noopener">Ruby string literals VS Value objects. Overengineering?</a></li>
+<li><a href="https://mkdev.me/en/posts/how-to-use-query-objects-to-refactor-rails-sql-queries" target="_blank" rel="noopener">How to use Query Objects to refactor Rails SQL-queries</a></li>
+<li><a href="https://blog.bigbinary.com/2016/06/26/rails-add-helpers-method-to-ease-usage-of-helper-modules-in-controllers.html" target="_blank" rel="noopener">Rails 5 adds &ldquo;helpers&rdquo; method in controllers</a></li>
+<li><a href="https://github.com/rails/rails/pull/24866" target="_blank" rel="noopener">Implement helpers proxy in controller instance level</a></li>
+<li><a href="https://medium.com/rubyinside/active-records-queries-tricks-2546181a98dd" target="_blank" rel="noopener">ActiveRecord’s queries tricks</a></li>
+<li><a href="https://ksylvest.com/posts/2014-12-20/advanced-eager-loading-in-rails" target="_blank" rel="noopener">Advanced Eager Loading in Rails</a></li>
+<li><a href="https://medium.flatstack.com/query-object-in-ruby-on-rails-56ea434365f0" target="_blank" rel="noopener">Query Object in Ruby on Rails</a></li>
+<li><a href="https://m.signalvnoise.com/provide-sharp-knives-cc0a22bf7934" target="_blank" rel="noopener">Provide sharp knives</a></li>
+<li><a href="https://medium.com/@arturtrzop/how-to-run-capybara-feature-specs-with-selenium-and-headless-chrome-circleci-2-0-case-study-7f32ae4e13dd" target="_blank" rel="noopener">Capybara feature specs with Selenium and headless Chrome — CircleCI 2.0</a></li>
+<li><a href="https://robots.thoughtbot.com/using-yieldself-for-composable-activerecord-relations" target="_blank" rel="noopener">Using <code>yield_self</code> for composable ActiveRecord relations</a></li>
+<li><a href="https://blog.arkency.com/2014/10/how-to-persist-hashes-in-rails-applications-with-postgresql/" target="_blank" rel="noopener">How to persist hashes in Rails applications with PostgreSQL</a></li>
+<li><a href="https://robots.thoughtbot.com/using-arel-to-compose-sql-queries" target="_blank" rel="noopener">Using Arel to Compose SQL Queries</a></li>
+<li><a href="https://blog.arkency.com/how-to-use-algolia-without-coupling-to-activerecord-base/" target="_blank" rel="noopener">How to use Algolia without coupling to ActiveRecord::Base</a></li>
+<li><a href="https://makandracards.com/makandra/4759-beware-of-curious-behaviour-of-downcase-with-umlauts" target="_blank" rel="noopener">Beware of curious behaviour of &lsquo;downcase&rsquo; with umlauts</a></li>
+<li><a href="http://blog.plataformatec.com.br/2014/07/rails-4-and-postgresql-arrays/" target="_blank" rel="noopener">Rails 4 and PostgreSQL Arrays</a></li>
+<li><a href="https://blog.arkency.com/2014/10/how-to-start-using-arrays-in-rails-with-postgresql/" target="_blank" rel="noopener">How to start using Arrays in Rails with PostgreSQL</a></li>
+<li><a href="https://pawelurbanek.com/2018/02/05/optimize-rails-performance-bottleneck-with-caching-and-rack-middleware/" target="_blank" rel="noopener">Optimize Rails Performance with Redis Caching and Rack Middleware</a></li>
+<li><a href="https://rollbar.com/blog/top-10-ruby-on-rails-errors/" target="_blank" rel="noopener">Top 10 errors from 1000+ Ruby on Rails projects (Rollbar)</a></li>
+<li><a href="https://hackernoon.com/performing-custom-validations-in-rails-an-example-9a373e807144" target="_blank" rel="noopener">Performing custom validations in Rails — an example</a></li>
+<li><a href="https://blog.bigbinary.com/2016/07/13/rails-5-allows-passing-record-to-error-message-generator.html" target="_blank" rel="noopener">Rails 5 allows passing record being validated to error message generator</a></li>
+<li><a href="http://rmosolgo.github.io/blog/2017/04/12/watching-files-during-rails-development/" target="_blank" rel="noopener">app.reloader example</a></li>
+<li><a href="https://www.monterail.com/blog/actionable-tips-to-improve-web-performance-with-rails" target="_blank" rel="noopener">Actionable Tips to Improve Web Performance with Rails</a></li>
+<li><a href="https://github.com/rails/rails/pull/32523" target="_blank" rel="noopener">Enter Enumerable#index_with</a></li>
+<li><a href="https://coderwall.com/p/o0nhuq/restricting-access-to-a-rails-engine" target="_blank" rel="noopener">Restricting access to a Rails engine</a></li>
+<li><a href="https://www.howtographql.com/graphql-ruby/0-introduction/" target="_blank" rel="noopener">graphql-ruby Tutorial</a></li>
+<li><a href="http://blog.plataformatec.com.br/2009/08/embracing-rest-with-mind-body-and-soul/" target="_blank" rel="noopener">Embracing REST with mind, body and soul. respond_with (Jose Valim 2009)</a></li>
+<li><a href="https://blog.appsignal.com/2018/07/17/javascript-sprinkled-rails-applications.html" target="_blank" rel="noopener">JavaScript-sprinkled Rails Applications</a></li>
+<li><a href="https://blog.appsignal.com/2018/04/03/russian-doll-caching-in-rails.html" target="_blank" rel="noopener">Russian doll caching in Rails</a></li>
+<li><a href="https://stackshare.io/shopify/e-commerce-at-scale-inside-shopifys-tech-stack" target="_blank" rel="noopener">E-Commerce at Scale: Inside Shopify&rsquo;s Tech Stack</a></li>
+<li><a href="https://github.com/rails/rails/pull/31162" target="_blank" rel="noopener">DSL for configuring Content-Security-Policy header</a></li>
+<li><a href="https://stackoverflow.com/questions/38232850/understanding-race-condition-ttl-in-rails" target="_blank" rel="noopener">Understanding race_condition_ttl in Rails</a></li>
+<li><a href="https://blog.driftingruby.com/hacking-content_for-to-create-a-simple-display-helper/" target="_blank" rel="noopener">Hacking content_for to create a simple display helper</a></li>
+<li><a href="https://signalvnoise.com/posts/3535-beyond-the-default-rails-environments" target="_blank" rel="noopener">Beyond the default Rails environments</a></li>
+<li><a href="https://nandovieira.com/working-with-dates-on-ruby-on-rails" target="_blank" rel="noopener">Working with dates on Ruby on Rails</a></li>
+<li><a href="https://medium.com/@wintermeyer/goodbye-secrets-welcome-credentials-f4709d9f4698" target="_blank" rel="noopener">Goodbye Secrets. Welcome Credentials! Rails 5.2</a></li>
+<li><a href="https://blog.castle.io/simplifying-internal-validations-using-dry-validation/" target="_blank" rel="noopener">Simplifying internal validations using Dry-Validation</a></li>
+<li><a href="https://bibwild.wordpress.com/2018/10/03/some-notes-on-whats-going-on-in-activestorage/" target="_blank" rel="noopener">Some notes on what’s going on in ActiveStorage</a></li>
+<li><a href="https://githubengineering.com/upgrading-github-from-rails-3-2-to-5-2/" target="_blank" rel="noopener">Upgrading GitHub from Rails 3.2 to 5.2</a></li>
+<li><a href="https://medium.com/geogo-in/state-machines-in-rails-5-45259a4f42da" target="_blank" rel="noopener">State machines in Rails 5</a></li>
+<li><a href="http://nelsonware.com/blog/2018/09/27/nine-tips-for-rails-migration-mastery.html" target="_blank" rel="noopener">Nine tips for Rails migration mastery</a></li>
+<li><a href="http://www.jaredrader.com/technical/2018/08/21/from-service-objects-to-interactors/" target="_blank" rel="noopener">From Service Objects To Interactors</a></li>
+<li><a href="https://medium.com/reflektive-engineering/validators-for-interactors-a0632494e3d5" target="_blank" rel="noopener">Validators for Interactors</a></li>
+<li><a href="https://karolgalanciak.com/blog/2018/08/19/indexes-on-rails-how-to-make-the-most-of-your-postgres-database/" target="_blank" rel="noopener">Indexes on Rails: How to Make the Most of Your Postgres Database</a></li>
+<li><a href="https://blog.cloud66.com/containers-for-rails-developers-use-containers-while-staying-true-to-your-ror-roots/" target="_blank" rel="noopener">Use containers while staying true to your RoR roots</a></li>
+<li><a href="https://nandovieira.com/using-es2015-with-asset-pipeline-on-ruby-on-rails" target="_blank" rel="noopener">Using ES2015 with Asset Pipeline on Ruby on Rails</a></li>
+<li><a href="https://ebobby.org/2018/09/25/using-sets-for-many-to-many-relationships/" target="_blank" rel="noopener">Using sets for many-to-many relationships</a></li>
+<li><a href="https://robots.thoughtbot.com/writing-less-error-prone-code" target="_blank" rel="noopener">Writing Less Error-Prone Code</a></li>
+<li><a href="https://naturaily.com/blog/ruby-on-rails-enum" target="_blank" rel="noopener">How to create perfect enum in 5 steps</a></li>
+<li><a href="https://www.ombulabs.com/blog/performance/rails/writing-fast-rails.html" target="_blank" rel="noopener">Tips for Writing Fast Rails: Part 1</a></li>
+<li><a href="https://www.ombulabs.com/blog/rails/performance/writing-fast-rails-part-2.html" target="_blank" rel="noopener">Tips for Writing Fast Rails: Part 2</a></li>
+<li><a href="https://blog.bigbinary.com/2016/02/26/rails-5-allows-configuring-queue-name-for-mailers.html" target="_blank" rel="noopener">Rails 5 allows configuring queue name for mailers</a></li>
+<li><a href="https://www.dan-manges.com/blog/action-dependent-validations-and-why-on-update-is-bad" target="_blank" rel="noopener">Action Dependent Validations and Why :on =&gt; :update is Bad</a></li>
+<li><a href="https://karolgalanciak.com/blog/2018/06/24/rails-and-conditional-validations-in-models/" target="_blank" rel="noopener">Rails and Conditional Validations in Models</a></li>
+<li><a href="https://bpohoriletz.github.io/2018/10/26/domain-driven-rails-architecture-pattern.html" target="_blank" rel="noopener">Domain Driven Rails Architecture</a></li>
+<li><a href="https://www.ombulabs.com/blog/rails/upgrades/active-record-5-1-api-changes.html" target="_blank" rel="noopener">Rails 5.2 ActiveRecord::Dirty API Changes</a></li>
+<li><a href="https://medium.com/@lfv89/rails-console-magic-tricks-da1fdd657d32" target="_blank" rel="noopener">Rails Console Magic Tricks</a></li>
+<li><a href="https://www.codewithjason.com/see-feature-specs-run-browser/" target="_blank" rel="noopener">How to See Your Feature Specs Run in the Browser</a></li>
+<li><a href="https://blog.bigbinary.com/2018/09/26/deploying-rails-applications-with-parmaetrized-containers.html" target="_blank" rel="noopener">Deploying Rails to Kubernets</a></li>
+<li><a href="https://www.ralfebert.de/snippets/ruby-rails/models-tables-migrations-cheat-sheet/" target="_blank" rel="noopener">Rails Cheat Sheet: Create Models, Tables and Migrations</a></li>
+<li><a href="http://rubyjunky.com/rails-activerecord-serialize.html" target="_blank" rel="noopener">Rails AR &lsquo;serialize&rsquo; class method</a></li>
+<li><a href="https://blog.bigbinary.com/2016/03/24/support-for-left-outer-joins-in-rails-5.html" target="_blank" rel="noopener">Support for left outer join in Rails 5</a></li>
+<li><a href="https://robots.thoughtbot.com/aint-no-calla-back-girl" target="_blank" rel="noopener">Factory Girl Callbacks (Thoughtbot)</a></li>
+<li><a href="https://robots.thoughtbot.com/nosy-models" target="_blank" rel="noopener">Nosy models (Thoughtbot)</a></li>
+<li><a href="https://robots.thoughtbot.com/tidy-views-and-beyond-with-decorators" target="_blank" rel="noopener">Tidy Views and Beyond with Decorators (Thoughtbot)</a></li>
+<li><a href="https://robots.thoughtbot.com/not-yet" target="_blank" rel="noopener">Not yet (Thoughtbot)</a></li>
+<li><a href="https://robots.thoughtbot.com/against-convention" target="_blank" rel="noopener">Against convention (Thoughtbot)</a></li>
+<li><a href="http://craftingruby.com/posts/2015/12/09/rails-antipattern-fat-decorator.html" target="_blank" rel="noopener">Rails Anti-Pattern: Fat Decorator</a></li>
+<li><a href="https://rossta.net/blog/local-ssl-for-rails-5.html" target="_blank" rel="noopener">Local SSL for Rails 5 development and tests</a></li>
+<li><a href="https://blog.carbonfive.com/2016/11/16/rails-database-best-practices/" target="_blank" rel="noopener">Rails Database Best Practices</a></li>
+<li><a href="https://brewhouse.io/2016/08/04/sql-in-rails.html" target="_blank" rel="noopener">Advanced SQL in Rails - Part 1</a></li>
+<li><a href="http://brewhouse.io/2016/08/12/sql-in-rails-part2.html" target="_blank" rel="noopener">Advanced SQL in Rails - Part 2</a></li>
+<li><a href="https://maxivak.com/update_attribute-and-update_attributes-ruby-on-rails/" target="_blank" rel="noopener">update_attribute, update_attributes and update_column</a></li>
+<li><a href="https://davidverhasselt.com/set-attributes-in-activerecord/" target="_blank" rel="noopener">Different Ways to Set Attributes in ActiveRecord</a></li>
+<li><a href="https://rubyplus.com/articles/3711-Tracking-Attribute-Changes-in-Rails-5" target="_blank" rel="noopener">Tracking Attribute Changes in Rails 5</a></li>
+<li><a href="https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction" target="_blank" rel="noopener">When duplication is far cheaper than the wrong abstraction</a></li>
+<li><a href="https://medium.com/@jaredrayjohnson1/4-things-i-learned-toying-around-with-nested-resources-in-rails-fed6d761e924" target="_blank" rel="noopener">4 things i learned toying around with nested resources in Rails</a></li>
+<li><a href="https://medium.com/@leshchuk/actually-you-can-do-simpler-using-ransacker-predicate-not-null-like-this-6f7b700ce8a2" target="_blank" rel="noopener">Actually you can do simpler using ransacker predicate not_null</a></li>
+<li><a href="https://medium.com/appaloosa-store-engineering/ruby-memory-activerecord-and-draper-64f06abeeb34" target="_blank" rel="noopener">Be careful when using &lsquo;distinct&rsquo; in a scope with Draper</a></li>
+<li><a href="https://pedro.herokuapp.com/past/2011/7/13/rails_migrations_with_no_downtime/" target="_blank" rel="noopener">Rails migrations with no downtime</a></li>
+<li><a href="https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md#transient-attributes" target="_blank" rel="noopener">FactoryBot transient attributes</a></li>
+<li><a href="https://solnic.codes/2012/04/04/get-rid-of-that-code-smell-attributes/" target="_blank" rel="noopener">Get Rid of That Code Smell – Attributes</a></li>
+<li><a href="https://solnic.codes/2012/05/11/get-rid-of-that-code-smell-duplication/" target="_blank" rel="noopener">Get Rid of That Code Smell – Duplication</a></li>
+<li><a href="https://solnic.codes/2012/06/25/get-rid-of-that-code-smell-primitive-obsession/" target="_blank" rel="noopener">Get Rid of That Code Smell – Primitive Obsession</a></li>
+<li><a href="https://typefast.blog/custom-spec-types-with-rspec/" target="_blank" rel="noopener">Custom spec types with RSpec</a></li>
+<li><a href="https://thepugautomatic.com/2014/08/union-with-active-record/" target="_blank" rel="noopener">UNION with Active Record</a></li>
+<li><a href="https://coderwall.com/p/9hohaa/activerecord-union-hack" target="_blank" rel="noopener">ActiveRecord UNION hack</a></li>
+<li><a href="http://blog.plataformatec.com.br/2012/06/about-the-composed_of-removal/" target="_blank" rel="noopener">About the composed_of removal (Rafael França 2012)</a></li>
+<li><a href="http://blog.plataformatec.com.br/2012/07/active-record-loves-blocks/" target="_blank" rel="noopener">Active Record loves blocks</a></li>
+<li><a href="https://revs.runtime-revolution.com/value-objects-in-ruby-on-rails-9df64bc8db34" target="_blank" rel="noopener">Value Objects in Ruby on Rails</a></li>
+<li><a href="https://solnic.codes/2012/07/09/single-responsibility-principle-on-rails-explained/" target="_blank" rel="noopener">Single Responsibility Principle on Rails Explained</a></li>
+<li><a href="https://coderwall.com/p/2tnpfa/easily-namespace-your-rails-models" target="_blank" rel="noopener">Easily namespace your Rails models</a></li>
+<li><a href="https://medium.freecodecamp.org/single-table-inheritance-vs-polymorphic-associations-in-rails-af3a07a204f2" target="_blank" rel="noopener">STI vs Polymorphic</a></li>
+<li><a href="https://about.futurelearn.com/blog/stubs-mocks-spies-rspec" target="_blank" rel="noopener">Stubs, Mocks and Spies in RSpec</a></li>
+<li><a href="https://blog.bigbinary.com/2019/03/06/rails-6-adds-negative-scopes-on-enum.html" target="_blank" rel="noopener">Rails 6 adds negative scopes on enum</a></li>
+<li><a href="https://samphippen.com/rack-middlewares-that-have-saved-me-literally-hours-of-my-life/" target="_blank" rel="noopener">Rack middlewares that have saved me literally hours of my life</a></li>
+<li><a href="https://jasoncharnes.com/embracing-modern-javascript/" target="_blank" rel="noopener">Embracing Modern JavaScript (with Ruby on Rails) 2017</a></li>
+<li><a href="https://frontdeveloper.pl/2019/03/why-dont-we-validate-controller-parameters/" target="_blank" rel="noopener">Why don’t we validate controller parameters?</a></li>
+<li><a href="https://andycroll.com/ruby/dont-use-instance-variables-in-partials/" target="_blank" rel="noopener">Don&rsquo;t use instance variables in partials</a></li>
+<li><a href="https://andycroll.com/ruby/ignore-php-bots-with-rack-attack/" target="_blank" rel="noopener">Ignore PHP bots with Rack::Attack</a></li>
+<li><a href="https://blog.bigbinary.com/2018/05/15/how-to-mitigate-ddos-using-rack-attack.html" target="_blank" rel="noopener">How to mitigate DDoS using Rack::Attack</a></li>
+<li><a href="https://andycroll.com/ruby/replace-timecop-with-rails-time-helpers-in-rspec/" target="_blank" rel="noopener">Replace Timecop With Rails’ Time Helpers in RSpec</a></li>
+<li><a href="https://andycroll.com/ruby/careful-with-present-when-using-activerecord-scopes/" target="_blank" rel="noopener">Careful with present? when using ActiveRecord scopes</a></li>
+<li><a href="https://andycroll.com/ruby/a-job-should-know-whether-to-run-itself/" target="_blank" rel="noopener">A job should know whether to run itself</a></li>
+<li><a href="https://andycroll.com/ruby/stop-robots-crawlers-triggering-errors-rails/" target="_blank" rel="noopener">Stop robots and crawlers causing errors in your Rails application</a></li>
+<li><a href="https://andycroll.com/ruby/use-simplecov/" target="_blank" rel="noopener">Use simplecov in your Rails test suite</a></li>
+<li><a href="https://pawelurbanek.com/rails-postgresql-data-integrity" target="_blank" rel="noopener">Validate and Fix Ruby on Rails ActiveRecord PostgreSQL Data Integrity</a></li>
+<li><a href="https://blog.arkency.com/2014/03/pdf-in-rails-without-controllers/" target="_blank" rel="noopener">Don&rsquo;t call controller from background job</a></li>
+<li><a href="https://thoughtbot.com/blog/using-polymorphism-to-make-a-better-activity-feed-in-rails" target="_blank" rel="noopener">Using Polymorphism to Make a Better Activity Feed in Rails</a></li>
+<li><a href="https://www.madetech.com/blog/when-to-avoid-the-dry-principle" target="_blank" rel="noopener">When to avoid the DRY principle</a></li>
+<li><a href="https://blog.saeloun.com/2019/04/15/rails-6-deprecates-update-attributes.html" target="_blank" rel="noopener">Rails 6 deprecates update_attributes and update_attributes!</a></li>
+<li><a href="https://richonrails.com/articles/basic-search-using-ransack" target="_blank" rel="noopener">Basic Search Using Ransack</a></li>
+<li><a href="https://infinum.co/the-capsized-eight/best-ruby-on-rails-refactoring-talks" target="_blank" rel="noopener">Best Ruby On Rails refactoring talks</a></li>
+<li><a href="https://thoughtbot.com/blog/refactoring-ruby-iteration-patterns-to-the-database" target="_blank" rel="noopener">Refactoring Ruby Iteration Patterns to the Database</a></li>
+<li><a href="https://stackoverflow.com/a/3492056/3874570" target="_blank" rel="noopener">&lsquo;map&rsquo; method with AR has_many</a></li>
+<li><a href="https://stackoverflow.com/a/35290657/3874570" target="_blank" rel="noopener">How to stub a &lsquo;decent_exposure&rsquo; helper method in a view spec with RSpec?</a></li>
+<li><a href="https://stackoverflow.com/a/16525628/3874570" target="_blank" rel="noopener">How to Test a Concern in Rails</a></li>
+<li><a href="https://thoughtbot.com/blog/handling-associations-on-null-objects" target="_blank" rel="noopener">Handling Associations on Null Objects</a></li>
+<li><a href="https://thoughtbot.com/blog/use-factory-girls-build-stubbed-for-a-faster-test" target="_blank" rel="noopener">Use Factory Girl&rsquo;s build_stubbed for a Faster Test Suite</a></li>
+<li><a href="https://medium.com/@yuliaoletskaya/capybara-inconsistent-click-behavior-and-flickering-tests-f50b5fae8ab2" target="_blank" rel="noopener">Capybara inconsistent click behavior and flickering tests</a></li>
+<li><a href="https://andycroll.com/ruby/using-strftime-in-a-rails-view-is-probably-a-mistake/" target="_blank" rel="noopener">Using strftime in a Rails view is probably a mistake</a></li>
+<li><a href="https://stackoverflow.com/a/4047884/3874570" target="_blank" rel="noopener">Rails - assume_migrated_upto_version</a></li>
+<li><a href="https://blog.heroku.com/curious-case-table-locking-update-query" target="_blank" rel="noopener">The Curious Case of the Table-Locking UPDATE Query</a></li>
+<li><a href="https://www.taniarascia.com/continuous-integration-pipeline-docker/" target="_blank" rel="noopener">Building a Continuous Integration &amp; Deployment Pipeline Using Docker (CI/CD)</a></li>
+<li><a href="https://mailchi.mp/railsspeed/why-i-prefer-minitest" target="_blank" rel="noopener">Why I prefer Minitest (Nate Berkopec)</a></li>
+<li><a href="https://medium.com/entrepreneurguide-me/rails-vs-django-vs-laravel-an-analysis-of-web-frameworks-from-a-non-technical-founder-312506969afd" target="_blank" rel="noopener">Rails vs Django vs Laravel</a></li>
+<li><a href="http://hughevans.net/2008/09/25/date-range-string-conversions/" target="_blank" rel="noopener">Rails Date Range String Conversions</a></li>
+<li><a href="http://tenderlovemaking.com/2015/01/23/my-experience-with-minitest-and-rspec.html" target="_blank" rel="noopener">My experience with Minitest and RSpec (Aaron Patterson)</a></li>
+<li><a href="http://tenderlovemaking.com/2014/06/02/yagni-methods-are-killing-me.html" target="_blank" rel="noopener">YAGNI methods are killing me (Aaron Patterson)</a></li>
+<li><a href="https://mailchi.mp/railsspeed/do-you-have-to-add-caching-to-scale-well?e=b93eff4a24" target="_blank" rel="noopener">Is caching a necessary step when scaling a web application? (Nate Berkopec)</a></li>
+<li><a href="https://piotrsarnacki.com/2014/01/01/i-am-tired-by-rails-should-fundamentally-change-crowd" target="_blank" rel="noopener">I&rsquo;m tired of the &lsquo;Rails should fundamentally change&rsquo; crowd (Piotr Sarnacki)</a></li>
+<li><a href="https://pawelurbanek.com/ruby-concurrent-requests" target="_blank" rel="noopener">How to Perform Concurrent HTTP Requests in Ruby and Rails</a></li>
+<li><a href="https://blog.lelonek.me/what-service-objects-are-not-7abef8aa2f99" target="_blank" rel="noopener">What service objects are not</a></li>
+<li><a href="https://pawelurbanek.com/rails-mistakes-downtime" target="_blank" rel="noopener">Ruby on Rails Mistakes that could Kill Your Production Servers</a></li>
+<li><a href="https://mailchi.mp/railsspeed/can-i-switch-to-puma-thread-safety-rack-constants-and-more" target="_blank" rel="noopener">What makes an application thread-safe? Can I switch to Puma?</a></li>
+<li><a href="https://www.agileplannerapp.com/blog/building-agile-planner/rails-background-jobs-in-threads" target="_blank" rel="noopener">Running Rails jobs in background threads</a></li>
+<li><a href="https://thoughtbot.com/blog/tips-for-using-factory-girl-without-an-orm" target="_blank" rel="noopener">Tips for Using FactoryGirl Without an ORM (Thoughtbot)</a></li>
+<li><a href="https://thoughtbot.com/blog/its-about-time-zones" target="_blank" rel="noopener">It&rsquo;s About Time (Zones)</a></li>
+<li><a href="https://api.rubyonrails.org/classes/ActiveModel/AttributeMethods.html" target="_blank" rel="noopener">Active Model Attribute Methods</a></li>
+<li><a href="https://mailchi.mp/railsspeed/scaling-is-almost-entirely-about-queue-latency" target="_blank" rel="noopener">Scaling is mostly about just one metric: queue time</a></li>
+</ul>
+
+            </div>
+
+        </article>
+
+        
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+    
+
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2020&nbsp;Alexander Shemetovskiy</div>
+
+            
+    
+        <ul class="socials"><li class="socials-item">
+                    <a href="/rss.xml" target="_blank" rel="external noopener" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="mailto:alexkval@gmail.com" target="_blank" rel="external noopener" title="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://github.com/alexkval" target="_blank" rel="external noopener" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://twitter.com/alexkval" target="_blank" rel="external noopener" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://t.me/alexkval" target="_blank" rel="external noopener" title="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon social-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                </li></ul>
+    
+
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true,
+        header: '[data-scroll-header]'
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/meme.min.185530990dfec107a70ab138f45085aabdf7c3888ebc363f667497978c71d3eb.js" integrity="sha256-GFUwmQ3&#43;wQenCrE49FCFqr33w4iOvDY/ZnSXl4xx0&#43;s="></script>
+
+    </body>
+</html>
