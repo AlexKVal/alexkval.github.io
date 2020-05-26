@@ -3,22 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://alexkval.github.io/</loc>
+    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/categories/</loc>
+    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/tags/development/</loc>
+    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/posts/</loc>
+    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/categories/ruby-on-rails/</loc>
+    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/tags/rubyonrails/</loc>
+    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/posts/show-me-sql-generated-by-rake-tasks/</loc>
+    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/tags/</loc>
+    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/categories/tools/</loc>
+    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://alexkval.github.io/categories/ai/</loc>
     <lastmod>2019-04-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://alexkval.github.io/tags/ai/</loc>
-    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alexkval.github.io/</loc>
-    <lastmod>2020-05-25T16:31:10+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alexkval.github.io/categories/</loc>
     <lastmod>2019-04-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -33,22 +68,12 @@
   </url>
   
   <url>
-    <loc>https://alexkval.github.io/posts/</loc>
-    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://alexkval.github.io/tags/python/</loc>
     <lastmod>2019-04-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://alexkval.github.io/tags/setup/</loc>
-    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alexkval.github.io/tags/</loc>
     <lastmod>2019-04-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -63,27 +88,7 @@
   </url>
   
   <url>
-    <loc>https://alexkval.github.io/tags/development/</loc>
-    <lastmod>2016-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://alexkval.github.io/posts/dissecting-rails-new/</loc>
-    <lastmod>2016-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alexkval.github.io/categories/ruby-on-rails/</loc>
-    <lastmod>2016-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alexkval.github.io/tags/rubyonrails/</loc>
-    <lastmod>2016-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alexkval.github.io/categories/tools/</loc>
     <lastmod>2016-12-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -154,7 +159,7 @@
   
   <url>
     <loc>https://alexkval.github.io/readings/for-beginners/</loc>
-    <lastmod>2020-05-25T01:31:39+01:00</lastmod>
+    <lastmod>2020-05-26T15:05:27+01:00</lastmod>
   </url>
   
   <url>
@@ -169,7 +174,7 @@
   
   <url>
     <loc>https://alexkval.github.io/readings/javascript/</loc>
-    <lastmod>2020-05-25T00:53:59+01:00</lastmod>
+    <lastmod>2020-05-26T15:04:40+01:00</lastmod>
   </url>
   
   <url>
@@ -204,7 +209,7 @@
   
   <url>
     <loc>https://alexkval.github.io/readings/ruby-on-rails/</loc>
-    <lastmod>2020-05-25T00:36:12+01:00</lastmod>
+    <lastmod>2020-05-26T00:28:36+01:00</lastmod>
   </url>
   
   <url>
