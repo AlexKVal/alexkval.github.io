@@ -23,7 +23,7 @@
         
             <copyright>Copyright © Alexander Shemetovskiy, all rights reserved.</copyright>
         
-        <lastBuildDate>Thu, 28 May 2020 14:01:22 &#43;0100</lastBuildDate>
+        <lastBuildDate>Thu, 28 May 2020 14:33:22 &#43;0100</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://alexkval.github.io/rss.xml" />
         
@@ -37,7 +37,7 @@
                     <author>alexkval@gmail.com (Alexander Shemetovskiy)</author>
                 
                 <copyright>Copyright © Alexander Shemetovskiy, all rights reserved.</copyright>
-                <description>&lt;p&gt;&lt;img src=&#34;https://alexkval.github.io/posts/js-like-object-in-rails/intro.png&#34; alt=&#34;screenshot&#34; title=&#34;Intro image&#34;&gt;&lt;/p&gt;
+                <description>&lt;p&gt;&lt;img src=&#34;https://alexkval.github.io/posts/js-like-object-in-rails/intro.png&#34; alt=&#34;screenshot&#34;&gt;&lt;/p&gt;
 &lt;p&gt;One day, when I was explaining how the &lt;code&gt;routing &amp;gt; params &amp;gt; controllers &amp;gt; views&lt;/code&gt; work,
 I wanted to keep things as simple as possible,
 so I needed a way to flexibly &amp;ldquo;mock&amp;rdquo; AR objects.&lt;/p&gt;

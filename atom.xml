@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Alexander Shemetovskiy</title>
     <subtitle type="html">Alexander Shemetovskiy</subtitle>
-    <updated>2020-05-28T14:01:22&#43;01:00</updated>
+    <updated>2020-05-28T14:33:22&#43;01:00</updated>
     <id>https://alexkval.github.io/</id>
     <link rel="alternate" type="text/html" href="https://alexkval.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://alexkval.github.io/atom.xml" />
@@ -20,14 +20,14 @@
             <title type="text">JavaScript like object in Ruby on Rails</title>
             <link rel="alternate" type="text/html" href="https://alexkval.github.io/posts/js-like-object-in-rails/" />
             <id>https://alexkval.github.io/posts/js-like-object-in-rails/</id>
-            <updated>2020-05-28T14:01:06&#43;01:00</updated>
+            <updated>2020-05-28T14:33:03&#43;01:00</updated>
             <published>2020-05-28T13:19:39&#43;01:00</published>
             <author>
                     <name>Alexander Shemetovskiy</name>
                     <uri>https://alexkval.github.io/</uri>
                     <email>alexkval@gmail.com</email>
                     </author>
-            <rights>Copyright © Alexander Shemetovskiy, all rights reserved.</rights><summary type="html">&lt;p&gt;&lt;img src=&#34;https://alexkval.github.io/posts/js-like-object-in-rails/intro.png&#34; alt=&#34;screenshot&#34; title=&#34;Intro image&#34;&gt;&lt;/p&gt;
+            <rights>Copyright © Alexander Shemetovskiy, all rights reserved.</rights><summary type="html">&lt;p&gt;&lt;img src=&#34;https://alexkval.github.io/posts/js-like-object-in-rails/intro.png&#34; alt=&#34;screenshot&#34;&gt;&lt;/p&gt;
 &lt;p&gt;One day, when I was explaining how the &lt;code&gt;routing &amp;gt; params &amp;gt; controllers &amp;gt; views&lt;/code&gt; work,
 I wanted to keep things as simple as possible,
 so I needed a way to flexibly &amp;ldquo;mock&amp;rdquo; AR objects.&lt;/p&gt;
