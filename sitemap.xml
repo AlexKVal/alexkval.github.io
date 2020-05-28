@@ -4,47 +4,52 @@
   
   <url>
     <loc>https://alexkval.github.io/</loc>
-    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+    <lastmod>2020-05-28T14:01:06+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://alexkval.github.io/categories/</loc>
-    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+    <lastmod>2020-05-28T14:01:06+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://alexkval.github.io/tags/development/</loc>
-    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+    <lastmod>2020-05-28T14:01:06+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/posts/js-like-object-in-rails/</loc>
+    <lastmod>2020-05-28T14:01:06+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://alexkval.github.io/posts/</loc>
-    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+    <lastmod>2020-05-28T14:01:06+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://alexkval.github.io/categories/ruby-on-rails/</loc>
-    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+    <lastmod>2020-05-28T14:01:06+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://alexkval.github.io/tags/rubyonrails/</loc>
-    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alexkval.github.io/posts/show-me-sql-generated-by-rake-tasks/</loc>
-    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+    <lastmod>2020-05-28T14:01:06+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://alexkval.github.io/tags/</loc>
-    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+    <lastmod>2020-05-28T14:01:06+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://alexkval.github.io/categories/tools/</loc>
-    <lastmod>2020-05-26T17:31:58+01:00</lastmod>
+    <loc>https://alexkval.github.io/categories/useful-tricks/</loc>
+    <lastmod>2020-05-28T14:01:06+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexkval.github.io/posts/show-me-sql-generated-by-rake-tasks/</loc>
+    <lastmod>2020-05-28T13:20:56+01:00</lastmod>
   </url>
   
   <url>
