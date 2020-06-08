@@ -23,10 +23,65 @@
         
             <copyright>Copyright © Alexander Shemetovskiy, all rights reserved.</copyright>
         
-        <lastBuildDate>Thu, 28 May 2020 14:33:22 &#43;0100</lastBuildDate>
+        <lastBuildDate>Mon, 08 Jun 2020 15:24:53 &#43;0100</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://alexkval.github.io/rss.xml" />
         
+        
+            <item>
+                <title>What is &#39;unlogged&#39; in PostgreSQL for</title>
+                <link>https://alexkval.github.io/posts/what-is-unlogged-in-postgresql-for/</link>
+                <guid isPermaLink="true">https://alexkval.github.io/posts/what-is-unlogged-in-postgresql-for/</guid>
+                <pubDate>Mon, 08 Jun 2020 14:29:50 &#43;0100</pubDate>
+                
+                    <author>alexkval@gmail.com (Alexander Shemetovskiy)</author>
+                
+                <copyright>Copyright © Alexander Shemetovskiy, all rights reserved.</copyright>
+                <description>&lt;p&gt;&lt;img src=&#34;https://alexkval.github.io/posts/what-is-unlogged-in-postgresql-for/intro.jpg&#34; alt=&#34;screenshot&#34; title=&#34;Photo: by flickrfavorites on flickr&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Today I&amp;rsquo;ve learned about one of the useful PostgreSQL features - &amp;lsquo;unlogged&amp;rsquo; tables.&lt;/p&gt;
+&lt;p&gt;What does this feature exist for?&lt;/p&gt;
+&lt;p&gt;Say you need to cache some transient data and you don&amp;rsquo;t really care about it being persisted after a server crash,
+enter &lt;a href=&#34;https://www.postgresql.org/docs/11/sql-createtable.html#SQL-CREATETABLE-UNLOGGED&#34;&gt;&amp;lsquo;unlogged&amp;rsquo;&lt;/a&gt; tables.&lt;/p&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://alexkval.github.io/categories/postgresql/">PostgreSQL</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://alexkval.github.io/categories/sql/">SQL</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://alexkval.github.io/tags/postgresql/">postgresql</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://alexkval.github.io/tags/development/">development</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>JavaScript like object in Ruby on Rails</title>
