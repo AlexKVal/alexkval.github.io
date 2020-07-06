@@ -23,10 +23,59 @@
         
             <copyright>Copyright © Alexander Shemetovskiy, all rights reserved.</copyright>
         
-        <lastBuildDate>Sun, 05 Jul 2020 13:35:29 &#43;0100</lastBuildDate>
+        <lastBuildDate>Mon, 06 Jul 2020 19:05:39 &#43;0100</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://alexkval.github.io/rss.xml" />
         
+        
+            <item>
+                <title>JavaScript-like HashMaps in Ruby</title>
+                <link>https://alexkval.github.io/posts/js-like-hashmap-in-ruby/</link>
+                <guid isPermaLink="true">https://alexkval.github.io/posts/js-like-hashmap-in-ruby/</guid>
+                <pubDate>Mon, 06 Jul 2020 14:36:17 &#43;0100</pubDate>
+                
+                    <author>alexkval@gmail.com (Alexander Shemetovskiy)</author>
+                
+                <copyright>Copyright © Alexander Shemetovskiy, all rights reserved.</copyright>
+                <description>&lt;p&gt;&lt;img src=&#34;https://alexkval.github.io/posts/js-like-hashmap-in-ruby/intro.jpg&#34; alt=&#34;screenshot&#34; title=&#34;Photo by Joshua Aragon on Unsplash&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In the previous &lt;a href=&#34;https://alexkval.github.io/posts/js-like-object-in-rails/&#34;&gt;JavaScript like object in Ruby on Rails&lt;/a&gt; article,
+I&amp;rsquo;ve described how similar behavior can be achieved in Rails code.&lt;/p&gt;
+&lt;p&gt;But in pure Ruby there still is no short way for this.&lt;/p&gt;
+&lt;p&gt;It turns out that a proposal to Ruby core has been made to add this nice-to-have feature.&lt;/p&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://alexkval.github.io/categories/ruby/">Ruby</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://alexkval.github.io/tags/ruby/">ruby</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://alexkval.github.io/tags/development/">development</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>What is &#39;unlogged&#39; in PostgreSQL for</title>
