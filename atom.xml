@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">AlexKVal</title>
     <subtitle type="html">Alexander Shemetovskiy</subtitle>
-    <updated>2023-01-20T15:20:15&#43;00:00</updated>
+    <updated>2023-01-26T15:18:52&#43;00:00</updated>
     <id>https://alexkval.github.io/</id>
     <link rel="alternate" type="text/html" href="https://alexkval.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://alexkval.github.io/atom.xml" />
@@ -16,6 +16,85 @@
             </author>
     <rights>Copyright © Alexander Shemetovskiy</rights>
     <generator uri="https://gohugo.io/" version="0.71.0">Hugo</generator>
+        <entry>
+            <title type="text">Exception vs StandardError</title>
+            <link rel="alternate" type="text/html" href="https://alexkval.github.io/posts/exception-vs-standard-error/" />
+            <id>https://alexkval.github.io/posts/exception-vs-standard-error/</id>
+            <updated>2023-01-26T00:00:00&#43;00:00</updated>
+            <published>2023-01-26T00:00:00&#43;00:00</published>
+            <author>
+                    <name>Alexander Shemetovskiy</name>
+                    <uri>https://alexkval.github.io/</uri>
+                    <email>alexkval@gmail.com</email>
+                    </author>
+            <rights>Copyright © Alexander Shemetovskiy</rights><summary type="html">&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rb&#34; data-lang=&#34;rb&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# RuntimeError &amp;lt; StandardError &amp;lt; Exception &amp;lt; Object&lt;/span&gt;
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;begin&lt;/span&gt;
+  require &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;does/not/exist&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;rescue&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Exception&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; e
+  &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;it is an Exception&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# =&amp;gt; &amp;#34;it is an Exception&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;begin&lt;/span&gt;
+  require &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;does/not/exist&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;rescue&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;StandardError&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; e
+  &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;it is an Exception&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# =&amp;gt; LoadError: cannot load such file -- does/not/exist&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;What is the difference in results between this&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rb&#34; data-lang=&#34;rb&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;raise&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Oups&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;rescue&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hi&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and this?&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rb&#34; data-lang=&#34;rb&#34;&gt;require &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;does/not/exist&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;rescue&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hi&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And why the result is different.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s figure it out step by step.&lt;/p&gt;</summary>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://alexkval.github.io/categories/ruby/" term="Ruby" label="Ruby" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://alexkval.github.io/categories/ruby-on-rails/" term="Ruby on Rails" label="Ruby on Rails" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://alexkval.github.io/tags/ruby/" term="ruby" label="ruby" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://alexkval.github.io/tags/rubyonrails/" term="rubyonrails" label="rubyonrails" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://alexkval.github.io/tags/development/" term="development" label="development" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">Let&#39;s implement &#39;Stack&#39; in Python</title>
             <link rel="alternate" type="text/html" href="https://alexkval.github.io/posts/stack-in-python/" />
