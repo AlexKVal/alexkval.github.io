@@ -23,10 +23,83 @@
         
             <copyright>Copyright © Alexander Shemetovskiy</copyright>
         
-        <lastBuildDate>Sat, 18 Feb 2023 01:35:25 &#43;0000</lastBuildDate>
+        <lastBuildDate>Sat, 18 Feb 2023 17:19:30 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://alexkval.github.io/rss.xml" />
         
+        
+            <item>
+                <title>Prefer simple methods</title>
+                <link>https://alexkval.github.io/posts/prefer-short-methods/</link>
+                <guid isPermaLink="true">https://alexkval.github.io/posts/prefer-short-methods/</guid>
+                <pubDate>Sat, 18 Feb 2023 00:00:00 &#43;0000</pubDate>
+                
+                    <author>alexkval@gmail.com (Alexander Shemetovskiy)</author>
+                
+                <copyright>Copyright © Alexander Shemetovskiy</copyright>
+                <description>&lt;p&gt;&lt;a href=&#34;https://alexkval.github.io/posts/prefer-short-methods&#34;&gt;&lt;img src=&#34;https://alexkval.github.io/posts/prefer-short-methods/code.jpg&#34; alt=&#34;screenshot&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Long methods vs simple ones. What&amp;rsquo;s the problem?&lt;/p&gt;
+&lt;p&gt;Long methods&amp;rsquo; issues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;usually does too much and &amp;ldquo;knows&amp;rdquo; too much&lt;/li&gt;
+&lt;li&gt;as a consequence, it breaks the Single Responsibility Principle&lt;/li&gt;
+&lt;li&gt;it is harder to grasp what it does when you read it&lt;/li&gt;
+&lt;li&gt;more changes needed to add or amend functionality&lt;/li&gt;
+&lt;li&gt;you have to write pretty complex tests&lt;/li&gt;
+&lt;li&gt;and you need a lot of them to cover all of the possible permutations&lt;/li&gt;
+&lt;/ul&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://alexkval.github.io/categories/ruby/">Ruby</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://alexkval.github.io/categories/ruby-on-rails/">Ruby on Rails</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://alexkval.github.io/categories/refactoring/">Refactoring</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://alexkval.github.io/tags/ruby/">ruby</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://alexkval.github.io/tags/rubyonrails/">rubyonrails</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://alexkval.github.io/tags/refactoring/">refactoring</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Exception vs StandardError</title>
