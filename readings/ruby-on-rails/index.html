@@ -3,9 +3,8 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.71.0" /><meta name="theme-color" content="#fff" />
-
-    
+    <meta name="generator" content="Hugo 0.111.1"><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
 
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +17,13 @@
 
     <title> | AlexKVal</title>
 
-    <link rel="stylesheet" href="/css/meme.min.58bc39dbe134c5e44a78e94ce3e1861400ca666811a7cdadca215d1fae085f0d.css" integrity="sha256-WLw52&#43;E0xeRKeOlM4&#43;GGFADKZmgRp82tyiFdH64IXw0=" />
+    <link rel="stylesheet" href="/css/meme.min.528aabe165d470195cf17a6665d1964266636b2bdf6b138568600ea5c725b1e7.css"/>
+
+    
+    
+        <script src="/js/meme.min.72f12c15c6f1aa1e5e4e40389f8155cf6b85e992f330fab7888df4762e307669.js"></script>
+
+    
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -26,14 +31,14 @@
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" /></noscript>
 
     <meta name="author" content="Alexander Shemetovskiy" /><meta name="description" content="Ruby On Rails
- How DHH Organizes His Rails Controllers Gemfile of dreams from Evil Martians Gourmet Service Objects ActiveRecord Mistakes That Slow Down Rails Apps: Count, Where and Present A Single file Rails Application Rails Console Shortcuts, Tips, and Tricks 27 Ruby Gems I use in almost every SaaS project Authorization with Pundit Change data in migrations like a boss Getting Started with JBuilder How to Make a Rails 5 App API-Only How Does ActiveJob Work?" />
+How DHH Organizes His Rails Controllers Gemfile of dreams from Evil Martians Gourmet Service Objects ActiveRecord Mistakes That Slow Down Rails Apps: Count, Where and Present A Single file Rails Application Rails Console Shortcuts, Tips, and Tricks 27 Ruby Gems I use in almost every SaaS project Authorization with Pundit Change data in migrations like a boss Getting Started with JBuilder How to Make a Rails 5 App API-Only How Does ActiveJob Work?" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="AlexKVal" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="AlexKVal" />
     <meta name="msapplication-starturl" content="../../" />
@@ -46,16 +51,17 @@
 
     
     <link rel="canonical" href="https://alexkval.github.io/readings/ruby-on-rails/" />
+    
 
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebPage",
         "datePublished": "2014-12-28T12:00:00+00:00",
-        "dateModified": "2023-02-18T01:35:14+00:00",
+        "dateModified": "2023-03-03T01:45:55+00:00",
         "url": "https://alexkval.github.io/readings/ruby-on-rails/",
         "name": "",
-        "description": "Ruby On Rails\n How DHH Organizes His Rails Controllers Gemfile of dreams from Evil Martians Gourmet Service Objects ActiveRecord Mistakes That Slow Down Rails Apps: Count, Where and Present A Single file Rails Application Rails Console Shortcuts, Tips, and Tricks 27 Ruby Gems I use in almost every SaaS project Authorization with Pundit Change data in migrations like a boss Getting Started with JBuilder How to Make a Rails 5 App API-Only How Does ActiveJob Work?",
+        "description": "Ruby On Rails\nHow DHH Organizes His Rails Controllers Gemfile of dreams from Evil Martians Gourmet Service Objects ActiveRecord Mistakes That Slow Down Rails Apps: Count, Where and Present A Single file Rails Application Rails Console Shortcuts, Tips, and Tricks 27 Ruby Gems I use in almost every SaaS project Authorization with Pundit Change data in migrations like a boss Getting Started with JBuilder How to Make a Rails 5 App API-Only How Does ActiveJob Work?",
         "image": "https://alexkval.github.io/apple-touch-icon.png",
         "license": "Copyright © Alexander Shemetovskiy",
         "publisher": {
@@ -87,7 +93,7 @@
 
 <meta property="og:title" content="" />
 <meta property="og:description" content="Ruby On Rails
- How DHH Organizes His Rails Controllers Gemfile of dreams from Evil Martians Gourmet Service Objects ActiveRecord Mistakes That Slow Down Rails Apps: Count, Where and Present A Single file Rails Application Rails Console Shortcuts, Tips, and Tricks 27 Ruby Gems I use in almost every SaaS project Authorization with Pundit Change data in migrations like a boss Getting Started with JBuilder How to Make a Rails 5 App API-Only How Does ActiveJob Work?" />
+How DHH Organizes His Rails Controllers Gemfile of dreams from Evil Martians Gourmet Service Objects ActiveRecord Mistakes That Slow Down Rails Apps: Count, Where and Present A Single file Rails Application Rails Console Shortcuts, Tips, and Tricks 27 Ruby Gems I use in almost every SaaS project Authorization with Pundit Change data in migrations like a boss Getting Started with JBuilder How to Make a Rails 5 App API-Only How Does ActiveJob Work?" />
 <meta property="og:url" content="https://alexkval.github.io/readings/ruby-on-rails/" />
 <meta property="og:site_name" content="AlexKVal" />
 <meta property="og:locale" content="en" /><meta property="og:image" content="https://alexkval.github.io/apple-touch-icon.png" />
@@ -112,12 +118,15 @@
 
 
     
+    
+
+    
 </head>
 
     <body>
         <div class="container">
             
-    <header class="header" data-scroll-header>
+    <header class="header">
         
             <div class="header-wrapper">
                 <div class="header-inner single">
@@ -137,7 +146,7 @@
         
         
             
-                <li class="menu-item active"><a href="/readings/"><span class="menu-item-name">Readings</span></a>
+                <li class="menu-item"><a href="/readings/"><span class="menu-item-name">Readings</span></a>
                 </li>
             
         
@@ -176,18 +185,18 @@
 
         
 
-        <article class="content post" data-small-caps="true" data-align="default" data-type="readings" data-toc-num="true">
+        <article class="content post h-entry" data-small-caps="true" data-align="default" data-type="readings" data-toc-num="true">
 
-            <h1 class="post-title"></h1>
-
-            
+            <h1 class="post-title p-name"></h1>
 
             
 
             
 
-            <div class="post-body">
-              <p><strong>Ruby On Rails</strong></p>
+            
+
+            <div class="post-body e-content">
+                <p><strong>Ruby On Rails</strong></p>
 <ul>
 <li><a href="http://jeromedalbert.com/how-dhh-organizes-his-rails-controllers/" target="_blank" rel="noopener">How DHH Organizes His Rails Controllers</a></li>
 <li><a href="https://evilmartians.com/chronicles/gemfile-of-dreams-libraries-we-use-to-build-rails-apps" target="_blank" rel="noopener">Gemfile of dreams from Evil Martians</a></li>
@@ -497,7 +506,7 @@
 <li><a href="https://blog.saeloun.com/2020/01/21/rails-6-1-adds-query-method-missing-to-find-orphan-records.html" target="_blank" rel="noopener">Rails 6.1 adds query method missing to find orphan records</a></li>
 <li><a href="https://shopify.engineering/how-to-introduce-composite-primary-keys-in-rails" target="_blank" rel="noopener">How to Introduce Composite Primary Keys in Rails</a></li>
 <li><a href="https://medium.com/doctolib/stop-worrying-about-postgresql-locks-in-your-rails-migrations-3426027e9cc9" target="_blank" rel="noopener">Stop worrying about PostgreSQL locks in your Rails migrations</a></li>
-<li><a href="https://bigbinary.com/blog/rails-6-1-adds-nulls-first-and-nulls-last-to-arel" target="_blank" rel="noopener">Rails 6.1 &lsquo;nulls_first&rsquo; and &lsquo;nulls_last&rsquo; methods for PostgreSQL</a></li>
+<li><a href="https://bigbinary.com/blog/rails-6-1-adds-nulls-first-and-nulls-last-to-arel" target="_blank" rel="noopener">Rails 6.1 &rsquo;nulls_first&rsquo; and &rsquo;nulls_last&rsquo; methods for PostgreSQL</a></li>
 <li><a href="https://bigbinary.com/blog/rails-6-1-adds-active-record-finder-methods" target="_blank" rel="noopener">Rails 6.1 &lsquo;sole&rsquo; and &lsquo;find_sole_by&rsquo;</a></li>
 <li><a href="https://www.flagsmith.com/podcast/david-heinemeier-hansson-ruby-on-rails" target="_blank" rel="noopener">How did DHH discover Ruby, the language?</a></li>
 <li><a href="https://blog.engineyard.com/ruby-unbundled-instant-poll-app-in-single-file" target="_blank" rel="noopener">Rails App in a Single File</a></li>
@@ -525,16 +534,17 @@
 <li><a href="https://avohq.io/blog/the-difference-in-avo-and-rails-starter-kits" target="_blank" rel="noopener">Avo as a starter kit</a></li>
 <li><a href="https://avohq.io/blog/how-to-bundle-assets-in-a-rails-engine" target="_blank" rel="noopener">How to bundle assets in a Rails engine</a></li>
 <li><a href="https://blog.appsignal.com/2023/02/15/whats-new-in-rails-7-1.html" target="_blank" rel="noopener">What&rsquo;s New in Rails 7.1</a></li>
+<li><a href="https://world.hey.com/dhh/introducing-mrsk-9330a267" target="_blank" rel="noopener">Introducing MRSK by DHH</a></li>
 </ul>
 
             </div>
 
+            
+
+
         </article>
 
         
-
-        
-
 
         
 
@@ -604,18 +614,8 @@
 
         </div>
         
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
-<script>
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        speedAsDuration: true,
-        header: '[data-scroll-header]'
-    });
-</script>
-
-
-
-
+        
 
 
 
@@ -627,7 +627,10 @@
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>
@@ -639,11 +642,6 @@
 
 
 
-
-
-
-
-<script src="/js/meme.min.185530990dfec107a70ab138f45085aabdf7c3888ebc363f667497978c71d3eb.js" integrity="sha256-GFUwmQ3&#43;wQenCrE49FCFqr33w4iOvDY/ZnSXl4xx0&#43;s="></script>
 
     </body>
 </html>

@@ -3,9 +3,8 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.71.0" /><meta name="theme-color" content="#fff" />
-
-    
+    <meta name="generator" content="Hugo 0.111.1"><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
 
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +17,13 @@
 
     <title> | AlexKVal</title>
 
-    <link rel="stylesheet" href="/css/meme.min.58bc39dbe134c5e44a78e94ce3e1861400ca666811a7cdadca215d1fae085f0d.css" integrity="sha256-WLw52&#43;E0xeRKeOlM4&#43;GGFADKZmgRp82tyiFdH64IXw0=" />
+    <link rel="stylesheet" href="/css/meme.min.528aabe165d470195cf17a6665d1964266636b2bdf6b138568600ea5c725b1e7.css"/>
+
+    
+    
+        <script src="/js/meme.min.72f12c15c6f1aa1e5e4e40389f8155cf6b85e992f330fab7888df4762e307669.js"></script>
+
+    
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -26,14 +31,14 @@
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" /></noscript>
 
     <meta name="author" content="Alexander Shemetovskiy" /><meta name="description" content="Rust
- repr(transparent) attribute What type is the “type ()”? Writing a small ray tracer in Rust and Zig Why Discord is switching from Go to Rust The Rust community will harass you if you use &amp;lsquo;unsafe&amp;rsquo; wrong (Steve Klabnik) Good comparison: Rust vs Go Rust on PX-HER0  " />
+repr(transparent) attribute What type is the “type ()”? Writing a small ray tracer in Rust and Zig Why Discord is switching from Go to Rust The Rust community will harass you if you use ‘unsafe’ wrong (Steve Klabnik) Good comparison: Rust vs Go Rust on PX-HER0 " />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="AlexKVal" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="AlexKVal" />
     <meta name="msapplication-starturl" content="../../" />
@@ -46,6 +51,7 @@
 
     
     <link rel="canonical" href="https://alexkval.github.io/readings/rust/" />
+    
 
 <script type="application/ld+json">
     {
@@ -55,7 +61,7 @@
         "dateModified": "2020-11-21T12:12:54+00:00",
         "url": "https://alexkval.github.io/readings/rust/",
         "name": "",
-        "description": "Rust\n repr(transparent) attribute What type is the “type ()”? Writing a small ray tracer in Rust and Zig Why Discord is switching from Go to Rust The Rust community will harass you if you use \u0026lsquo;unsafe\u0026rsquo; wrong (Steve Klabnik) Good comparison: Rust vs Go Rust on PX-HER0  ",
+        "description": "Rust\nrepr(transparent) attribute What type is the “type ()”? Writing a small ray tracer in Rust and Zig Why Discord is switching from Go to Rust The Rust community will harass you if you use ‘unsafe’ wrong (Steve Klabnik) Good comparison: Rust vs Go Rust on PX-HER0 ",
         "image": "https://alexkval.github.io/apple-touch-icon.png",
         "license": "Copyright © Alexander Shemetovskiy",
         "publisher": {
@@ -87,7 +93,7 @@
 
 <meta property="og:title" content="" />
 <meta property="og:description" content="Rust
- repr(transparent) attribute What type is the “type ()”? Writing a small ray tracer in Rust and Zig Why Discord is switching from Go to Rust The Rust community will harass you if you use &amp;lsquo;unsafe&amp;rsquo; wrong (Steve Klabnik) Good comparison: Rust vs Go Rust on PX-HER0  " />
+repr(transparent) attribute What type is the “type ()”? Writing a small ray tracer in Rust and Zig Why Discord is switching from Go to Rust The Rust community will harass you if you use ‘unsafe’ wrong (Steve Klabnik) Good comparison: Rust vs Go Rust on PX-HER0 " />
 <meta property="og:url" content="https://alexkval.github.io/readings/rust/" />
 <meta property="og:site_name" content="AlexKVal" />
 <meta property="og:locale" content="en" /><meta property="og:image" content="https://alexkval.github.io/apple-touch-icon.png" />
@@ -112,12 +118,15 @@
 
 
     
+    
+
+    
 </head>
 
     <body>
         <div class="container">
             
-    <header class="header" data-scroll-header>
+    <header class="header">
         
             <div class="header-wrapper">
                 <div class="header-inner single">
@@ -137,7 +146,7 @@
         
         
             
-                <li class="menu-item active"><a href="/readings/"><span class="menu-item-name">Readings</span></a>
+                <li class="menu-item"><a href="/readings/"><span class="menu-item-name">Readings</span></a>
                 </li>
             
         
@@ -176,18 +185,18 @@
 
         
 
-        <article class="content post" data-small-caps="true" data-align="default" data-type="readings" data-toc-num="true">
+        <article class="content post h-entry" data-small-caps="true" data-align="default" data-type="readings" data-toc-num="true">
 
-            <h1 class="post-title"></h1>
-
-            
+            <h1 class="post-title p-name"></h1>
 
             
 
             
 
-            <div class="post-body">
-              <p><strong>Rust</strong></p>
+            
+
+            <div class="post-body e-content">
+                <p><strong>Rust</strong></p>
 <ul>
 <li><a href="https://doc.rust-lang.org/nomicon/other-reprs.html#reprtransparent" target="_blank" rel="noopener">repr(transparent) attribute</a></li>
 <li><a href="https://stackoverflow.com/a/38663453/3874570" target="_blank" rel="noopener">What type is the “type ()”?</a></li>
@@ -200,12 +209,12 @@
 
             </div>
 
+            
+
+
         </article>
 
         
-
-        
-
 
         
 
@@ -275,18 +284,8 @@
 
         </div>
         
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
-<script>
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        speedAsDuration: true,
-        header: '[data-scroll-header]'
-    });
-</script>
-
-
-
-
+        
 
 
 
@@ -298,7 +297,10 @@
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>
@@ -310,11 +312,6 @@
 
 
 
-
-
-
-
-<script src="/js/meme.min.185530990dfec107a70ab138f45085aabdf7c3888ebc363f667497978c71d3eb.js" integrity="sha256-GFUwmQ3&#43;wQenCrE49FCFqr33w4iOvDY/ZnSXl4xx0&#43;s="></script>
 
     </body>
 </html>

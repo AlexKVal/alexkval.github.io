@@ -3,9 +3,8 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.71.0" /><meta name="theme-color" content="#fff" />
-
-    
+    <meta name="generator" content="Hugo 0.111.1"><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
 
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +17,13 @@
 
     <title>Tags: tensor-flow | AlexKVal</title>
 
-    <link rel="stylesheet" href="/css/meme.min.58bc39dbe134c5e44a78e94ce3e1861400ca666811a7cdadca215d1fae085f0d.css" integrity="sha256-WLw52&#43;E0xeRKeOlM4&#43;GGFADKZmgRp82tyiFdH64IXw0=" />
+    <link rel="stylesheet" href="/css/meme.min.528aabe165d470195cf17a6665d1964266636b2bdf6b138568600ea5c725b1e7.css"/>
+
+    
+    
+        <script src="/js/meme.min.72f12c15c6f1aa1e5e4e40389f8155cf6b85e992f330fab7888df4762e307669.js"></script>
+
+    
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -32,7 +37,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="AlexKVal" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="AlexKVal" />
     <meta name="msapplication-starturl" content="../../" />
@@ -45,6 +50,7 @@
 
     
     <link rel="canonical" href="https://alexkval.github.io/tags/tensor-flow/" />
+    
 
 <script type="application/ld+json">
     {
@@ -110,12 +116,15 @@
 
 
     
+    
+
+    
 </head>
 
     <body>
         <div class="container">
             
-    <header class="header" data-scroll-header>
+    <header class="header">
         
             <div class="header-wrapper">
                 <div class="header-inner list">
@@ -169,7 +178,6 @@
 
             
             
-    
         <main class="main list" id="main">
             <div class="main-inner">
                 <div class="content list-group">
@@ -185,8 +193,6 @@
                     
                     
 
-                    
-                    
                     
 
                     
@@ -272,18 +278,8 @@
 
         </div>
         
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
-<script>
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        speedAsDuration: true,
-        header: '[data-scroll-header]'
-    });
-</script>
-
-
-
-
+        
 
 
 
@@ -295,7 +291,10 @@
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>
@@ -307,11 +306,6 @@
 
 
 
-
-
-
-
-<script src="/js/meme.min.185530990dfec107a70ab138f45085aabdf7c3888ebc363f667497978c71d3eb.js" integrity="sha256-GFUwmQ3&#43;wQenCrE49FCFqr33w4iOvDY/ZnSXl4xx0&#43;s="></script>
 
     </body>
 </html>

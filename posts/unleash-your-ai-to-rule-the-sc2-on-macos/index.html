@@ -3,9 +3,8 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.71.0" /><meta name="theme-color" content="#fff" />
-
-    
+    <meta name="generator" content="Hugo 0.111.1"><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
 
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,14 +17,21 @@
 
     <title>Unleash your AI to rule the StarCraft2 (on macOS) | AlexKVal</title>
 
-    <link rel="stylesheet" href="/css/meme.min.58bc39dbe134c5e44a78e94ce3e1861400ca666811a7cdadca215d1fae085f0d.css" integrity="sha256-WLw52&#43;E0xeRKeOlM4&#43;GGFADKZmgRp82tyiFdH64IXw0=" />
+    <link rel="stylesheet" href="/css/meme.min.528aabe165d470195cf17a6665d1964266636b2bdf6b138568600ea5c725b1e7.css"/>
+
+    
+    
+        <script src="/js/meme.min.72f12c15c6f1aa1e5e4e40389f8155cf6b85e992f330fab7888df4762e307669.js"></script>
+
+    
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Comfortaa:wght@700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="Alexander Shemetovskiy" /><meta name="description" content="This a bit of pretentious title is about the setup of the great PySC2 library which makes it possible to “rule” the StarCraft II with your own AI.
+    <meta name="author" content="Alexander Shemetovskiy" /><meta name="description" content="
+This a bit of pretentious title is about the setup of the great PySC2 library which makes it possible to “rule” the StarCraft II with your own AI.
 “Scientifically” speaking, the PySC2 allows for Reinforcement Learning agents to interact with the StarCraft II game. The library does it by exposing the StarCraft II Machine Learning API as a Python RL Environment.
 " />
 
@@ -34,7 +40,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="AlexKVal" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="AlexKVal" />
     <meta name="msapplication-starturl" content="../../" />
@@ -47,6 +53,7 @@
 
     
     <link rel="canonical" href="https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/" />
+    
 
 <script type="application/ld+json">
     {
@@ -56,7 +63,7 @@
         "dateModified": "2019-04-14T00:00:00+00:00",
         "url": "https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/",
         "headline": "Unleash your AI to rule the StarCraft2 (on macOS)",
-        "description": "This a bit of pretentious title is about the setup of the great PySC2 library which makes it possible to “rule” the StarCraft II with your own AI.\n“Scientifically” speaking, the PySC2 allows for Reinforcement Learning agents to interact with the StarCraft II game. The library does it by exposing the StarCraft II Machine Learning API as a Python RL Environment.\n",
+        "description": "\nThis a bit of pretentious title is about the setup of the great PySC2 library which makes it possible to “rule” the StarCraft II with your own AI.\n“Scientifically” speaking, the PySC2 allows for Reinforcement Learning agents to interact with the StarCraft II game. The library does it by exposing the StarCraft II Machine Learning API as a Python RL Environment.\n",
         "inLanguage" : "en",
         "articleSection": "posts",
         "wordCount":  734 ,
@@ -98,7 +105,8 @@
 
 
 <meta property="og:title" content="Unleash your AI to rule the StarCraft2 (on macOS)" />
-<meta property="og:description" content="This a bit of pretentious title is about the setup of the great PySC2 library which makes it possible to “rule” the StarCraft II with your own AI.
+<meta property="og:description" content="
+This a bit of pretentious title is about the setup of the great PySC2 library which makes it possible to “rule” the StarCraft II with your own AI.
 “Scientifically” speaking, the PySC2 allows for Reinforcement Learning agents to interact with the StarCraft II game. The library does it by exposing the StarCraft II Machine Learning API as a Python RL Environment.
 " />
 <meta property="og:url" content="https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/" />
@@ -130,12 +138,15 @@
 
 
     
+    
+
+    
 </head>
 
     <body>
         <div class="container">
             
-    <header class="header" data-scroll-header>
+    <header class="header">
         
             <div class="header-wrapper">
                 <div class="header-inner single">
@@ -194,9 +205,9 @@
 
         
 
-        <article class="content post" data-small-caps="true" data-align="default" data-type="posts" data-toc-num="true">
+        <article class="content post h-entry" data-small-caps="true" data-align="default" data-type="posts" data-toc-num="true">
 
-            <h1 class="post-title">Unleash your AI to rule the StarCraft2 (on macOS)</h1>
+            <h1 class="post-title p-name">Unleash your AI to rule the StarCraft2 (on macOS)</h1>
 
             
 
@@ -214,7 +225,7 @@
         
         
             
-                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/categories/ai/" class="category-link">AI</a>/<a href="/categories/machine-learning/" class="category-link">Machine learning</a></span>
+                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/categories/ai/" class="category-link p-category">AI</a>/<a href="/categories/machine-learning/" class="category-link p-category">Machine learning</a></span>
             
         
     
@@ -232,8 +243,8 @@
 
             
 
-            <div class="post-body">
-              <p><img src="/posts/unleash-your-ai-to-rule-the-sc2-on-macos/intro-sc2.png" alt="screenshot"><span class="caption">◎ AI is learning how to play SC2</span></p>
+            <div class="post-body e-content">
+                <p><img src="/posts/unleash-your-ai-to-rule-the-sc2-on-macos/intro-sc2.png" alt="screenshot"><span class="caption">◎ AI is learning how to play SC2</span></p>
 <p>This a bit of pretentious title is about the setup of the great <a href="https://github.com/deepmind/pysc2" target="_blank" rel="noopener">PySC2</a> library
 which makes it possible to “rule” the <strong>StarCraft II</strong> with your own <strong>AI</strong>.</p>
 <p>“Scientifically” speaking, the PySC2 allows for Reinforcement Learning agents
@@ -245,24 +256,24 @@ And also, here <a href="https://en.wikipedia.org/wiki/Reinforcement_learning" ta
 <p>The <a href="https://docs.brew.sh/Installation" target="_blank" rel="noopener">Homebrew</a> is the preferred way to install packages for macOS, so make sure that it is installed.</p>
 <p>In case it is not, here are the necessary steps.</p>
 <p>First, install the Command Line Tools for Xcode</p>
-<pre><code>xcode-select --install
+<pre tabindex="0"><code>xcode-select --install
 </code></pre><p>Then accept the XCode license</p>
-<pre><code>sudo xcodebuild -license accept
+<pre tabindex="0"><code>sudo xcodebuild -license accept
 </code></pre><p>Now we are ready to install the Homebrew</p>
-<pre><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;
+<pre tabindex="0"><code>/bin/bash -c &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&#34;
 </code></pre><p>Let’s make the installed <code>brew</code> command of the Homebrew project available in your terminal console.
 Add the following line</p>
-<pre><code>export PATH=/usr/local/bin:$PATH
+<pre tabindex="0"><code>export PATH=/usr/local/bin:$PATH
 </code></pre><p>to your preferred shell’s profile. E.g. it could be <code>.bash_profile</code>, or <code>.zshrc</code>.</p>
 <p>If you are unsure you can take the &ldquo;compromise&rdquo; way and use the <code>.profile</code>.</p>
 <p>If you have no preferred text editor, you can use <code>nano</code></p>
-<pre><code>nano ~/.profile
+<pre tabindex="0"><code>nano ~/.profile
 </code></pre><p>Insert that line <code>export PATH=/usr/local/bin:$PATH</code> into the <code>nano</code>,
 then press <code>Ctrl + o</code>, then <code>enter</code>, and finally <code>Ctrl + x</code>.</p>
 <p>Now type</p>
-<pre><code>source ~/.profile
+<pre tabindex="0"><code>source ~/.profile
 </code></pre><p>(or whatever your preferred shell’s profile) for the added line to take effect, and then</p>
-<pre><code>brew update
+<pre tabindex="0"><code>brew update
 </code></pre><p>This way we update the <code>brew</code> package manager’s database.</p>
 <p>And here goes the tricky part.</p>
 <p>At the moment of writing this article, the <code>TensorFlow</code> does not support yet <code>Python 3.7</code>
@@ -271,44 +282,44 @@ We need to install the <code>Python 3.6</code> for things to go smoothly later.<
 <p>Luckily there is a simple way for it.</p>
 <p>We will use the <a href="https://github.com/Homebrew/homebrew-core/commit/f2a764ef944b1080be64bd88dca9a1d80130c558" target="_blank" rel="noopener">python: update 3.6.5_1 bottle</a> commit.</p>
 <p>In case, you already have installed the <code>Python 3.7</code> unlink it first</p>
-<pre><code>brew unlink python
+<pre tabindex="0"><code>brew unlink python
 </code></pre><p>Note: this command won’t remove the 3.7 version from your system.</p>
 <p>Then install the <code>Python 3.6</code></p>
-<pre><code>brew install --ignore-dependencies https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
+<pre tabindex="0"><code>brew install --ignore-dependencies https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
 </code></pre><p>Now check that we have the right version</p>
-<pre><code>python3 -V
+<pre tabindex="0"><code>python3 -V
 </code></pre><p>It should be <code>Python 3.6.5</code>.</p>
 <p>Congratulations 🎉.</p>
 <p>The next step is not necessary but recommended.</p>
 <p>It is useful for cases when you screw something up and would like to go &ldquo;from the scratch&rdquo;.</p>
 <p>Let’s install and use the <a href="https://virtualenv.pypa.io/en/latest/" target="_blank" rel="noopener">virtualenv</a></p>
-<pre><code>mkdir ~/.virtualenvs
+<pre tabindex="0"><code>mkdir ~/.virtualenvs
 pip3 install virtualenv virtualenvwrapper
 </code></pre><p>And to make it available in your terminal console, add these lines to your shell’s profile</p>
-<pre><code># virtualenv and virtualenvwrapper
+<pre tabindex="0"><code># virtualenv and virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
 </code></pre><p>and then load it for those lines to take effect</p>
-<pre><code>source ~/.profile
+<pre tabindex="0"><code>source ~/.profile
 </code></pre><p>(or whatever your shell’s preferred profile is).</p>
 <p>Pay attention to the terminal output so there are no errors.</p>
 <p>Now we are ready to create a dedicated virtual environment which we’ll use for our further setup.</p>
 <p>Let’s call it <strong>sc2</strong>.</p>
-<pre><code>mkvirtualenv sc2 -p python3
+<pre tabindex="0"><code>mkvirtualenv sc2 -p python3
 </code></pre><p>After this command, your prompt should be prefixed with <strong>(sc2)</strong>.</p>
 <p>If you would like to switch to this virtual environment in another terminal tab,
 or get back to it after you’ve closed your previous one, just type</p>
-<pre><code>workon sc2
+<pre tabindex="0"><code>workon sc2
 </code></pre><p>Now we finally are ready to install the <strong>PySC2</strong>.</p>
-<pre><code>pip install pysc2
+<pre tabindex="0"><code>pip install pysc2
 </code></pre><p>Now go to the <a href="https://www.blizzard.com/" target="_blank" rel="noopener">https://www.blizzard.com</a> and get the <code>StarCraft II</code> installed.
 The starter edition will suffice for our experiments.</p>
 <p>For the <code>PySC2</code> library to work we need to download and extract some additional materials.</p>
 <p>The <a href="https://github.com/Blizzard/s2client-proto#map-packs" target="_blank" rel="noopener">Ladder maps</a> and <a href="https://github.com/deepmind/pysc2/releases/download/v1.2/mini_games.zip" target="_blank" rel="noopener">Mini-games</a>.</p>
 <p>They go to the <strong>StarcraftII/Maps/</strong> directory.</p>
 <p>This folder does not exist by default so we should create it first.</p>
-<pre><code>cd “/Applications/StarCraft II”
+<pre tabindex="0"><code>cd “/Applications/StarCraft II”
 mkdir Maps
 open Maps
 </code></pre><p>Now download those archives and extract them into the newly created <strong>Maps</strong> folder.</p>
@@ -320,17 +331,17 @@ That’s it.</p>
 <p>Now, after you’ve installed the StarCraft II game client and downloaded all the additional materials, you can start experimenting</p>
 <p><a href="https://github.com/deepmind/pysc2#run-an-agent" target="_blank" rel="noopener">https://github.com/deepmind/pysc2#run-an-agent</a></p>
 <p>Run this command to check out that everything works fine</p>
-<pre><code>python -m pysc2.bin.agent -map Simple64
+<pre tabindex="0"><code>python -m pysc2.bin.agent -map Simple64
 </code></pre><p>If you’ve got the <code>StarCraft II</code> opened in a mini window with <code>PySC2</code> doing it’s RL job, then congratulations! ✨🎉</p>
 <p><img src="/posts/unleash-your-ai-to-rule-the-sc2-on-macos/bottom-sc2.png" alt="screenshot"><span class="caption">◎ AI is 'thinking'</span></p>
             </div>
 
+            
+
+
         </article>
 
         
-
-        
-
 
         
 
@@ -361,7 +372,7 @@ That’s it.</p>
             
                 <div class="share-item linkedin">
                     
-                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/&amp;title=Unleash%20your%20AI%20to%20rule%20the%20StarCraft2%20%28on%20macOS%29&amp;summary=This%20a%20bit%20of%20pretentious%20title%20is%20about%20the%20setup%20of%20the%20great%20PySC2%20library%20which%20makes%20it%20possible%20to%20%e2%80%9crule%e2%80%9d%20the%20StarCraft%20II%20with%20your%20own%20AI.%0a%e2%80%9cScientifically%e2%80%9d%20speaking,%20the%20PySC2%20allows%20for%20Reinforcement%20Learning%20agents%20to%20interact%20with%20the%20StarCraft%20II%20game.%20The%20library%20does%20it%20by%20exposing%20the%20StarCraft%20II%20Machine%20Learning%20API%20as%20a%20Python%20RL%20Environment.%0a&amp;source=AlexKVal" title="Share on LinkedIn" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/&amp;title=Unleash%20your%20AI%20to%20rule%20the%20StarCraft2%20%28on%20macOS%29&amp;summary=%0aThis%20a%20bit%20of%20pretentious%20title%20is%20about%20the%20setup%20of%20the%20great%20PySC2%20library%20which%20makes%20it%20possible%20to%20%e2%80%9crule%e2%80%9d%20the%20StarCraft%20II%20with%20your%20own%20AI.%0a%e2%80%9cScientifically%e2%80%9d%20speaking,%20the%20PySC2%20allows%20for%20Reinforcement%20Learning%20agents%20to%20interact%20with%20the%20StarCraft%20II%20game.%20The%20library%20does%20it%20by%20exposing%20the%20StarCraft%20II%20Machine%20Learning%20API%20as%20a%20Python%20RL%20Environment.%0a&amp;source=AlexKVal" title="Share on LinkedIn" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
                 </div>
             
 
@@ -382,21 +393,21 @@ That’s it.</p>
             
                 <div class="share-item douban">
                     
-                    <a href="https://www.douban.com/share/service?href=https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/&amp;name=Unleash%20your%20AI%20to%20rule%20the%20StarCraft2%20%28on%20macOS%29&amp;text=This%20a%20bit%20of%20pretentious%20title%20is%20about%20the%20setup%20of%20the%20great%20PySC2%20library%20which%20makes%20it%20possible%20to%20%e2%80%9crule%e2%80%9d%20the%20StarCraft%20II%20with%20your%20own%20AI.%0a%e2%80%9cScientifically%e2%80%9d%20speaking,%20the%20PySC2%20allows%20for%20Reinforcement%20Learning%20agents%20to%20interact%20with%20the%20StarCraft%20II%20game.%20The%20library%20does%20it%20by%20exposing%20the%20StarCraft%20II%20Machine%20Learning%20API%20as%20a%20Python%20RL%20Environment.%0a" title="Share on Douban" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
+                    <a href="https://www.douban.com/share/service?href=https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/&amp;name=Unleash%20your%20AI%20to%20rule%20the%20StarCraft2%20%28on%20macOS%29&amp;text=%0aThis%20a%20bit%20of%20pretentious%20title%20is%20about%20the%20setup%20of%20the%20great%20PySC2%20library%20which%20makes%20it%20possible%20to%20%e2%80%9crule%e2%80%9d%20the%20StarCraft%20II%20with%20your%20own%20AI.%0a%e2%80%9cScientifically%e2%80%9d%20speaking,%20the%20PySC2%20allows%20for%20Reinforcement%20Learning%20agents%20to%20interact%20with%20the%20StarCraft%20II%20game.%20The%20library%20does%20it%20by%20exposing%20the%20StarCraft%20II%20Machine%20Learning%20API%20as%20a%20Python%20RL%20Environment.%0a" title="Share on Douban" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item qq">
                     
-                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/&amp;title=Unleash%20your%20AI%20to%20rule%20the%20StarCraft2%20%28on%20macOS%29&amp;summary=This%20a%20bit%20of%20pretentious%20title%20is%20about%20the%20setup%20of%20the%20great%20PySC2%20library%20which%20makes%20it%20possible%20to%20%e2%80%9crule%e2%80%9d%20the%20StarCraft%20II%20with%20your%20own%20AI.%0a%e2%80%9cScientifically%e2%80%9d%20speaking,%20the%20PySC2%20allows%20for%20Reinforcement%20Learning%20agents%20to%20interact%20with%20the%20StarCraft%20II%20game.%20The%20library%20does%20it%20by%20exposing%20the%20StarCraft%20II%20Machine%20Learning%20API%20as%20a%20Python%20RL%20Environment.%0a&amp;pics=https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/intro-sc2.png&amp;site=AlexKVal" title="Share on QQ" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
+                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/&amp;title=Unleash%20your%20AI%20to%20rule%20the%20StarCraft2%20%28on%20macOS%29&amp;summary=%0aThis%20a%20bit%20of%20pretentious%20title%20is%20about%20the%20setup%20of%20the%20great%20PySC2%20library%20which%20makes%20it%20possible%20to%20%e2%80%9crule%e2%80%9d%20the%20StarCraft%20II%20with%20your%20own%20AI.%0a%e2%80%9cScientifically%e2%80%9d%20speaking,%20the%20PySC2%20allows%20for%20Reinforcement%20Learning%20agents%20to%20interact%20with%20the%20StarCraft%20II%20game.%20The%20library%20does%20it%20by%20exposing%20the%20StarCraft%20II%20Machine%20Learning%20API%20as%20a%20Python%20RL%20Environment.%0a&amp;pics=https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/intro-sc2.png&amp;site=AlexKVal" title="Share on QQ" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item qzone">
                     
-                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/&amp;title=Unleash%20your%20AI%20to%20rule%20the%20StarCraft2%20%28on%20macOS%29&amp;summary=This%20a%20bit%20of%20pretentious%20title%20is%20about%20the%20setup%20of%20the%20great%20PySC2%20library%20which%20makes%20it%20possible%20to%20%e2%80%9crule%e2%80%9d%20the%20StarCraft%20II%20with%20your%20own%20AI.%0a%e2%80%9cScientifically%e2%80%9d%20speaking,%20the%20PySC2%20allows%20for%20Reinforcement%20Learning%20agents%20to%20interact%20with%20the%20StarCraft%20II%20game.%20The%20library%20does%20it%20by%20exposing%20the%20StarCraft%20II%20Machine%20Learning%20API%20as%20a%20Python%20RL%20Environment.%0a&amp;pics=https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/intro-sc2.png&amp;site=AlexKVal" title="Share on Qzone" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
+                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/&amp;title=Unleash%20your%20AI%20to%20rule%20the%20StarCraft2%20%28on%20macOS%29&amp;summary=%0aThis%20a%20bit%20of%20pretentious%20title%20is%20about%20the%20setup%20of%20the%20great%20PySC2%20library%20which%20makes%20it%20possible%20to%20%e2%80%9crule%e2%80%9d%20the%20StarCraft%20II%20with%20your%20own%20AI.%0a%e2%80%9cScientifically%e2%80%9d%20speaking,%20the%20PySC2%20allows%20for%20Reinforcement%20Learning%20agents%20to%20interact%20with%20the%20StarCraft%20II%20game.%20The%20library%20does%20it%20by%20exposing%20the%20StarCraft%20II%20Machine%20Learning%20API%20as%20a%20Python%20RL%20Environment.%0a&amp;pics=https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/intro-sc2.png&amp;site=AlexKVal" title="Share on Qzone" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
                 </div>
             
 
@@ -407,9 +418,9 @@ That’s it.</p>
                     <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
 
 <script>
-    var typeNumber = 0;
-    var errorCorrectionLevel = 'L';
-    var qr = qrcode(typeNumber, errorCorrectionLevel);
+    const typeNumber = 0;
+    const errorCorrectionLevel = 'L';
+    const qr = qrcode(typeNumber, errorCorrectionLevel);
     qr.addData('https:\/\/alexkval.github.io\/posts\/unleash-your-ai-to-rule-the-sc2-on-macos\/');
     qr.make();
     document.getElementById('qrcode-img').innerHTML = qr.createImgTag();
@@ -433,7 +444,7 @@ That’s it.</p>
             <ul class="related-list">
                 
                     <li class="related-item">
-                        <a href="/posts/stack-in-python/" class="related-link">Let&#39;s implement &#39;Stack&#39; in Python</a>
+                        <a href="/posts/stack-in-python/" class="related-link">Let&rsquo;s implement &lsquo;Stack&rsquo; in Python</a>
                     </li>
                 
             </ul>
@@ -513,7 +524,7 @@ That’s it.</p>
             
             
                 <li class="post-nav-next">
-                    <a href="/posts/dissecting-rails-new/" rel="next">Dissecting of the &#39;rails new&#39; command &gt;</a>
+                    <a href="/posts/dissecting-rails-new/" rel="next">Dissecting of the &lsquo;rails new&rsquo; command &gt;</a>
                 </li>
             
         </ul>
@@ -563,18 +574,8 @@ That’s it.</p>
 
         </div>
         
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
-<script>
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        speedAsDuration: true,
-        header: '[data-scroll-header]'
-    });
-</script>
-
-
-
-
+        
 
 
 
@@ -586,7 +587,10 @@ That’s it.</p>
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>
@@ -598,11 +602,6 @@ That’s it.</p>
 
 
 
-
-
-
-
-<script src="/js/meme.min.185530990dfec107a70ab138f45085aabdf7c3888ebc363f667497978c71d3eb.js" integrity="sha256-GFUwmQ3&#43;wQenCrE49FCFqr33w4iOvDY/ZnSXl4xx0&#43;s="></script>
 
     </body>
 </html>
