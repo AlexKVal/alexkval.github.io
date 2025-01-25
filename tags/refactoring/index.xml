@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Refactoring on AlexKVal</title>
+    <link>https://alexkval.github.io/tags/refactoring/</link>
+    <description>Recent content in Refactoring on AlexKVal</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright © Alexander Shemetovskiy</copyright>
+    <lastBuildDate>Sat, 18 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://alexkval.github.io/tags/refactoring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prefer simple methods</title>
+      <link>https://alexkval.github.io/posts/prefer-short-methods/</link>
+      <pubDate>Sat, 18 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://alexkval.github.io/posts/prefer-short-methods/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://alexkval.github.io/posts/prefer-short-methods&#34;&gt;&lt;img src=&#34;https://alexkval.github.io/posts/prefer-short-methods/code.jpg&#34; alt=&#34;screenshot&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Long methods vs simple ones. What&amp;rsquo;s the problem?&lt;/p&gt;&#xA;&lt;p&gt;Long methods&amp;rsquo; issues:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;usually does too much and &amp;ldquo;knows&amp;rdquo; too much&lt;/li&gt;&#xA;&lt;li&gt;as a consequence, it breaks the Single Responsibility Principle&lt;/li&gt;&#xA;&lt;li&gt;it is harder to grasp what it does when you read it&lt;/li&gt;&#xA;&lt;li&gt;more changes needed to add or amend functionality&lt;/li&gt;&#xA;&lt;li&gt;you have to write pretty complex tests&lt;/li&gt;&#xA;&lt;li&gt;and you need a lot of them to cover all of the possible permutations&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

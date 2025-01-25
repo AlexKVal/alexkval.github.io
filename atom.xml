@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">AlexKVal</title>
     <subtitle type="html">Alexander Shemetovskiy</subtitle>
-    <updated>2024-10-05T14:15:29&#43;01:00</updated>
+    <updated>2025-01-25T16:47:19&#43;00:00</updated>
     <id>https://alexkval.github.io/</id>
     <link rel="alternate" type="text/html" href="https://alexkval.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://alexkval.github.io/atom.xml" />
@@ -15,7 +15,7 @@
                 <email>alexkval@gmail.com</email>
             </author>
     <rights>Copyright © Alexander Shemetovskiy</rights>
-    <generator uri="https://gohugo.io/" version="0.111.3">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.142.0">Hugo</generator>
         <entry>
             <title type="text">Prefer simple methods</title>
             <link rel="alternate" type="text/html" href="https://alexkval.github.io/posts/prefer-short-methods/" />
@@ -71,19 +71,19 @@
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/ruby/" term="ruby" label="ruby" />
+                                <category scheme="https://alexkval.github.io/tags/ruby/" term="Ruby" label="Ruby" />
                             
                         
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/rubyonrails/" term="rubyonrails" label="rubyonrails" />
+                                <category scheme="https://alexkval.github.io/tags/rubyonrails/" term="Rubyonrails" label="Rubyonrails" />
                             
                         
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/refactoring/" term="refactoring" label="refactoring" />
+                                <category scheme="https://alexkval.github.io/tags/refactoring/" term="Refactoring" label="Refactoring" />
                             
                         
                     
@@ -149,19 +149,19 @@
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/ruby/" term="ruby" label="ruby" />
+                                <category scheme="https://alexkval.github.io/tags/ruby/" term="Ruby" label="Ruby" />
                             
                         
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/rubyonrails/" term="rubyonrails" label="rubyonrails" />
+                                <category scheme="https://alexkval.github.io/tags/rubyonrails/" term="Rubyonrails" label="Rubyonrails" />
                             
                         
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/development/" term="development" label="development" />
+                                <category scheme="https://alexkval.github.io/tags/development/" term="Development" label="Development" />
                             
                         
                     
@@ -202,7 +202,7 @@
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/categories/data-structures/" term="Data structures" label="Data structures" />
+                                <category scheme="https://alexkval.github.io/categories/data-structures/" term="Data Structures" label="Data Structures" />
                             
                         
                             
@@ -218,7 +218,7 @@
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/python/" term="python" label="python" />
+                                <category scheme="https://alexkval.github.io/tags/python/" term="Python" label="Python" />
                             
                         
                     
@@ -263,13 +263,13 @@ I&amp;rsquo;ve described how similar behavior can be achieved in Rails code.&lt;
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/ruby/" term="ruby" label="ruby" />
+                                <category scheme="https://alexkval.github.io/tags/ruby/" term="Ruby" label="Ruby" />
                             
                         
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/development/" term="development" label="development" />
+                                <category scheme="https://alexkval.github.io/tags/development/" term="Development" label="Development" />
                             
                         
                     
@@ -320,13 +320,13 @@ enter &lt;a href=&#34;https://www.postgresql.org/docs/11/sql-createtable.html#SQ
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/postgresql/" term="postgresql" label="postgresql" />
+                                <category scheme="https://alexkval.github.io/tags/postgresql/" term="Postgresql" label="Postgresql" />
                             
                         
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/development/" term="development" label="development" />
+                                <category scheme="https://alexkval.github.io/tags/development/" term="Development" label="Development" />
                             
                         
                     
@@ -384,13 +384,13 @@ so I needed a way to flexibly &amp;ldquo;mock&amp;rdquo; AR objects.&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/rubyonrails/" term="rubyonrails" label="rubyonrails" />
+                                <category scheme="https://alexkval.github.io/tags/rubyonrails/" term="Rubyonrails" label="Rubyonrails" />
                             
                         
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/development/" term="development" label="development" />
+                                <category scheme="https://alexkval.github.io/tags/development/" term="Development" label="Development" />
                             
                         
                     
@@ -440,13 +440,13 @@ and I wanted to demonstrate what SQL queries the Rails generates.&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/rubyonrails/" term="rubyonrails" label="rubyonrails" />
+                                <category scheme="https://alexkval.github.io/tags/rubyonrails/" term="Rubyonrails" label="Rubyonrails" />
                             
                         
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/development/" term="development" label="development" />
+                                <category scheme="https://alexkval.github.io/tags/development/" term="Development" label="Development" />
                             
                         
                     
@@ -488,7 +488,7 @@ The library does it by exposing the &lt;code&gt;StarCraft II Machine Learning AP
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/categories/machine-learning/" term="Machine learning" label="Machine learning" />
+                                <category scheme="https://alexkval.github.io/categories/machine-learning/" term="Machine Learning" label="Machine Learning" />
                             
                         
                     
@@ -498,31 +498,31 @@ The library does it by exposing the &lt;code&gt;StarCraft II Machine Learning AP
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/ai/" term="ai" label="ai" />
+                                <category scheme="https://alexkval.github.io/tags/ai/" term="Ai" label="Ai" />
                             
                         
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/machine-learning/" term="machine-learning" label="machine-learning" />
+                                <category scheme="https://alexkval.github.io/tags/machine-learning/" term="Machine-Learning" label="Machine-Learning" />
                             
                         
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/setup/" term="setup" label="setup" />
+                                <category scheme="https://alexkval.github.io/tags/setup/" term="Setup" label="Setup" />
                             
                         
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/tensor-flow/" term="tensor-flow" label="tensor-flow" />
+                                <category scheme="https://alexkval.github.io/tags/tensor-flow/" term="Tensor-Flow" label="Tensor-Flow" />
                             
                         
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/python/" term="python" label="python" />
+                                <category scheme="https://alexkval.github.io/tags/python/" term="Python" label="Python" />
                             
                         
                     
@@ -576,13 +576,13 @@ The library does it by exposing the &lt;code&gt;StarCraft II Machine Learning AP
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/rubyonrails/" term="rubyonrails" label="rubyonrails" />
+                                <category scheme="https://alexkval.github.io/tags/rubyonrails/" term="Rubyonrails" label="Rubyonrails" />
                             
                         
                             
                             
                             
-                                <category scheme="https://alexkval.github.io/tags/development/" term="development" label="development" />
+                                <category scheme="https://alexkval.github.io/tags/development/" term="Development" label="Development" />
                             
                         
                     

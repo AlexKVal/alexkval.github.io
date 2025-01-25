@@ -10,7 +10,7 @@
         <title>AlexKVal</title>
         <link>https://alexkval.github.io/</link>
         <description>Alexander Shemetovskiy</description>
-        <generator>Hugo 0.111.3 https://gohugo.io/</generator>
+        <generator>Hugo 0.142.0 https://gohugo.io/</generator>
         
             <language>en</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>Copyright © Alexander Shemetovskiy</copyright>
         
-        <lastBuildDate>Sat, 05 Oct 2024 14:15:29 &#43;0100</lastBuildDate>
+        <lastBuildDate>Sat, 25 Jan 2025 16:47:19 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://alexkval.github.io/rss.xml" />
         
@@ -81,19 +81,19 @@
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/ruby/">ruby</category>
+                                    <category domain="https://alexkval.github.io/tags/ruby/">Ruby</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/rubyonrails/">rubyonrails</category>
+                                    <category domain="https://alexkval.github.io/tags/rubyonrails/">Rubyonrails</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/refactoring/">refactoring</category>
+                                    <category domain="https://alexkval.github.io/tags/refactoring/">Refactoring</category>
                                 
                             
                         
@@ -157,19 +157,19 @@
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/ruby/">ruby</category>
+                                    <category domain="https://alexkval.github.io/tags/ruby/">Ruby</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/rubyonrails/">rubyonrails</category>
+                                    <category domain="https://alexkval.github.io/tags/rubyonrails/">Rubyonrails</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/development/">development</category>
+                                    <category domain="https://alexkval.github.io/tags/development/">Development</category>
                                 
                             
                         
@@ -208,7 +208,7 @@
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/categories/data-structures/">Data structures</category>
+                                    <category domain="https://alexkval.github.io/categories/data-structures/">Data Structures</category>
                                 
                             
                                 
@@ -224,7 +224,7 @@
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/python/">python</category>
+                                    <category domain="https://alexkval.github.io/tags/python/">Python</category>
                                 
                             
                         
@@ -267,13 +267,13 @@ I&amp;rsquo;ve described how similar behavior can be achieved in Rails code.&lt;
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/ruby/">ruby</category>
+                                    <category domain="https://alexkval.github.io/tags/ruby/">Ruby</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/development/">development</category>
+                                    <category domain="https://alexkval.github.io/tags/development/">Development</category>
                                 
                             
                         
@@ -322,13 +322,13 @@ enter &lt;a href=&#34;https://www.postgresql.org/docs/11/sql-createtable.html#SQ
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/postgresql/">postgresql</category>
+                                    <category domain="https://alexkval.github.io/tags/postgresql/">Postgresql</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/development/">development</category>
+                                    <category domain="https://alexkval.github.io/tags/development/">Development</category>
                                 
                             
                         
@@ -384,13 +384,13 @@ so I needed a way to flexibly &amp;ldquo;mock&amp;rdquo; AR objects.&lt;/p&gt;
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/rubyonrails/">rubyonrails</category>
+                                    <category domain="https://alexkval.github.io/tags/rubyonrails/">Rubyonrails</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/development/">development</category>
+                                    <category domain="https://alexkval.github.io/tags/development/">Development</category>
                                 
                             
                         
@@ -438,13 +438,13 @@ and I wanted to demonstrate what SQL queries the Rails generates.&lt;/p&gt;
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/rubyonrails/">rubyonrails</category>
+                                    <category domain="https://alexkval.github.io/tags/rubyonrails/">Rubyonrails</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/development/">development</category>
+                                    <category domain="https://alexkval.github.io/tags/development/">Development</category>
                                 
                             
                         
@@ -484,7 +484,7 @@ The library does it by exposing the &lt;code&gt;StarCraft II Machine Learning AP
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/categories/machine-learning/">Machine learning</category>
+                                    <category domain="https://alexkval.github.io/categories/machine-learning/">Machine Learning</category>
                                 
                             
                         
@@ -494,31 +494,31 @@ The library does it by exposing the &lt;code&gt;StarCraft II Machine Learning AP
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/ai/">ai</category>
+                                    <category domain="https://alexkval.github.io/tags/ai/">Ai</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/machine-learning/">machine-learning</category>
+                                    <category domain="https://alexkval.github.io/tags/machine-learning/">Machine-Learning</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/setup/">setup</category>
+                                    <category domain="https://alexkval.github.io/tags/setup/">Setup</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/tensor-flow/">tensor-flow</category>
+                                    <category domain="https://alexkval.github.io/tags/tensor-flow/">Tensor-Flow</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/python/">python</category>
+                                    <category domain="https://alexkval.github.io/tags/python/">Python</category>
                                 
                             
                         
@@ -570,13 +570,13 @@ The library does it by exposing the &lt;code&gt;StarCraft II Machine Learning AP
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/rubyonrails/">rubyonrails</category>
+                                    <category domain="https://alexkval.github.io/tags/rubyonrails/">Rubyonrails</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://alexkval.github.io/tags/development/">development</category>
+                                    <category domain="https://alexkval.github.io/tags/development/">Development</category>
                                 
                             
                         

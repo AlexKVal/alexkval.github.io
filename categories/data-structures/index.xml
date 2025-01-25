@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Structures on AlexKVal</title>
+    <link>https://alexkval.github.io/categories/data-structures/</link>
+    <description>Recent content in Data Structures on AlexKVal</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright © Alexander Shemetovskiy</copyright>
+    <lastBuildDate>Sat, 11 Jul 2020 00:03:14 +0100</lastBuildDate>
+    <atom:link href="https://alexkval.github.io/categories/data-structures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Let&#39;s implement &#39;Stack&#39; in Python</title>
+      <link>https://alexkval.github.io/posts/stack-in-python/</link>
+      <pubDate>Fri, 10 Jul 2020 22:16:18 +0100</pubDate>
+      <guid>https://alexkval.github.io/posts/stack-in-python/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-py&#34; data-lang=&#34;py&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Stack()     &lt;span style=&#34;color:#75715e&#34;&gt;# []&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;push(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;one&amp;#39;&lt;/span&gt;)   &lt;span style=&#34;color:#75715e&#34;&gt;# [&amp;#39;one&amp;#39;]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;push(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;two&amp;#39;&lt;/span&gt;)   &lt;span style=&#34;color:#75715e&#34;&gt;# [&amp;#39;one&amp;#39;, &amp;#39;two&amp;#39;]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;top()         &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#39;two&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;push(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;three&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;# [&amp;#39;one&amp;#39;, &amp;#39;two&amp;#39;, &amp;#39;three&amp;#39;]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;top()         &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#39;three&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;size()        &lt;span style=&#34;color:#75715e&#34;&gt;# 3&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pop()         &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#39;three&amp;#39;  [&amp;#39;one&amp;#39;, &amp;#39;two&amp;#39;]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pop()         &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#39;two&amp;#39;    [&amp;#39;one&amp;#39;]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is the API I want to have for the &amp;lsquo;Stack&amp;rsquo; data structure.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s implement it in &lt;code&gt;Python&lt;/code&gt; step by step.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
