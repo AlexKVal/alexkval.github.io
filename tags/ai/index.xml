@@ -4,15 +4,17 @@
     <title>Ai on AlexKVal</title>
     <link>https://alexkval.github.io/tags/ai/</link>
     <description>Recent content in Ai on AlexKVal</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <managingEditor>alexkval@gmail.com (Alexander Shemetovskiy)</managingEditor>
+    <webMaster>alexkval@gmail.com (Alexander Shemetovskiy)</webMaster>
     <copyright>Copyright © Alexander Shemetovskiy</copyright>
     <lastBuildDate>Sun, 14 Apr 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alexkval.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unleash your AI to rule the StarCraft2 (on macOS)</title>
       <link>https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/</link>
-      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate><author>alexkval@gmail.com (Alexander Shemetovskiy)</author>
       <guid>https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://alexkval.github.io/posts/unleash-your-ai-to-rule-the-sc2-on-macos/intro-sc2.png&#34; alt=&#34;screenshot&#34; title=&#34;AI is learning how to play SC2&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This a bit of pretentious title is about the setup of the great &lt;a href=&#34;https://github.com/deepmind/pysc2&#34;&gt;PySC2&lt;/a&gt; library&#xA;which makes it possible to “rule” the &lt;strong&gt;StarCraft II&lt;/strong&gt; with your own &lt;strong&gt;AI&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;“Scientifically” speaking, the PySC2 allows for Reinforcement Learning agents&#xA;to interact with the &lt;code&gt;StarCraft II&lt;/code&gt; game.&#xA;The library does it by exposing the &lt;code&gt;StarCraft II Machine Learning API&lt;/code&gt; as a Python RL Environment.&lt;/p&gt;</description>
     </item>
